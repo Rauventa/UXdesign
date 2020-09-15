@@ -1,0 +1,90 @@
+
+.offer, .confidentiality {
+  @include danger_text;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 4rem;
+
+  a {
+    color: $textBlack;
+    line-height: 18px;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin: 4rem 0 2rem 0;
+  }
+
+  h2 {
+    margin: 4rem 0 2rem 0;
+  }
+
+  &__title {
+    padding: 2rem 0 1rem 0;
+    margin: 0 0 1rem 0 !important;
+  }
+
+  .divider {
+    padding: 1rem 0;
+    display: block;
+  }
+
+  .post-title {
+    margin: 2rem 0;
+  }
+
+  .dotted-list {
+    margin-left: 1rem;
+    li {
+      list-style: inherit;
+    }
+  }
+}
+
+// Back-Top arrow button
+
+.back-top {
+  transition: all .3s ease-in-out;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 100px;
+  padding: .25em;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 178, 178, 0.3);
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  img {
+    width: 24px;
+    height: 12px;
+  }
+
+  &:hover {
+    &::before {
+      content: 'Наверх';
+      font-size: 15px;
+      position: absolute;
+      left: -70px;
+    }
+  }
+}

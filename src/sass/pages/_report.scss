@@ -1,0 +1,292 @@
+
+
+.report, .question, .partners {
+  padding: 2rem 0;
+  @include danger_text;
+  width: 50%;
+  min-height: 75vh;
+
+  h1, h2 {
+    margin-bottom: 2rem;
+  }
+
+  .club-link {
+    text-decoration: underline;
+    color: $textBlack;
+  }
+
+
+  .danger-text {
+    text-transform: uppercase;
+    letter-spacing: 0.085em;
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+    margin-bottom: 2rem;
+
+    .normal-list {
+      padding-left: 2rem;
+
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.5rem 0;
+
+        img {
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    ul {
+      li {
+        padding: 0;
+      }
+    }
+  }
+
+  &__form {
+    form {
+      width: 70%;
+    }
+  }
+}
+
+.partners {
+  width: 100%;
+  
+  &__packs {
+
+    h1 {
+      text-align: center;
+      border-bottom: 1px solid #00B2B2;
+      padding-bottom: 2rem;
+    }
+
+    ol {
+      padding-left: 1rem;
+
+      li {
+        list-style: inherit;
+      }
+    }
+
+    &_general, &_info {
+      border: 1px solid #DEDEDE;
+      border-radius: 5px;
+      padding: 2rem;
+
+      li {
+        padding: 0;
+      }
+
+      &-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &_general {
+      &-buttons {
+        button {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &_info {
+    //
+    }
+  }
+}
+
+.main-report {
+
+  &__content {
+
+    button {
+      margin-bottom: 1rem;
+    }
+
+    &_heading {
+      display: flex;
+      align-items: flex-start;
+
+      &-gift {
+        display: flex;
+        align-items: center;
+        background-color: #FFD483;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-left: 5rem;
+
+        img {
+          margin-right: 0.5rem;
+          width: 20px;
+          height: 20px;
+        }
+
+        p {
+          font-size: 10px !important;
+          text-transform: uppercase;
+          margin-bottom: 0;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      &-text {
+        h1 {
+          line-height: 30px !important;
+        }
+      }
+    }
+
+    &_buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &_container {
+      display: flex;
+      justify-content: center;
+      min-height: 50vh;
+
+      &-video {
+        img {
+          width: 100%;
+        }
+
+        button {
+          margin: 2rem 0;
+        }
+      }
+
+      &-info {
+        height: 100%;
+
+        &--content {
+          ul {
+            li {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              &::before {
+                content: '';
+                background: url("../../img/ul-dot.svg") center (center/cover) no-repeat;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+
+        &--bonus {
+          a {
+            color: $textGrey;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 15px;
+          }
+        }
+
+        div {
+          margin-bottom: 1rem;
+        }
+
+        .speaker {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+
+          img {
+            margin-right: 1rem;
+            width: 50px;
+            height: 50px;
+            border: 1px solid $lineLight;
+            border-radius: 100rem;
+          }
+
+          &_text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0;
+
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .report, .question {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .report, .question {
+    width: 85%;
+  }
+
+  .partners {
+    &__packs {
+      &_general {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .report, .question {
+    width: 100%;
+    padding: 0 2rem 2rem 2rem;
+
+    &__form {
+      form {
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .partners {
+    padding: 0 1.5rem 2rem 1.5rem;
+
+    &__info {
+      .normal-list {
+        padding: 0;
+      }
+    }
+
+    &__packs {
+
+      .col-xl-6 {
+        padding: 0 !important;
+      }
+
+      &_general {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

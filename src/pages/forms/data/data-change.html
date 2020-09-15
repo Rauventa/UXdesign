@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../css/styles.min.css">
+    <link rel="stylesheet" href="../../../css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Data change</title>
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="header__line"></div>
+        <div class="header__container">
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-back">
+                    <img src="../../../img/leftArrow.svg" alt="">
+                    <a href="#">На главную</a>
+                </div>
+            </div>
+            <div class="header__container_content">
+                <img src="../../../img/logo.svg" alt="logo">
+                <p>
+                    онлайн-конференция для тех, кто делает
+                    <br>
+                    удобные цифровые продукты
+                </p>
+            </div>
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-logout">
+                    <a href="#">Выход</a>
+                    <img src="../../../img/logout.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="data">
+
+    <div class="data__nav"></div>
+
+    <div class="data__form">
+        <div class="data__form_main">
+            <h1>Основные данные</h1>
+            <div class="form-group">
+                <label for="surname">Фамилия*</label>
+                <input type="text" class="form-control" id="surname" aria-describedby="surname">
+            </div>
+            <div class="form-group">
+                <label for="name">Имя*</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес электронной почты*</label>
+                <input type="email" class="form-control" id="address"  aria-describedby="v">
+            </div>
+            <div class="form-group" id="show_hide_old_password">
+                <label for="oldPasswordId">Старый пароль*</label>
+                <input type="password" class="form-control" id="oldPasswordId" aria-describedby="oldPassword">
+                <span class="show-hide">
+                    <a href=""><i aria-hidden="true" class="fa fa-eye-slash"></i></a>
+                </span>
+                <small id="oldPassword" class="form-text info-text">
+                    <a href="#">Не помните старый пароль?</a>
+                </small>
+            </div>
+            <div class="form-group" id="show_hide_password">
+                <label for="password">Новый пароль*</label>
+                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                <span class="show-hide">
+                    <a href=""><i aria-hidden="true" class="fa fa-eye-slash"></i></a>
+                </span>
+            </div>
+            <div class="form-group" id="show_hide_repeat">
+                <label for="repeat">Подтвердите новый пароль*</label>
+                <input type="password" class="form-control" id="repeat">
+                <span class="show-hide">
+                        <a href=""><i aria-hidden="true" class="fa fa-eye-slash"></i></a>
+                    </span>
+            </div>
+        </div>
+        <div class="data__form_english">
+            <h1>Для сертификата на английском</h1>
+            <div class="form-group">
+                <label for="surname">Фамилия на английском</label>
+                <input type="text" class="form-control" id="surnameEng">
+            </div>
+            <div class="form-group">
+                <label for="name">Имя на английском</label>
+                <input type="text" class="form-control" id="nameEng">
+            </div>
+        </div>
+    </div>
+
+    <div class="full-w-buttons">
+        <button class="btn btn-primary">Сохранить</button>
+    </div>
+
+</div>
+<footer class="footer">
+    <div class="footer__nav">
+        <ul>
+            <li><a href="#">События</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Партнерам</a></li>
+            <li><a href="#">Докладчикам</a></li>
+            <li><a href="#">Договор</a></li>
+            <li><a href="#">Положение о конфиденциальности</a></li>
+            <li><a href="#">Вопрос или проблема?</a></li>
+        </ul>
+    </div>
+    <div class="footer__info">
+        <p>© UX-Марафон 2015-2020</p>
+        <div class="footer__info_socials">
+            <a href="#">
+                <img src="../../../img/socials/facebook.svg" alt="facebook">
+            </a>
+            <a href="#">
+                <img src="../../../img/socials/telegram.svg" alt="telegram">
+            </a>
+            <a href="#">
+                <img src="../../../img/socials/insta.svg" alt="insta">
+            </a>
+            <a href="#">
+                <img src="../../../img/socials/youtube.svg" alt="youtube">
+            </a>
+        </div>
+        <p>Мы используем иллюстрации с icons8.com </p>
+    </div>
+</footer>
+</body>
+<script src="https://use.fontawesome.com/b9bdbd120a.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $("#show_hide_old_password a").on('click', function(event) {
+            event.preventDefault();
+            if($('#show_hide_old_password input').attr("type") == "text"){
+                $('#show_hide_old_password input').attr('type', 'password');
+                $('#show_hide_old_password i').addClass( "fa-eye-slash" );
+                $('#show_hide_old_password i').removeClass( "fa-eye" );
+            }else if($('#show_hide_old_password input').attr("type") == "password"){
+                $('#show_hide_old_password input').attr('type', 'text');
+                $('#show_hide_old_password i').removeClass( "fa-eye-slash" );
+                $('#show_hide_old_password i').addClass( "fa-eye" );
+            }
+        });
+
+        $("#show_hide_password a").on('click', function(event) {
+            event.preventDefault();
+            if($('#show_hide_password input').attr("type") == "text"){
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass( "fa-eye-slash" );
+                $('#show_hide_password i').removeClass( "fa-eye" );
+            }else if($('#show_hide_password input').attr("type") == "password"){
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass( "fa-eye-slash" );
+                $('#show_hide_password i').addClass( "fa-eye" );
+            }
+        });
+
+        $("#show_hide_repeat a").on('click', function(event) {
+            event.preventDefault();
+            if($('#show_hide_repeat input').attr("type") == "text"){
+                $('#show_hide_repeat input').attr('type', 'password');
+                $('#show_hide_repeat i').addClass( "fa-eye-slash" );
+                $('#show_hide_repeat i').removeClass( "fa-eye" );
+            }else if($('#show_hide_repeat input').attr("type") == "password"){
+                $('#show_hide_repeat input').attr('type', 'text');
+                $('#show_hide_repeat i').removeClass( "fa-eye-slash" );
+                $('#show_hide_repeat i').addClass( "fa-eye" );
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,7 @@
+@mixin danger_text {
+  .danger-text {
+    color: $bgMagenta;
+    margin: 1rem 0;
+    letter-spacing: 0.085em !important;
+  }
+}

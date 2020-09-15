@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//vjs.zencdn.net/5.6.0/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <video id="example_video_1" class="video-js vjs-big-play-centered"
+           controls preload="auto" width="640" height="264" autoplay
+           data-viblast-key="N8FjNTQ3NDdhZqZhNGI5NWU5ZTI=">
+        <!-- this is an important to specify the type of the video. Use 'application/x-mpegURL' for HLS streams or 'application/dash+xml' for DASH streams -->
+        <source src="//cdn3.viblast.com/streams/hls/airshow/playlist.m3u8" type='application/x-mpegURL' />
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+</body>
+    <script src="//vjs.zencdn.net/5.6.0/video.js"></script>
+    <script src="//cdn.viblast.com/vb/stable/viblast.js"></script>
+    <script>
+        videojs('#example_video_1', {}, function() { });
+    </script>
+</html>

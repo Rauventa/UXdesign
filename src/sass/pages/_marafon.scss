@@ -1,0 +1,185 @@
+.marafon {
+
+  &__container {
+
+    &_heading {
+
+      &-main {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        h1 {
+          margin-bottom: 0;
+        }
+
+        &--gift {
+          display: flex;
+          align-items: center;
+          background-color: #FFD483;
+          border-radius: 5px;
+          padding: 0.5rem;
+          margin-left: 1rem;
+
+          img {
+            margin-right: 0.5rem;
+            width: 20px;
+            height: 20px;
+          }
+
+          p {
+            font-size: 10px !important;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            letter-spacing: 0.1em;
+          }
+        }
+      }
+    }
+
+    &_links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      &-buttons {
+        display: flex;
+        align-items: center;
+
+        button {
+          margin-right: 1rem;
+        }
+
+        a {
+          color: $textBlack;
+          text-decoration: underline;
+        }
+      }
+
+      .old-marafon {
+        p {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &_content {
+      padding: 2rem 0 2rem 0;
+
+      .col-xl-4 {
+        margin-bottom: 2rem;
+      }
+
+      &-card {
+        background-color: $white;
+        box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        min-height: 100%;
+
+        &:hover {
+          box-shadow: 2px 2px 8px rgba(0,178,178,.5),-2px -2px 8px rgba(0,178,178,.5);
+          cursor: pointer;
+
+          .marafon__container_content-card--image {
+            img {
+              opacity: 0.85;
+            }
+          }
+        }
+
+        &--image {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px 6px 0 0;
+            opacity: 1;
+          }
+
+          .marafon-gift {
+            border-radius: 100rem;
+            background-color: #FFD483;
+            border: 1px solid #FEAE14;
+            padding: 0.65rem;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+
+        &--info {
+          padding: 1rem;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          p {
+            margin-bottom: 0;
+          }
+
+          &_download, &_block {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 1rem;
+
+            img {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .marafon {
+    &__container {
+
+      &_heading {
+        //padding-top: 8rem;
+
+        &-main {
+          //flex-direction: column;
+        }
+      }
+
+      &_links {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .info-text {
+          margin-bottom: 1rem;
+        }
+
+        &-buttons {
+          display: flex;
+          flex-direction: column;
+
+          button {
+            margin-right: 0;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

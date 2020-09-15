@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/styles.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Report</title>
+</head>
+<body>
+    <header class="header-back-person">
+    <div class="header">
+        <div class="header__line"></div>
+        <div class="header__container line-available">
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-back">
+                    <img src="../../img/leftArrow.svg" alt="">
+                    <a href="#">На главную</a>
+                </div>
+            </div>
+            <div class="header__container_content">
+                <img src="../../img/logo.svg" alt="logo">
+                <p>
+                    онлайн-конференция для тех, кто делает
+                    <br>
+                    удобные цифровые продукты
+                </p>
+            </div>
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-user">
+                    <img src="../../img/user.svg" alt="">
+                    <a href="#">Мария</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="report container">
+        <h1>Докладчикам</h1>
+        <p class="danger-text">Мы приглашаем в спикеры UX-практиков из продуктовых компаний</p>
+        <div class="report__info">
+            <p>Если у вас есть полезный и актуальный материал по ближайшим темам конференции, которым хочется поделиться с широкой аудиторией, напишите нам!</p>
+
+            <p><b>Ближайшие темы:</b></p>
+            <ul>
+                <li>- UX в E-commerce</li>
+                <li>- Окупаемость в UX</li>
+                <li>- Аналитика поведения пользователей</li>
+            </ul>
+
+            <p>Если вы еще никогда не выступали: ничего страшного, мы проводим репетиции со спикерами и поможем сделать ваш доклад максимально полезным для зрителей.</p>
+        </div>
+
+        <div class="report__form">
+            <h2>Расскажите немного о своей теме и о себе</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="about">Опишите вкратце, о чем бы вы хотели рассказать*</label>
+                    <textarea class="form-control" id="about" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="surname">Фамилия*</label>
+                    <input type="text" class="form-control" id="surname" aria-describedby="surname">
+                </div>
+                <div class="form-group">
+                    <label for="name">Имя*</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="place">Место работы</label>
+                    <input type="text" class="form-control" id="place" aria-describedby="surname">
+                </div>
+                <div class="form-group">
+                    <label for="position">Должность</label>
+                    <input type="text" class="form-control" id="position" aria-describedby="surname">
+                </div>
+                <div class="form-group">
+                    <label for="socials">Профиль в Facebook или других соцсетях</label>
+                    <input type="text" class="form-control" id="socials">
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес электронной почты для связи*</label>
+                    <input type="email" class="form-control" id="address">
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul>
+                <li><a href="#">События</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Докладчикам</a></li>
+                <li><a href="#">Договор</a></li>
+                <li><a href="#">Положение о конфиденциальности</a></li>
+                <li><a href="#">Вопрос или проблема?</a></li>
+            </ul>
+        </div>
+        <div class="footer__info">
+            <p>© UX-Марафон 2015-2020</p>
+            <div class="footer__info_socials">
+                <a href="#">
+                    <img src="../../img/socials/facebook.svg" alt="facebook">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/telegram.svg" alt="telegram">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/insta.svg" alt="insta">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/youtube.svg" alt="youtube">
+                </a>
+            </div>
+            <p>Мы используем иллюстрации с icons8.com </p>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

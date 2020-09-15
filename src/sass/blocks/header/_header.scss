@@ -1,0 +1,219 @@
+header {
+  width: 100%;
+  background-color: $white;
+  position: relative;
+
+  .header {
+
+    .line-available {
+      border-bottom: 1px solid $bgOcean;
+    }
+
+    &__line {
+      height: 10px;
+      width: 100%;
+      background: linear-gradient(151.43deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%);
+    }
+
+    &__container {
+
+      &_hamburger {
+        display: none !important;
+      }
+
+      &_backButton {
+        background-color: $bgGrey;
+        box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        cursor: pointer;
+        position: absolute;
+        top: 20%;
+        left: 0;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+
+        p {
+          margin: 0 0 0 1rem;
+          color: $textBlack;
+          font-size: 15px;
+        }
+      }
+
+      &_buttons {
+
+        &-user, &-enter, &-back, &-logout {
+          background-color: $bgGrey;
+          box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+          width: 10rem;
+          display: flex;
+          align-items: center;
+          padding: 1.5rem 2rem;
+          border-radius: 0.5rem 0 0 0.5rem;
+          position: absolute;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #e0e0e0;
+          }
+
+          p {
+            color: $textBlack;
+            margin: 0 0 0 1rem;
+            font-size: 15px;
+          }
+        }
+
+        &-user, &-enter, &-logout {
+          top: 20%;
+          right: 0;
+        }
+
+        &-back {
+          width: 12rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          top: 20%;
+          left: 0;
+        }
+
+        &-logout {
+          p {
+            margin: 0 1rem 0 0;
+          }
+        }
+
+        &-enter {
+          p {
+            color: $bgMagenta;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &_content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem 2rem 2rem;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+
+        p {
+          font-size: 10px;
+          line-height: 158%;
+          text-transform: uppercase;
+          color: $textGrey;
+          text-align: center;
+          letter-spacing: 0.1em;
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 0;
+    border-bottom: 0;
+    position: fixed;
+    z-index: 10;
+
+    .header {
+
+      .line-available {
+        border: none;
+      }
+
+      &__line {
+        height: 10px;
+      }
+
+      &__container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        background-color: $bgGrey;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+        border-radius: 5px;
+        padding: 0 1rem;
+
+        .mobile-hide {
+          display: none;
+        }
+
+        &_hamburger {
+          display: block !important;
+        }
+
+        &_backButton {
+          position: relative;
+          background-color: transparent;
+          box-shadow: none;
+          width: auto;
+          border-radius: 0;
+          padding: 0;
+        }
+
+        &_buttons {
+
+          &-user, &-enter, &-back, &-logout {
+            position: relative;
+            background-color: transparent;
+            box-shadow: none;
+            width: auto;
+            top: 0;
+            border-radius: 0;
+            padding: 0;
+          }
+
+          &-enter {
+            p {
+              font-size: 10px !important;
+            }
+          }
+        }
+
+        &_content {
+          width: auto;
+          padding: 0;
+
+          img {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto;
+          }
+
+          p {
+            display: none;
+          }
+        }
+      }
+
+      .header-center {
+        justify-content: center;
+
+        .header__container_backButton {
+          position: absolute;
+          top: 1.5rem;
+          left: 1rem;
+        }
+      }
+    }
+  }
+}

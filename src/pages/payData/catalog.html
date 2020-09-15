@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/styles.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Catalog</title>
+</head>
+<body>
+    <header>
+    <div class="header">
+        <div class="header__line"></div>
+        <div class="header__container line-available">
+            <div class="header__container_backButton">
+                <img src="../../img/leftArrow.svg" alt="back">
+                <p>Назад</p>
+            </div>
+            <div class="header__container_content">
+                <img src="../../img/logo.svg" alt="logo">
+                <p>
+                    онлайн-конференция для тех, кто делает
+                    <br>
+                    удобные цифровые продукты
+                </p>
+            </div>
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-user">
+                    <img src="../../img/user.svg" alt="user">
+                    <p>Мария</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="catalog">
+        <section class="course">
+            <div class="course__content">
+                <div class="course__content_video available">
+                    <img src="https://wallpaperplay.com/walls/full/0/2/2/82794.jpg" alt="video">
+                </div>
+                <div class="course__content_info">
+                    <div class="course__content_info-main">
+                        <h2>Продукт как ребенок: от нуля до полутора лет. Лайфхаки, болезни роста и дизайн-родительство</h2>
+                        <p>Катерина Тюхай, UX-Lead, ВТБ</p>
+                    </div>
+                    <p class="info-text">#20 Юбилейный UX-Марафон</p>
+                </div>
+            </div>
+        </section>
+        <section class="tabs">
+            <div class="tabs__nav">
+                <h2>Выберите продукт</h2>
+            </div>
+            <div class="tabs__content">
+                <div class="container">
+                    <div id="month" class="b-tab active container-fluid">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <div class="item item-current">
+                                    <h2>
+                                        Только этот
+                                        <br>
+                                        доклад
+                                    </h2>
+                                    <h1 class="big-heading">590₽</h1>
+                                    <p class="info-text">
+                                        доступ к видео и презентации
+                                        <br>
+                                        на 1 год
+                                    </p>
+                                    <input id="first" type="radio" name="numbers" value="first">
+                                    <label for="first" class="btn btn-primary">
+                                        <p>Выбрать</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="item item-full">
+                                    <h2>
+                                        <span>Весь UX-Марафон</span>
+                                        <br>
+                                        6 докладов
+                                    </h2>
+                                    <h1 class="big-heading">2990₽</h1>
+                                    <p class="info-text">
+                                        доступ к видео, презентациям и
+                                        <br>
+                                        тематическим материалам
+                                        <br>
+                                        на 1 год
+                                    </p>
+                                    <input id="second" type="radio" name="numbers" value="first">
+                                    <label for="second" class="btn btn btn-secondary">
+                                        <p>Выбрать</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="item item-all">
+                                    <h1 class="big-heading">Скоро</h1>
+                                    <h2>
+                                        Все прошедшие
+                                        <br>
+                                        UX-Марафоны
+                                        <br>
+                                        100+ докладов
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="extra">
+            <div class="extra__form">
+                <h2>Проверьте свои данные</h2>
+                <form class="data__form_main">
+                    <div class="form-group">
+                        <label for="surname">Фамилия*</label>
+                        <input type="text" class="form-control" id="surname" value="Андреева" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Имя*</label>
+                        <input type="text" class="form-control" id="name" value="Мария" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Адрес электронной почты*</label>
+                        <input type="email" class="form-control" id="address" value="maria.andreeva@company.com" disabled>
+                    </div>
+                </form>
+
+                <div class="buttons">
+                    <button class="btn btn-primary" disabled >Все верно</button>
+                </div>
+
+                <p class="info-text">
+                    Вы можете проверить свои данные в
+                    <a href="#">личном кабинете</a>
+                </p>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__nav">
+                <ul>
+                    <li><a href="#">События</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Докладчикам</a></li>
+                    <li><a href="#">Договор</a></li>
+                    <li><a href="#">Положение о конфиденциальности</a></li>
+                    <li><a href="#">Вопрос или проблема?</a></li>
+                </ul>
+            </div>
+            <div class="footer__info">
+                <p>© UX-Марафон 2015-2020</p>
+                <div class="footer__info_socials">
+                    <a href="#">
+                        <img src="../../img/socials/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img src="../../img/socials/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="#">
+                        <img src="../../img/socials/insta.svg" alt="insta">
+                    </a>
+                    <a href="#">
+                        <img src="../../img/socials/youtube.svg" alt="youtube">
+                    </a>
+                </div>
+                <p>Мы используем иллюстрации с icons8.com </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../../js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

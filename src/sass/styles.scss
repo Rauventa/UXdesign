@@ -1,0 +1,31 @@
+// CORE INPUTS ---
+
+@import 'core/imports/fonts';
+@import 'core/variables/colors';
+
+// MIXINS ---
+
+@import 'core/mixins/text';
+
+// BLOCKS IMPORTS ---
+
+@import 'blocks/header/header';
+@import 'blocks/footer/footer';
+@import 'blocks/cookie/cookie';
+
+// ROOT IMPORTS ---
+
+@import 'blocks/root/root';
+@import 'blocks/test/test';
+
+// PAGES ---
+
+@import 'pages/docs';
+@import 'pages/payment';
+@import 'pages/report';
+@import 'pages/forms';
+@import 'pages/about';
+@import 'pages/first';
+@import 'pages/landing';
+@import 'pages/marafon';
+@import 'pages/certificate';
