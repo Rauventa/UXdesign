@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#16478C" />
     <meta property="og:description" content="UX-Марафон #21: Из рук в руки | 15 октября 2020"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/styles.min.css">
@@ -19,18 +20,25 @@
         <a class="back-top hide" href="" id="backTop">
             <img src="../../img/backTop.svg" alt="back-top">
         </a>
-<!--        <section class="header-line">-->
-<!--            <img src="../../img/landing/bell.svg" alt="bell1">-->
-<!--            <p>До повышени цен осталось 2 дня</p>-->
-<!--            <img src="../../img/landing/bell.svg" alt="bell2">-->
-<!--        </section>-->
+        <section class="header-line">
+            <img src="../../img/landing/bell.svg" alt="bell1">
+            <p>
+                До повышения цен осталось
+                <span id="countbox"></span>
+            </p>
+            <img src="../../img/landing/bell.svg" alt="bell2">
+        </section>
         <header>
             <div class="header-mobile">
                 <div class="header-mobile__line">
                     <p>UX-Марафон #21: Из рук в руки | 15 октября 2020 </p>
                 </div>
                 <div class="header-mobile__container">
-                    <div class="header-mobile__container_hamburger dropdown">
+                    <div class="header-mobile__container_buttons">
+                        <Button class="btn btn-primary" onclick="window.location.href = '#tickets'">Билеты</Button>
+                        <Button class="btn btn-light" onclick="window.location.href = '#program'">Программа</Button>
+                    </div>
+                    <!-- <div class="header-mobile__container_hamburger dropdown">
                         <img src="../../img/hamburger.svg" class="dropdown-toggle" id="hamburger-toggler-person" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="hamburger" />
                         <div class="dropdown-menu" aria-labelledby="hamburger-toggler-person">
                             <a class="dropdown-item" href="#tickets">Билеты</a>
@@ -41,13 +49,32 @@
                         <img src="../../img/logo.svg" alt="logo">
                     </div>
                     <div class="header-mobile__container_buttons">
-                        <div class="header-mobile__container_buttons-enter">
-                            <img src="../../img/user.svg" alt="">
-                            <p>Войти</p>
+                        <div class="header__container_buttons-user">
+                            <img src="../../img/user.svg" alt="user">
+                            <p>Мария</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+            <!-- <div class="sticky-header">
+                <div class="sticky-header__main">
+                    <div class="sticky-header__main sticky-header__main_logo">
+                        <img src="../../img/landing/logo.svg" alt="">
+                    </div>
+                    <div class="sticky-header__main sticky-header__main_text">
+                        <h2>UX-Марафон #21: Из рук в руки</h2>
+                        <p>15 октября 2020</p>
+                    </div>
+                </div>
+                <div class="sticky-header__buttons">
+                    <button class="btn btn-primary" onclick="window.location.href = '#tickets'">Билеты</button>
+                    <button class="btn btn-light" onclick="window.location.href = '#program'">Программа</button>
+                </div>
+                <div class="sticky-header__enter">
+                    <img src="../../img/user.svg" alt="">
+                    <p>Войти</p>
+                </div>
+            </div> -->
             <div class="sticky-header">
                 <div class="sticky-header__main">
                     <div class="sticky-header__main sticky-header__main_logo">
@@ -66,7 +93,7 @@
                     <img src="../../img/user.svg" alt="">
                     <p>Войти</p>
                 </div>
-            </div>
+            </div>   
             <div class="header-top">
                 <div class="header-logo">
                     <img src="../../img/landing/logo.svg" alt="">
@@ -76,6 +103,10 @@
                     <br>
                     онлайн-конференция
                 </h2>
+                <!-- <div class="header-enter person-enter">
+                    <img src="../../img/user.svg" alt="">
+                    <p>Мария</p>
+                </div> -->
                 <div class="header-enter">
                     <img src="../../img/user.svg" alt="">
                     <p>Войти</p>
@@ -102,60 +133,114 @@
                 <img src="../../img/landing/cjm.png" alt="cjm" class="img-cjm">
             </div>
         </header>
-        <section class="speakers">
-            <h1 class="landing-heading">Спикеры</h1>
-            <div class="speakers__list container">
-                <div class="speakers__list speakers__list_person" onclick="window.location.href = '#dmitry'">
-                    <img src="../../img/landing/ilyin.svg" alt="ilyin">
-                    <p class="danger-text">
-                        Дмитрий Ильин
-                        <br>
-                        <span class="info-text">
+<!--        <div class="speakers__list_person" onclick="window.location.href = '#another'">-->
+<!--            <img src="../../img/more.svg" alt="person">-->
+<!--            <p class="danger-text">-->
+<!--                + 3 крутых спикера-->
+<!--                <br>-->
+<!--                <span class="info-text">-->
+<!--                            С докладами про юзабилити-тесты,-->
+<!--                            <br>-->
+<!--                            CJM и другие фреймворки-->
+<!--                        </span>-->
+<!--            </p>-->
+<!--        </div>-->
+        <section class="speakers container">
+            <div class="row">
+                <div class="speakers__list container">
+                    <div class="col-xl-4 col-sm-12">
+                        <div class="speakers__list_person" onclick="window.location.href = '#dmitry'">
+                            <img src="../../img/landing/ilyin.svg" alt="ilyin">
+                            <p class="danger-text">
+                                Дмитрий Ильин
+                                <br>
+                                <span class="info-text">
                             Senior Marketing Data Analyst
                             <br>
                             Альфа-банк
                         </span>
-                    </p>
-                </div>
-                <div class="speakers__list speakers__list_person" onclick="window.location.href = '#marya'">
-                    <img src="../../img/landing/marya.svg" alt="marya">
-                    <p class="danger-text">
-                        Мария Амирханян
-                        <br>
-                        <span class="info-text">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-12">
+                        <div class="speakers__list_person" onclick="window.location.href = '#marya'">
+                            <img src="../../img/landing/marya.svg" alt="marya">
+                            <p class="danger-text">
+                                Мария Амирханян
+                                <br>
+                                <span class="info-text">
                             UX-исследователь
                             <br>
                             Mail.ru Group
                         </span>
-                    </p>
-                </div>
-                <div class="speakers__list speakers__list_person" onclick="window.location.href = '#irina'">
-                    <img src="../../img/landing/denisova.png" alt="denisova">
-                    <p class="danger-text">
-                        Ирина Денисова
-                        <br>
-                        <span class="info-text">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-12">
+                        <div class="speakers__list_person" onclick="window.location.href = '#irina'">
+                            <img src="../../img/landing/denisova.png" alt="denisova">
+                            <p class="danger-text">
+                                Ирина Денисова
+                                <br>
+                                <span class="info-text">
                             UX-специалист, аналитик,
                             <br>
                             основатель веб-студии
                             <br>
                             Denir.ru
                         </span>
-                    </p>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="speakers__list speakers__list_person" onclick="window.location.href = '#another'">
-                    <img src="../../img/more.svg" alt="person">
-                    <p class="danger-text">
-                        + 3 крутых спикера
-                        <br>
-                        <span class="info-text">
-                            С докладами про юзабилити-тесты,
-                            <br>
-                            CJM и другие фреймворки
-                        </span>
-                    </p>
+            </div>
+            <div class="row">
+                <div class="speakers__list container">
+                    <div class="col-xl-4 col-sm-12">
+                        <div class="speakers__list_person" onclick="window.location.href = '#nadezda'">
+                            <img src="../../img/landing/nadezda.png" alt="nadezda">
+                            <p class="danger-text">
+                                Надежда Щетинина
+                                <br>
+                                <span class="info-text">
+                                    Руководитель Центра компетенции
+                                    <br>
+                                    исследований клиентского опыта 
+                                    <br>
+                                    ПСБ
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-12">
+                        <div class="speakers__list_person" onclick="window.location.href = '#anastasiya'">
+                            <img src="../../img/landing/anastasiya.png" alt="anastasiya">
+                            <p class="danger-text">
+                                Анастасия Харитонова
+                                <br>
+                                <span class="info-text">
+                                    Lead Product Designer
+                                    <br>
+                                    Росбанк
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-12">
+                        <div class="speakers__list_person" onclick="window.location.href = '#keterina'">
+                            <img src="../../img/landing/katerina.png" alt="keterina">
+                            <p class="danger-text">
+                                Катерина Момот
+                                <br>
+                                <span class="info-text">
+                                    Дизайнер
+                                    <br>
+                                    Райффайзенбанк
+                                </span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </section>
         <section class="how">
@@ -392,28 +477,161 @@
                         </div>
                     </div>
                 </div>
-                <div class="program__list_action" id="another">
+                <div class="program__list_action" id="nadezda">
                     <div class="program__list_action-info">
                         <p class="info-text"></p>
-                        <p class="danger-text">юзабилити-тесты, CJM и другие фреймворки</p>
+                        <p class="danger-text">
+                            Как провести интервью и докопаться до сути
+                        </p>
                     </div>
                     <div class="program__list_action-content">
                         <div class="program__list_action-content--specialist">
-                            <img src="../../img/more.svg" alt="">
+                            <img src="../../img/landing/nadezda.png" alt="">
                             <div class="specialist-text">
-                                <p>+ 3 крутых спикера</p>
+                                <p>Надежда Щетинина</p>
+                                <p class="info-text">
+                                    Руководитель Центра компетенции
+                                    <br>
+                                    исследований клиентского опыта
+                                    <br>
+                                    ПСБ
+                                </p>
                             </div>
                         </div>
                         <div class="program__list_action-content--info">
-                            <p>
-                                Скоро объявим еще нескольких спикеров, следите за новостями в
-                                <a href="https://t.me/uxmarafon">Telegram</a>
-                                и
-                                <a href="https://www.facebook.com/uxmarafon/">UX Club</a>!
-                            </p>
+                            <ul>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Коротко о том, что такое глубинное интервью и зачем оно нужно
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Психология принципов проведения глубинного интервью
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Что делать, если вам попался трудный респондент
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как новичкам перестать бояться и начать интервьюировать
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <div class="program__list_action" id="katerina">
+                    <div class="program__list_action-info">
+                        <p class="info-text"></p>
+                        <p class="danger-text">
+                            UserStory Map — как описать новый продукт на основе CJM
+                        </p>
+                    </div>
+                    <div class="program__list_action-content">
+                        <div class="program__list_action-content--specialist">
+                            <img src="../../img/landing/katerina.png" alt="">
+                            <div class="specialist-text">
+                                <p>Катерина Момот</p>
+                                <p class="info-text">
+                                    Дизайнер
+                                    <br>
+                                    Райффайзенбанк
+                                </p>
+                            </div>
+                        </div>
+                        <div class="program__list_action-content--info">
+                            <ul>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Вы составили CJM. Что дальше?
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как составляется User Story Map: теория
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как теория ложится на практику — не все так просто 🙂
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Level UP: бизнес модель и бизнес-цели на карте
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="program__list_action" id="anastasiya">
+                    <div class="program__list_action-info">
+                        <p class="info-text"></p>
+                        <p class="danger-text">
+                            От гипотезы до результата и обратно. Юзабилити-тестирования  в Росбанке
+                        </p>
+                    </div>
+                    <div class="program__list_action-content">
+                        <div class="program__list_action-content--specialist">
+                            <img src="../../img/landing/anastasiya.png" alt="">
+                            <div class="specialist-text">
+                                <p>Анастасия Харитонова</p>
+                                <p class="info-text">
+                                    Lead Product Designer
+                                    <br>
+                                    Росбанк
+                                </p>
+                            </div>
+                        </div>
+                        <div class="program__list_action-content--info">
+                            <ul>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как мы формулируем и отбираем гипотезы
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как набрать респондентов в ограниченных условиях
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Сколько нужно респондентов и почему
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как проводим удаленные юзабилити-тестирования
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Как проводим очные юзабилити-тестирования
+                                </li>
+                                <li>
+                                    <img src="../../img/landing/grey-ellipse.svg" alt="ellipse">
+                                    Что делать с результатами
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="program__list_action" id="another">-->
+<!--                    <div class="program__list_action-info">-->
+<!--                        <p class="info-text"></p>-->
+<!--                        <p class="danger-text">юзабилити-тесты, CJM и другие фреймворки</p>-->
+<!--                    </div>-->
+<!--                    <div class="program__list_action-content">-->
+<!--                        <div class="program__list_action-content&#45;&#45;specialist">-->
+<!--                            <img src="../../img/more.svg" alt="">-->
+<!--                            <div class="specialist-text">-->
+<!--                                <p>+ 3 крутых спикера</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="program__list_action-content&#45;&#45;info">-->
+<!--                            <p>-->
+<!--                                Скоро объявим еще нескольких спикеров, следите за новостями в-->
+<!--                                <a href="https://t.me/uxmarafon">Telegram</a>-->
+<!--                                и-->
+<!--                                <a href="https://www.facebook.com/uxmarafon/">UX Club</a>!-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </section>
         <section class="what">
@@ -442,7 +660,7 @@
                 </div>
             </div>
         </section>
-        <section class="why">
+        <section class="why container">
             <h1 class="landing-heading">Почему UX-Марафон?</h1>
             <div class="why__content">
                 <div class="why__content why__content_item">
@@ -644,11 +862,6 @@
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Для юридических лиц</a>
                 </li>
             </ul>
-<!--            <section class="header-line">-->
-<!--                <img src="../../img/landing/bell.svg" alt="bell1">-->
-<!--                <p>До повышени цен осталось 2 дня</p>-->
-<!--                <img src="../../img/landing/bell.svg" alt="bell2">-->
-<!--            </section>-->
             <div class="tab-content" id="tickets-tabs">
                 <div class="tickets__main tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="tickets__main_list container">
@@ -673,7 +886,20 @@
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Видео докладов
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Просмотр видео всех докладов UX-марафона #21 на сайте ux-marafon.ru в течение 1 года с даты марафона"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Просмотр видео всех докладов
+                                                                <br/>
+                                                                UX-марафона #21 на сайте ux-marafon.ru
+                                                                <br/>
+                                                                в течение 1 года с даты марафона
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                             <li>
                                                 <i class="fa fa-times"></i>
@@ -690,12 +916,40 @@
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Полезные материалы
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Сборник ссылок и литературы по всему UX-Марафону и контакты спикеров"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Сборник ссылок и
+                                                                <br/>
+                                                                литературы по всему
+                                                                <br/>
+                                                                UX-Марафону и контакты
+                                                                <br/>
+                                                                спикеров
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Презентации
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Слайды, которые спикер показывает во время выступления. После конференции их можно скачать в pdf"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Слайды, которые спикер показывает во
+                                                                <br/>
+                                                                время выступления. После конференции
+                                                                <br/>
+                                                                их можно скачать в pdf.
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                         </ul>
                                     </div>
@@ -734,7 +988,22 @@
                                         <b>5 событий:</b>
                                         <br>
                                         UX-Марафоны #21-25
-                                        <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Темы будущих марафонов: UX-Марафон #22 - Информационная архитектураUX-Марафоны #23-25 - Аналитика поведения, UX в E-commerce, Окупаемость в UX"></i>
+                                        <i
+                                                class="fa fa-question-circle question-icon"
+                                                data-toggle="tooltip"
+                                                data-placement="right"
+                                                data-html="true"
+                                                title="<p>
+                                                        Темы будущих марафонов:
+                                                        <br/>
+                                                        UX-Марафон #22 - Информационная архитектура
+                                                        <br/>
+                                                        UX-Марафоны #23-25 - Аналитика поведения,
+                                                        <br/>
+                                                        UX в E-commerce, Окупаемость в UX
+                                                       </p>"
+                                        >
+                                        </i>
                                     </p>
                                 </div>
                                 <div class="item__content">
@@ -747,7 +1016,20 @@
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Видео докладов
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Просмотр видео всех докладов UX-марафонов #21-25 на сайте ux-marafon.ru в течение 1 года с даты марафона"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Просмотр видео всех докладов
+                                                                <br/>
+                                                                UX-марафонов #21-25 на сайте ux-marafon.ru
+                                                                <br/>
+                                                                в течение 1 года с даты марафона
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                             <li>
                                                 <i class="fa fa-times"></i>
@@ -764,12 +1046,40 @@
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Полезные материалы
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Сборник ссылок и литературы по всему UX-Марафону и контакты спикеров"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Сборник ссылок и
+                                                                <br/>
+                                                                литературы по всему
+                                                                <br/>
+                                                                UX-Марафону и контакты
+                                                                <br/>
+                                                                спикеров
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Презентации
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Слайды, которые спикер показывает во время выступления. После конференции их можно скачать в pdf"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Слайды, которые спикер показывает во
+                                                                <br/>
+                                                                время выступления. После конференции
+                                                                <br/>
+                                                                их можно скачать в pdf.
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                         </ul>
                                     </div>
@@ -810,7 +1120,20 @@
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Видео докладов
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Просмотр видео всех докладов UX-марафона #21 на сайте ux-marafon.ru в течение 1 года с даты марафона"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Просмотр видео всех докладов
+                                                                <br/>
+                                                                UX-марафона #21 на сайте ux-marafon.ru
+                                                                <br/>
+                                                                в течение 1 года с даты марафона
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                             <li>
                                                 <i class="fa fa-check"></i>
@@ -827,12 +1150,40 @@
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Полезные материалы
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Сборник ссылок и литературы по всему UX-Марафону и контакты спикеров"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Сборник ссылок и
+                                                                <br/>
+                                                                литературы по всему
+                                                                <br/>
+                                                                UX-Марафону и контакты
+                                                                <br/>
+                                                                спикеров
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                             <li>
                                                 <i class="fa fa-check"></i>
                                                 Презентации
-                                                <i class="fa fa-question-circle question-icon" data-toggle="popover" data-content="Слайды, которые спикер показывает во время выступления. После конференции их можно скачать в pdf"></i>
+                                                <i
+                                                        class="fa fa-question-circle question-icon"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right"
+                                                        data-html="true"
+                                                        title="<p>
+                                                                Слайды, которые спикер показывает во
+                                                                <br/>
+                                                                время выступления. После конференции
+                                                                <br/>
+                                                                их можно скачать в pdf.
+                                                               </p>"
+                                                >
+                                                </i>
                                             </li>
                                         </ul>
                                     </div>
@@ -869,6 +1220,13 @@
                 <div class="tickets__ur container tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <p class="danger-text">Больше билетов – больше скидка! от 3 билетов – 15%, от 5 билетов – 20%, от 10 билетов – 25%</p>
                 </div>
+            </div>
+            <div class="gift-line">
+                <div class="gift-line__content">
+                    <img src="../../img/landing/gift-ordinary.svg" alt="gift">
+                    <p>Получите доступ к одному из докладов UX-Марафона #20 + презентацию бесплатно</p>
+                </div>
+                <button class="btn btn-primary btn-border">Узнать больше</button>
             </div>
         </section>
         <section class="extra" id="extra">
@@ -990,7 +1348,46 @@
 </script>
 <script>
     $(function () {
-        $('[data-toggle="popover"]').popover()
+        $('[data-toggle="tooltip"]').tooltip({
+            trigger: "hover",
+            delay: {show: 300, hide: 100}
+        })
     })
+</script>
+<script>
+    dateFuture = new Date(2020,8,24,23,59,59);
+
+    function GetCount(){
+
+        dateNow = new Date();
+
+        amount = dateFuture.getTime() - dateNow.getTime();
+        delete dateNow;
+        if(amount < 0){
+            document.getElementById('countbox').innerHTML="Now!";
+        }
+        else{
+
+            days=0;hours=0;mins=0;secs=0;out="";
+
+            amount = Math.floor(amount/1000);
+
+            days=Math.floor(amount/86400);
+            amount=amount%86400;
+
+            if (days === 1) {
+                out+= days + " День"
+            } else if (days === 2 || days === 3 || days === 4) {
+                out+= days + " Дня"
+            } else {
+                out += days +" Дней"
+            }
+            document.getElementById('countbox').innerHTML=out;
+
+            setTimeout("GetCount()", 1000);
+        }
+    }
+
+    window.onload=function(){GetCount();}
 </script>
 </html>

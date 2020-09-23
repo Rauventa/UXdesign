@@ -231,6 +231,61 @@ a {
   color: $textBlack;
 }
 
+.gift-line {
+  background: linear-gradient(91.17deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+
+    p {
+      margin-bottom: 0;
+      color: $white;
+    }
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  .btn-border {
+    margin: 0 1rem;
+    border: 1px solid $white !important;
+    background-color: transparent !important;
+
+    &:hover {
+      background-color: #16478C !important;
+      border: 1px solid #16478C !important;
+      box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08) !important;
+    }
+  }
+}
+
+.tooltip {
+
+  &-inner {
+    background-color: $white !important;
+    padding: 1rem 2rem !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    border: 1px solid #8A8E93 !important;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.arrow {
+  display: none !important;
+}
+
 
 
 @media screen and (max-width: 767px) {

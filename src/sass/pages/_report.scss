@@ -156,8 +156,10 @@
       min-height: 50vh;
 
       &-video {
-        img {
+        .video-container {
+          height: auto;
           width: 100%;
+          display: flex;
         }
 
         button {

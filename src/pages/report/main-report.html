@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//vjs.zencdn.net/5.6.0/video-js.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.min.css">
     <link rel="stylesheet" href="../../css/site.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -68,7 +69,15 @@
                 <div class="row">
                     <div class="col-xl-7 col-md-12 col-sm-12">
                         <div class="main-report__content_container-video">
-                            <img src="../../img/main-report/placeholder.png" alt="">
+                            <div class="video-container">
+                                <video id="example_video_1" class="video-js vjs-big-play-centered"
+                                       controls preload="metadata" autoplay
+                                       data-viblast-key="N8FjNTQ3NDdhZqZhNGI5NWU5ZTI=">
+                                    <!-- this is an important to specify the type of the video. Use 'application/x-mpegURL' for HLS streams or 'application/dash+xml' for DASH streams -->
+                                    <source src="http://test.ux-marafon.ru/video/video_348.mp4" type="video/mp4" />
+                                </video>
+                                <p id="duration"></p>
+                            </div>
                             <button class="btn btn-primary">Скачать доклад</button>
                         </div>
                     </div>
@@ -170,6 +179,32 @@
         </div>
     </footer>
 </body>
+<script src="//vjs.zencdn.net/5.6.0/video.js"></script>
+    <script src="//cdn.viblast.com/vb/stable/viblast.js"></script>
+    <script>
+        let playerUX = videojs('#example_video_1', {
+            playbackRates: [0.5, 1, 1.5, 2]
+        }, function() {
+
+            let time = playerUX.duration();
+            let minutes = Math.floor(time / 60);
+            let seconds = Math.floor(time - minutes * 60);
+
+            document.getElementById("duration").innerHTML = `${minutes}:${seconds}`;
+
+            let isPlaying = false;
+
+            playerUX.on(['waiting', 'pause'], function() {
+                isPlaying = false;
+            });
+
+            playerUX.on('playing', function() {
+                isPlaying = true;
+
+                document.getElementById("duration").style.display = "none";
+            });
+        });
+    </script>
 <script src="../../js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

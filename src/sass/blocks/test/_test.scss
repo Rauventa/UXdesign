@@ -4,12 +4,14 @@
   justify-content: center;
   align-items: center;
   width: 839px;
-  height: 472px;
+  min-height: 350px;
+  height: 100%;
 }
 
 .vjs-paused {
   video {
     opacity: 0.2;
+    position: relative;
   }
 }
 
@@ -50,5 +52,56 @@
     right: 15px;
     font-size: 40px;
     top: 10px;
+  }
+}
+
+.vjs-menu-item {
+  color: $white;
+}
+
+.video-container {
+  width: 839px;
+  height: auto;
+  position: relative;
+  
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#duration {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background-color: $textBlack;
+  color: $white;
+}
+
+.video-basic {
+  .vjs-big-play-button {
+    width: fit-content !important;
+
+    &::before {
+      content: '' !important;
+      display: none !important;
+    }
+
+    &::after {
+      content: '\f101';
+      color: $bgOcean;
+      position: absolute;
+      right: 12px !important;
+      font-size: 40px;
+      top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video-js {
+    width: inherit;
   }
 }

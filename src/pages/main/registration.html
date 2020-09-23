@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#16478C" />
+    <meta property="og:description" content="UX-Марафон #21: Из рук в руки | 15 октября 2020"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/styles.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Reg</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header__line"></div>
+            <div class="header__container">
+                <div class="header__container_hamburger dropdown">
+                    <img src="../../img/hamburger.svg" class="dropdown-toggle" id="hamburger-toggler-enter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="hamburger" />
+                    <div class="dropdown-menu" aria-labelledby="hamburger-toggler-enter">
+                        <a class="dropdown-item" href="#">События</a>
+                        <a class="dropdown-item" href="#">Доклады</a>
+                        <a class="dropdown-item" href="#">Спикеры</a>
+                        <a class="dropdown-item" href="#">Компании</a>
+                    </div>
+                </div>
+                <div class="header__container_content">
+                    <img src="../../img/logo.svg" alt="logo">
+                    <p>
+                        онлайн-конференция для тех, кто делает
+                        <br>
+                        удобные цифровые продукты
+                    </p>
+                </div>
+                <div class="header__container_buttons">
+                    <div class="header__container_buttons-enter">
+                        <img src="../../img/user.svg" alt="">
+                        <p>Войти</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="reg">
+        <div class="reg__container container">
+            <div class="reg__title">
+                <p>
+                    доступ к одному из докладов UX-марафона #20 + презентация бесплатно для новых пользователей
+                </p>
+            </div>
+            <div class="reg__video">
+                <div class="reg__video_container">
+                    <div class="reg__video_screen">
+                        <img src="../../img/reg/reg__screen.png" alt="screen">
+                        <div class="reg__video_counter">
+                            <span class="hour reg__video_counter-item">1:08:06</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reg__video_info">
+                    <h3 class="reg__video_info-title">8 наколок UX-менеджера</h3>
+                    <p class="reg__video_info-members">Алексей Бородкин, Lead Designer, Виталий Мазуревич, Product Designer, Росбанк</p>
+                    <div class="reg__video_info-ux">#20 Юбилейный UX-Марафон</div>
+                </div>
+            </div>
+        </div>
+        <div class="registration container">
+            <p class="danger-text">Здравствуйте, рады вас видеть</p>
+            <p class="info-text">
+                Создайте аккаунт и присоединяйтесь к нашему сообществу
+            </p>
+            <div class="registration__form">
+                <form>
+                    <div class="form-group">
+                        <label for="surname">Фамилия*</label>
+                        <input type="text" class="form-control" id="surname" aria-describedby="surname">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Имя*</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Адрес электронной почты*</label>
+                        <input type="email" class="form-control" id="address">
+                    </div>
+                    <div class="form-group" id="show_hide_password">
+                        <label for="password">Пароль*</label>
+                        <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                        <span class="show-hide">
+                            <a href=""><i aria-hidden="true" class="fa fa-eye-slash"></i></a>
+                        </span>
+                        <small id="passwordHelp" class="form-text info-text">
+                            <br>
+                            - не менее 6 символов
+                            <br>
+                            - не менее 1 цифры
+                            <br>
+                            - латинские буквы в нижнем и верхнем регистре
+                        </small>
+                    </div>
+                    <div class="form-group" id="show_hide_repeat">
+                        <label for="repeat">Подтвердите новый пароль*</label>
+                        <input type="password" class="form-control" id="repeat">
+                        <span class="show-hide">
+                            <a href=""><i aria-hidden="true" class="fa fa-eye-slash"></i></a>
+                        </span>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">
+                            Я внимательно прочитал(а)
+                            <a href="#">Договор</a>
+                            и
+                            <a href="#">Положение о конфиденциальности</a>
+                            и выражаю свое полное согласие с этими документами.
+                        </label>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary">Создать аккаунт</button>
+                        <p class="info-text">
+                            Уже есть аккаунт?
+                            <a href="#">Войти</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul>
+                <li><a href="#">События</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Докладчикам</a></li>
+                <li><a href="#">Договор</a></li>
+                <li><a href="#">Положение о конфиденциальности</a></li>
+                <li><a href="#">Вопрос или проблема?</a></li>
+            </ul>
+        </div>
+        <div class="footer__info">
+            <p>© UX-Марафон 2015-2020</p>
+            <div class="footer__info_socials">
+                <a href="#">
+                    <img src="../../img/socials/facebook.svg" alt="facebook">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/telegram.svg" alt="telegram">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/insta.svg" alt="insta">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/youtube.svg" alt="youtube">
+                </a>
+            </div>
+            <p>Мы используем иллюстрации с icons8.com </p>
+        </div>
+    </footer>
+</body>
+</html>

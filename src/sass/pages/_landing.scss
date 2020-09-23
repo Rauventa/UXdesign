@@ -52,6 +52,7 @@
   .header-line {
     min-height: 5vh;
     width: 100%;
+    padding: 0.25rem;
     background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
     display: flex;
     justify-content: center;
@@ -81,11 +82,26 @@
       &__line {
         height: 10px;
         width: 100%;
-        background: linear-gradient(151.43deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%);
+        padding: 0.25rem;
+        background: #16478C !important;
       }
 
       &__container {
+        &_buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
 
+          button {
+            margin: 0 1rem;
+            min-width: 20px !important;
+            max-width: 38px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
         &_hamburger {
           display: none !important;
         }
@@ -150,6 +166,12 @@
             left: 0;
           }
 
+          &-user {
+            p {
+              color: $textBlack;
+            }
+          }
+
           &-logout {
             p {
               margin: 0 1rem 0 0;
@@ -193,7 +215,7 @@
 
     .sticky-header.sticky-header-show {
       opacity: 1;
-      margin: -2rem 0;
+      margin: -4.5rem 0;
     }
 
     .sticky-header {
@@ -298,6 +320,13 @@
         margin-left: 3rem;
       }
 
+      .person-enter {
+        p {
+          text-transform: none !important;
+          color: $textBlack !important;
+        }
+      }
+
       .header-enter {
         background-color: #F6F6F7;
         box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
@@ -380,6 +409,7 @@
 
         .danger-text {
           font-size: 20px;
+          letter-spacing: 0 !important;
         }
 
         .info-text {
@@ -550,6 +580,7 @@
   .what {
     padding: 4rem;
     width: 100%;
+    background: linear-gradient(180deg, rgba(255, 95, 109, 0.5) -29.2%, rgba(255, 195, 113, 0.5) 105.47%);
     margin-bottom: 4rem;
 
     p {
@@ -591,7 +622,7 @@
   .why {
     padding: 4rem;
     background: linear-gradient(88.36deg, rgba(243, 154, 154, 0.6) -3.15%, rgba(183, 182, 241, 0.6) 84.21%);
-    margin: 0 4rem 4rem 4rem;
+    //margin: 0 4rem 4rem 4rem;
     min-height: 80vh;
 
     &__content {
@@ -606,7 +637,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        width: 60%;
+        width: 70%;
 
 
         &:not(:last-child) {
@@ -658,7 +689,7 @@
 
     &_container {
       width: 100%;
-      min-height: 60vh;
+      //min-height: 60vh;
       background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
       padding: 2rem 0;
       display: flex;
@@ -991,6 +1022,10 @@
           border: 1px solid $bgMagenta;
           box-shadow: 2px 2px 8px rgba(175, 3, 178, 0.3), -2px -2px 8px rgba(175, 3, 178, 0.3);
 
+          .danger-text {
+            letter-spacing: 0 !important;
+          }
+
           .item__heading {
             background-color: rgba(175,3,178, 0.35);
           }
@@ -1096,7 +1131,7 @@
     }
 
     &__ur {
-      padding: 4rem 0 2rem 0;
+      padding: 1rem 0 2rem 0;
       width: 100%;
       height: 100%;
 
@@ -1329,6 +1364,7 @@
           align-items: center;
           min-height: 3vh;
           width: 100%;
+          padding: 0.5rem;
           background: linear-gradient(91.17deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%);
 
           p {
@@ -1339,7 +1375,7 @@
 
         &__container {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           position: relative;
           align-items: center;
           background-color: $bgGrey;
@@ -1372,6 +1408,12 @@
               top: 0;
               border-radius: 0;
               padding: 0;
+            }
+
+            &-user {
+              p {
+                color: $textBlack;
+              }
             }
 
             &-enter {
@@ -1443,7 +1485,7 @@
     }
 
     .what {
-      padding: 0 2rem 2rem 2rem;
+      padding: 2rem;
       &__content {
         &_info {
           margin: 2rem 0 !important;
@@ -1566,6 +1608,18 @@
             &:not(:last-child) {
               margin-bottom: 2rem;
             }
+          }
+        }
+      }
+    }
+
+    .feedback {
+      .swiper-wrapper {
+        .swiper-slide {
+          display: none;
+
+          &:nth-child(-n+3) {
+            display: block;
           }
         }
       }
@@ -1699,7 +1753,7 @@
     }
 
     .what {
-      margin-bottom: 0;
+      margin-bottom: 4rem;
 
       &__content {
         flex-direction: column;
