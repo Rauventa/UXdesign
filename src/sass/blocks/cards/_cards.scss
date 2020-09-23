@@ -4,16 +4,24 @@
         flex-direction: column;
         align-items: center;
     }
+    &__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
 }
 .menu {
     display: flex;
     align-items: center;
     justify-content: center;
     &__wrapper {
+        margin-top: 40px;
         display: flex;
         align-items: center;
         padding: 8px 15px;
-        background-color: $bgGrey ;
+        background-color: $bgGrey;
         box-shadow: inset 0px 1px 2px rgba(29, 37, 47, 0.08), inset 0px 4px 6px rgba(29, 37, 47, 0.08);
         border-radius: 6px;
     }
@@ -79,5 +87,189 @@
                 z-index: 1000;
             }
         }
+    }
+}
+.card {
+    max-width: 30%;
+    background-color: $white;
+    box-shadow: 0px 2px 2px rgba(29, 37, 47, 0.08), 0px 4px 6px rgba(29, 37, 47, 0.08);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+    height: 100%;
+    .present {
+        display: none;
+        position: absolute;
+        background: #FFD483;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #FEAE14;
+        box-sizing: border-box;
+        border-radius: 100%;
+        padding: 10px;
+        left: 10px;
+        top: 10px;
+    }
+    .unavailable {
+        display: none;
+    }
+    .available {
+        display: none;
+    }
+
+
+    &__descr {
+        margin-top: 20px;
+        width: 90%;
+        h2 {
+            color: $textBlack;
+            font-size: 18px;
+        }
+        .name {
+            font-size: 14px;
+        }
+        .speciality {
+            font-size: 14px;
+        }
+    }
+    &__video {
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__bottom {
+        margin-top: 30px;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        // align-self: start;
+    }
+    .available {
+        padding: 5px 15px;
+        background: rgba(14, 151, 85, 0.15);
+        border-radius: 4px;
+        P {
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $lineSuccess;
+            margin: 0;
+            padding: 0;
+            .date {
+                font-weight: bold;
+            }
+        }
+    }
+    .unavailable {
+        padding: 5px 15px;
+        background: $bgGrey;
+        border-radius: 4px;
+        display: none;
+        P {
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $textGrey;
+            margin: 0;
+            padding: 0;
+            .date {
+                font-weight: bold;
+            }
+        }
+    }
+    .download {
+        // display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 24px;
+        width: 24px;
+        transition: .3s all ease;
+        display: none;
+        &_item {
+            animation: dowl_item 1.3s ease-in-out infinite;
+           
+            // transform: translateY(100px);
+            transition: 1s;
+        }
+        svg {
+            position: absolute;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    .price {
+        display: none;
+        background: rgba(#1D252F, .5);
+        border-radius: 4px;
+        color: $white;
+        padding: 5px;
+        font-size: 11px;
+    }
+    .free {
+        width: 100%;
+        background: $bgMagenta;
+        font-weight: bold;
+        font-size: 11px;
+        color: $bgGrey;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        text-transform: uppercase;
+        padding: 5px 0;
+        .date {
+            text-transform: uppercase;
+            margin-left: 4px;
+            font-weight: bold;
+        }
+    }
+    &_free {
+        .free {
+            display: flex;
+        }
+    }
+    &_download {
+        .download {
+            display: flex;
+        }
+    }
+    &_available {
+        .available {
+            display: block;
+        }
+    }
+    &_unavailable {
+        .unavailable {
+            display: block ;
+        }
+    }
+    &_present {
+        .present {
+            display: flex;
+        }
+    }
+    &_nobuy {
+        .price {
+            display: block;
+        }
+    }
+}
+@keyframes dowl_item {
+    0% {
+        top: -4px;
+    }   
+    50% {
+        top: 0px;
+    }
+    100% {
+        top: -4px;
     }
 }
