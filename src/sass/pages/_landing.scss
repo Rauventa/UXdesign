@@ -1859,3 +1859,21 @@
   }
 
 }
+// gift 
+.landing__gift {
+  display: block;
+  z-index: 300;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  &_overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: rgba( 0, 0, 0, .8);
+  }
+}

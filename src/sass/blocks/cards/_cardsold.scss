@@ -84,7 +84,7 @@
                 font-size: 14px;
                 text-transform: uppercase;
                 transition: .3s all ease;
-                z-index: 30;
+                z-index: 1000;
             }
         }
     }
@@ -99,17 +99,6 @@
     position: relative;
     margin-bottom: 50px;
     height: 100%;
-    cursor: pointer;
-    transition: .3s all ease;
-    &:hover {
-        box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
-        .card__descr {
-            h2 {
-                color: #00B2B2;
-            }
-            
-        }
-    }
     .present {
         display: none;
         position: absolute;
@@ -137,7 +126,6 @@
         h2 {
             color: $textBlack;
             font-size: 18px;
-            transition: .3s all ease;
         }
         .name {
             font-size: 14px;
@@ -166,7 +154,7 @@
         background: rgba(14, 151, 85, 0.15);
         border-radius: 4px;
         P {
-            font-size: 9px !important;
+            font-size: 9px;
             font-weight: bold;
             text-transform: uppercase;
             color: $lineSuccess;
@@ -183,7 +171,7 @@
         border-radius: 4px;
         display: none;
         P {
-            font-size: 9px !important;
+            font-size: 9px;
             font-weight: bold;
             text-transform: uppercase;
             color: $textGrey;
@@ -274,169 +262,6 @@
         }
     }
 }
-//slider покупок
-.purchases {
-    margin-top: 30px;
-    position: relative;
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 30px;
-    &__slider_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        // width: 90%;
-        margin-top: 10px;
-    }
-    &__descr {
-        color: $textBlack;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        z-index: 0;
-        height: 40px;
-        line-height: 20px;
-        h2 {
-            margin-bottom: 0 !important;
-        }
-        a {
-            line-height: 12px;
-            font-size: 15px;
-            color: $bgMagenta;
-            margin-left: 10px;
-            z-index: 4;
-        }
-    }
-    &:before {
-        content: '';
-        display: block;
-        background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        opacity: .2;
-    }
-}
-.swiper-container {
-    z-index: 3;
-}
-.swiper-slide {
-    width: auto;
-    .card {
-        max-width: 100%;
-        margin: 10px 0;
-    }
-}
-.swiper-button-next2 , .swiper-button-prev2 {
-    z-index: 10;
-    &:active {
-        outline: none;
-    }
-}
-.reports__head {
-    width: 100%;
-    margin-top: 40px;
-    h2 {
-        font-size: 24px;
-        color: $textBlack;
-    }
-}
-.reports__tabs-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: start;
-    .tab_head {
-        padding: 10px 20px;
-        border-radius: 4px;
-        background: #B1EBEB;
-        color: $textBlack;
-        margin: 5px 10px 5px 0;
-        cursor: pointer;
-        transition: .3s ease;
-        &.active {
-            background: $blue;
-            color: $white;
-        }
-        &:hover {
-            background: $blue;
-            color: $white;
-        }
-    }
-}
-
-
-//sliders 
-.tab {
-    position: relative;
-    width: 100%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    // display: none;
-    &.active {
-        display: block;
-    }
-    &__slider_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        // width: 90%;
-    }
-    &__descr {
-        color: $textBlack;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        z-index: 4;
-        margin-top: 10px;
-        height: 40px;
-        line-height: 20px; 
-        a {
-            height: 20px;
-            line-height: 14px ;
-            font-size: 15px;
-            color: $bgMagenta;
-            margin-left: 10px;
-            z-index: 4;
-        }
-    }
-}
-.swiper-container {
-    z-index: 3;
-}
-.swiper-slide {
-    width: auto;
-    .card {
-        max-width: 100%;
-        margin: 10px 0;
-    }
-}
-.swiper-button-next2 , .swiper-button-prev2 {
-    z-index: 10;
-    &:active {
-        outline: none;
-    }
-}
-.swp-btn {
-    margin: 20px;
-    transition:.3s all;
-}
-.swiper-button-disabled {
-    transform: translateY(-100px);
-    visibility: hidden;
-    opacity: 0;
-}
 @keyframes dowl_item {
     0% {
         top: -4px;
@@ -446,89 +271,5 @@
     }
     100% {
         top: -4px;
-    }
-}
-
-@media (max-width: 1290px) {
-    .purchases {
-        &__slider_wrapper {
-            width: 100%;
-        }
-    }
-    .tab {
-        &__slider_wrapper {
-            width: 90%;
-        }
-    }
-}
-@media (max-width: 1024px) {
-    .reports__head {
-        margin-top: 100px;
-    }
-    .menu {
-        display: none;
-    }
-    .swp-btn {
-        display: none;
-    }
-    .tab {
-        padding: 0;
-        margin: 15px 0;
-    }
-    .purchases {
-        &__slider_wrapper {
-            width: 90%;
-        }
-    }
-    .tab {
-        &__slider_wrapper {
-            width: 90%;
-        }
-    }
-} 
-@media screen and (max-width: 830px) {
-    .tabs_content_2 {
-        max-width: 100%;
-    }
-    .tabs_content_1 {
-        max-width: 100%;
-    }
-    .purchases {
-        &__slider_wrapper {
-            width: 90%;
-        }
-    }
-    .tab {
-        &__slider_wrapper {
-            width: 90%;
-        }
-    }
-}
-@media screen and (max-width: 450px) {
-    .card__bottom {
-        .available {
-            p {
-                font-size: 9px !important;
-            }
-        }
-    }
-}
-@media screen and (max-width: 400px) {
-    .purchases {
-        &__slider_wrapper {
-            width: 100%;
-        }
-    }
-    .tab  {
-        &__slider_wrapper {
-            width: 100%;
-        }
-    }
-    .card__bottom {
-        .available {
-            p {
-                font-size: 7px !important;
-            }
-        }
     }
 }
