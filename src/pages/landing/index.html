@@ -1340,6 +1340,7 @@
                     </svg>
                 </div>
             </div>
+            <h2 class="modal_title">Хотите в подарок доклад с прошлого события?</h2>
             <div class="card card_buy card_free">
                 <div class="present">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1460,13 +1461,14 @@
     }
 
     window.onload=function(){GetCount();}
-
-
+</script>
+<script>
     const ticketsTriggerModal = document.querySelector('.tickets__main'), 
           modal  = document.querySelector('.landing__gift '), 
           modalOverlay = document.querySelector('.landing__gift_overlay'), 
           modalBody = document.querySelector('.landing__gift_modal'), 
-          modalClose = document.querySelector('.landing__gift_modal-close');
+          modalClose = document.querySelector('.landing__gift_modal-close'),
+          modalCancelBtn = document.querySelector('.gift__btns-no');
     let triggerCheck = false;
 
     ticketsTriggerModal.addEventListener('mouseenter', function(e) {
@@ -1489,6 +1491,16 @@
         }
     });
     modalClose.addEventListener('click', function(e) {
+        e.preventDefault()
+        if  (e.target == this ) {
+            modal.classList.remove('active');
+            triggerCheck = true;
+        }
+        if (triggerCheck == true) {
+            modal.classList.add('delete');
+        }
+    });
+    modalCancelBtn.addEventListener('click', function(e) {
         e.preventDefault()
         if  (e.target == this ) {
             modal.classList.remove('active');

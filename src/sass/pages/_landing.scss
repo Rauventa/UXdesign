@@ -1263,6 +1263,14 @@
     background: $white;
     box-shadow: 2px 2px 12px rgba(175, 3, 178, 0.3), -2px -2px 12px rgba(175, 3, 178, 0.3);
     border-radius: 5px;
+    .modal_title {
+      width: 100%;
+      max-width: 280px;
+      margin-top: 20px;
+      font-size: 20px;
+      color: $textBlack;
+      text-align: center;
+    }
     .gift {
       margin-top: 30px;
       position: relative;
@@ -1351,7 +1359,7 @@
       }
     }
     .card {
-      margin-top: 30px;
+      margin-top: 10px;
       width: 90%;
       max-width: 290px;
       padding-bottom: 30px;
@@ -1399,7 +1407,7 @@
   align-items: center;
   width: 100%;
   &__card {
-    padding: 20px 30px;
+    padding: 2rem 4rem;
     background: #FFFFFF;
     box-shadow: 0px 2px 6px rgba(29, 37, 47, 0.08), 0px 4px 12px rgba(29, 37, 47, 0.12);
     border-radius: 6px;
