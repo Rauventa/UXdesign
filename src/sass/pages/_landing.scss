@@ -1861,8 +1861,6 @@
 }
 // gift 
 .landing__gift {
-  display: block;
-  z-index: 300;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -1871,15 +1869,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s all ease-in-out;;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 300;
+  }
+  &.delete {
+    display: none;
+  }
   &_overlay {
     height: 100%;
     width: 100%;
     top: 0;
     right: 0;
     position: absolute;
+    cursor: pointer;
     background: rgba( 0, 0, 0, .8);
   }
   &_modal {
+    cursor: default;
     display: flex;
     flex-direction: column;
     align-items: center;

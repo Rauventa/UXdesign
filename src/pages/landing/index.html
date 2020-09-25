@@ -1313,7 +1313,7 @@
     <div class="landing__gift">
         <div class="landing__gift_overlay"></div>
         <div class="landing__gift_modal">
-            <div class="close">
+            <div class="close landing__gift_modal-close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L19 19" stroke="#8A8E93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M19 1L1 19" stroke="#8A8E93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1460,5 +1460,43 @@
     }
 
     window.onload=function(){GetCount();}
+
+
+    const ticketsTriggerModal = document.querySelector('.tickets__main'), 
+          modal  = document.querySelector('.landing__gift '), 
+          modalOverlay = document.querySelector('.landing__gift_overlay'), 
+          modalBody = document.querySelector('.landing__gift_modal'), 
+          modalClose = document.querySelector('.landing__gift_modal-close');
+    let triggerCheck = false;
+
+    ticketsTriggerModal.addEventListener('mouseenter', function(e) {
+
+        let target = e.target;
+        if (e.target == this && triggerCheck === false) {
+            this.addEventListener('mouseleave', () => {
+            modal.classList.add('active');
+            triggerCheck = true;
+        });
+        } 
+    });
+    modalOverlay.addEventListener('click', function(e) {
+        if  (e.target != modalBody ) {
+            modal.classList.remove('active');
+            triggerCheck = true;
+        }
+        if (triggerCheck == true) {
+            modal.classList.add('delete');
+        }
+    });
+    modalClose.addEventListener('click', function(e) {
+        e.preventDefault()
+        if  (e.target == this ) {
+            modal.classList.remove('active');
+            triggerCheck = true;
+        }
+        if (triggerCheck == true) {
+            modal.classList.add('delete');
+        }
+    });
 </script>
 </html>
