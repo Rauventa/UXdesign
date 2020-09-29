@@ -372,6 +372,51 @@
     }
 }
 
+// my page
+
+.myLectures {
+    padding: 2rem;
+
+    &__heading {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    &__container {
+        .card {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.myCategory {
+    &__heading {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem 1rem 1rem;
+
+        h1 {
+            span {
+                color: $bgMagenta;
+            }
+        }
+    }
+
+    &__container {
+        .card {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
 
 //sliders 
 .tab {
@@ -528,6 +573,21 @@
         .available {
             p {
                 font-size: 7px !important;
+            }
+        }
+    }
+}
+
+// normal media
+
+@media screen and (max-width: 768px) {
+    .myLectures {
+        padding: 2rem 1rem;
+
+        &__heading {
+            h1 {
+                font-size: 20px !important;
+                line-height: 26px !important;
             }
         }
     }
