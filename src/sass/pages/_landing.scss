@@ -1263,14 +1263,22 @@
     background: $white;
     box-shadow: 2px 2px 12px rgba(175, 3, 178, 0.3), -2px -2px 12px rgba(175, 3, 178, 0.3);
     border-radius: 5px;
+
     .modal_title {
       width: 100%;
       max-width: 280px;
-      margin-top: 20px;
+      margin: 2rem auto 1rem auto;
       font-size: 20px;
       color: $textBlack;
       text-align: center;
     }
+
+    .title {
+      .info-text {
+        text-align: center;
+      }
+    }
+
     .gift {
       margin-top: 30px;
       position: relative;
@@ -2114,29 +2122,35 @@
         font-size: 15px !important;
       }
     }
+
+    &__gift {
+      h2 {
+        font-size: 18px !important;
+      }
+
+      .gift {
+        &__btns {
+          width: 100%;
+          flex-direction: column;
+          a {
+            width: 85%;
+          }
+          &-ye {
+            width: 100% !important;
+            max-width: 100%;
+            margin-bottom: 10px;
+          }
+          &-no {
+            width: 100% !important;
+            max-width: 100%;
+          }
+        }
+      }
+    }
   }
 
 }
-// gift 
 
-@media screen and (max-width: 364px) {
-  .gift__btns {
-    width: 100%;
-    flex-direction: column;
-    a {
-      width: 85%;
-    }
-    &-ye {
-      width: 100% !important;
-      max-width: 100%;
-      margin-bottom: 10px;
-    }
-    &-no {
-      width: 100% !important;
-      max-width: 100%;
-    }
-  }
-}
 @keyframes giftOverlay {
   0% {
     transform: rotate(-40deg);
