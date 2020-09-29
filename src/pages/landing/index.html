@@ -1472,52 +1472,79 @@
     window.onload=function(){GetCount();}
 </script>
 <script>
-    const ticketsTriggerModal = document.querySelector('.tickets__main'), 
-          modal  = document.querySelector('.landing__gift '), 
-          modalOverlay = document.querySelector('.landing__gift_overlay'), 
-          modalBody = document.querySelector('.landing__gift_modal'), 
-          modalClose = document.querySelector('.landing__gift_modal-close'),
-          modalCancelBtn = document.querySelector('.gift__btns-no');
-    let triggerCheck = false;
+    if (window.matchMedia("(max-width: 768px)").matches) {
 
-    ticketsTriggerModal.addEventListener('mouseenter', function(e) {
+        setTimeout(function(){
 
-        let target = e.target;
-        if (e.target == this && triggerCheck === false) {
-            this.addEventListener('mouseleave', () => {
+            const modal  = document.querySelector('.landing__gift '),
+                modalClose = document.querySelector('.landing__gift_modal-close'),
+                modalCancelBtn = document.querySelector('.gift__btns-no'),
+                modalOverlay = document.querySelector('.landing__gift_overlay');
+
             modal.classList.add('active');
-            triggerCheck = true;
+
+            modalOverlay.addEventListener('click', function(e) {
+                modal.classList.remove('active');
+            });
+
+            modalClose.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('active');
+            });
+            modalCancelBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('active');
+            });
+
+            }, 30000);
+    } else {
+        const ticketsTriggerModal = document.querySelector('.tickets__main'),
+            modal  = document.querySelector('.landing__gift '),
+            modalOverlay = document.querySelector('.landing__gift_overlay'),
+            modalBody = document.querySelector('.landing__gift_modal'),
+            modalClose = document.querySelector('.landing__gift_modal-close'),
+            modalCancelBtn = document.querySelector('.gift__btns-no');
+        let triggerCheck = false;
+
+        ticketsTriggerModal.addEventListener('mouseenter', function(e) {
+
+            let target = e.target;
+            if (e.target == this && triggerCheck === false) {
+                this.addEventListener('mouseleave', () => {
+                    modal.classList.add('active');
+                    triggerCheck = true;
+                });
+            }
         });
-        } 
-    });
-    modalOverlay.addEventListener('click', function(e) {
-        if  (e.target != modalBody ) {
-            modal.classList.remove('active');
-            triggerCheck = true;
-        }
-        if (triggerCheck == true) {
-            modal.classList.add('delete');
-        }
-    });
-    modalClose.addEventListener('click', function(e) {
-        e.preventDefault()
-        if  (e.target == this ) {
-            modal.classList.remove('active');
-            triggerCheck = true;
-        }
-        if (triggerCheck == true) {
-            modal.classList.add('delete');
-        }
-    });
-    modalCancelBtn.addEventListener('click', function(e) {
-        e.preventDefault()
-        if  (e.target == this ) {
-            modal.classList.remove('active');
-            triggerCheck = true;
-        }
-        if (triggerCheck == true) {
-            modal.classList.add('delete');
-        }
-    });
+        modalOverlay.addEventListener('click', function(e) {
+            if  (e.target != modalBody ) {
+                modal.classList.remove('active');
+                triggerCheck = true;
+            }
+            if (triggerCheck == true) {
+                modal.classList.add('delete');
+            }
+        });
+        modalClose.addEventListener('click', function(e) {
+            e.preventDefault()
+            if  (e.target == this ) {
+                modal.classList.remove('active');
+                triggerCheck = true;
+            }
+            if (triggerCheck == true) {
+                modal.classList.add('delete');
+            }
+        });
+        modalCancelBtn.addEventListener('click', function(e) {
+            e.preventDefault()
+            if  (e.target == this ) {
+                modal.classList.remove('active');
+                triggerCheck = true;
+            }
+            if (triggerCheck == true) {
+                modal.classList.add('delete');
+            }
+        });
+    }
 </script>
 </html>
