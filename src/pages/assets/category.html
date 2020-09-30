@@ -41,6 +41,36 @@
             </div>
         </div>
     </header>
+
+    <div class="menu container-fluid">
+        <!-- back button container -->
+        <!-- <div class="menu__back_button">
+
+        </div> -->
+        <div class="menu__wrapper">
+            <a href="#" class="menu__link">
+                <div class="menu__item">
+                    <span>события</span>
+                </div>
+            </a>
+            <!-- when the menu tab is active, the activity class is added to the link (namely the link <a>) -->
+            <a href="#" class="menu__link active">
+                <div class="menu__item ">
+                    <span>доклады</span>
+                </div>
+            </a>
+            <a href="#" class="menu__link">
+                <div class="menu__item">
+                    <span>спикеры</span>
+                </div>
+            </a>
+            <a href="#" class="menu__link">
+                <div class="menu__item">
+                    <span>компании</span>
+                </div>
+            </a>
+        </div>
+    </div>
     <div class="myCategory">
 
         <div class="myCategory__heading">
@@ -52,12 +82,17 @@
             </h1>
 
             <div class="myCategory__heading_filter">
-
+                <label>
+                    <select class="form-control">
+                        <option>Самые новые</option>
+                        <option>Популярные</option>
+                    </select>
+                </label>
             </div>
         </div>
 
         <div class="purchases container-fluid">
-            <div class="wrapper container">
+            <div class="wrapper">
                 <div class="purchases__descr">
                     <h2>
                         Мои покупки <span class="counter">(12)</span>
@@ -73,7 +108,7 @@
                               stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-                <div class="purchases__container swiper-container container">
+                <div class="purchases__container swiper-container container-fluid">
                     <div class="purchases__wrapper swiper-wrapper ">
                         <div class="purchases__slide swiper-slide">
                             <div class="card card_buy card_download card_available">
@@ -830,7 +865,7 @@
                 spaceBetween: 30
             },
             1250: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30
             }
         }
@@ -867,7 +902,7 @@
                 spaceBetween: 30
             },
             1250: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30
             }
         }
@@ -904,7 +939,7 @@
                 spaceBetween: 30
             },
             1250: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30
             }
         }
