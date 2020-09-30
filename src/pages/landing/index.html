@@ -1205,9 +1205,36 @@
                         </div>
                     </div>
 
+                    
+
                     <form class="tickets__main_form">
                         <div class="form-group">
-                            <label for="promo">У вас есть промокод?</label>
+                            <label for="promo">
+                                У вас есть промокод?
+                                <div class="hint">
+                                    <div class="hint__trigger">
+                                        <i
+                                                class="fa fa-question-circle question-icon"
+                                        >
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="hint__body">
+                                    <span class="hint__trigger_close">
+                                      <img src="../../img/landing/x.svg" alt="x">
+                                    </span>
+                                    <p>
+                                        <b>Как получить промокод и скидку 555 руб на любой билет?</b>
+                                        <br>
+                                        1. Сделайте публикацию о событии, расскажите, почему хотите пойти и поделитесь ссылкой:
+                                        <a href="https://bit.ly/3l0SAur">https://bit.ly/3l0SAur</a>
+                                        <br>
+                                        2. Пришлите скриншот или ссылку на публикацию на <a href="mailto:info@ux-marafon.ru">info@ux-marafon.ru</a>
+                                        <br>
+                                        3. Получите промокод на скидку!
+                                    </p>
+                                </div>
+                            </label>
                             <input type="email" class="form-control" id="promo" aria-describedby="promoHelp">
                         </div>
                         <input id="activePromo" type="radio" name="numbers" value="first">
@@ -1546,5 +1573,18 @@
             }
         });
     }
+</script>
+<script>
+    const trigger = document.querySelector('.hint__trigger'),
+        close = document.querySelector('.hint__trigger_close');
+    trigger.addEventListener('mouseenter', () => {
+        document.querySelector('.hint__body').classList.add('active');
+    });
+    close.addEventListener('click', () => {
+        document.querySelector('.hint__body').classList.remove('active');
+    });
+    document.querySelector('.hint__body').addEventListener('mouseleave', () => {
+        document.querySelector('.hint__body').classList.remove('active');
+    });
 </script>
 </html>

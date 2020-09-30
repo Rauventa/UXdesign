@@ -8,6 +8,13 @@
   // scroll-behavior: smooth;
 }
 
+p,span,h1,h2,h3,h4,h5,h6,a,br,ul,ol,li,b,strong,label,small {
+  &::selection {
+    background-color: rgba(175, 3, 178, 0.5);
+    color: $white;
+  }
+}
+
 h1 {
   font-size: 24px !important;
   line-height: 26px !important;

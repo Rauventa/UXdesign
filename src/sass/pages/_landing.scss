@@ -1117,6 +1117,13 @@
 
           label {
             color: $textBlack;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            i {
+              margin-left: 0.5rem;
+            }
           }
 
           input {
@@ -2148,6 +2155,58 @@
       }
     }
   }
+
+}
+
+.hint__trigger {
+  cursor: pointer;
+
+  i {
+    color : $textGrey;
+  }
+
+}
+.hint__body {
+  position: absolute;
+  width: 40%;
+  border: 1px solid #8A8E93;
+  border-radius: 5px;
+  padding: 2rem 3rem;
+  visibality: hidden;
+  opacity: 0;
+  transition: .5s all;
+  z-index: -1;
+  background: $bgGrey;
+
+  span {
+    color: $textGrey;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    b {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: $textBlack;
+      text-decoration: underline;
+    }
+  }
+}
+.hint__body.active {
+  z-index: 30;
+  visibality: visible;
+  opacity: 1;
+}
+.hint__trigger_close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  line-height: 15px;
+  font-size: 30px;
+  cursor: pointer;
 
 }
 
