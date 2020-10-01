@@ -74,6 +74,12 @@
       margin-bottom: 2rem !important;
     }
 
+    &_buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     &_card {
       height: 100% !important;
       width: 100%;
@@ -118,8 +124,8 @@
           font-weight: bold;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          position: inherit;    
-          bottom: 35px;
+          position: absolute;
+          bottom: 10px;
           left: 10px;
           margin: 0;
         }
@@ -129,7 +135,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1.5rem;
 
         &--post {
           display: flex;
@@ -174,6 +180,19 @@
           margin-bottom: 0.5rem;
         }
       }
+    }
+  }
+}
+
+.firstAlready {
+  &__content {
+
+    h2 {
+      padding: 2rem 0;
+    }
+
+    &_pics {
+      min-height: 360px;
     }
   }
 }
@@ -321,7 +340,7 @@
         height: auto;
     
         &-content {
-          padding: 0 1rem 1rem 1rem;
+          padding: 1rem 1rem 0 1rem;
 
           &--post {
             margin-top: 1rem;

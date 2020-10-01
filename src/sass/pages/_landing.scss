@@ -1060,16 +1060,16 @@
           cursor: pointer;
 
           i {
-            color : $textGrey;
+            color : $textBlack;
           }
 
         }
         .hint__body {
           position: absolute;
-          width: 40%;
+          width: 33%;
           border: 1px solid #8A8E93;
           border-radius: 5px;
-          padding: 2rem 3rem;
+          padding: 1rem 2rem;
           visibality: hidden;
           opacity: 0;
           transition: .5s all;
@@ -1105,6 +1105,7 @@
           line-height: 15px;
           font-size: 30px;
           cursor: pointer;
+          display: none;
         }
 
         input[type="radio"] {
