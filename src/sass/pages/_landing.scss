@@ -837,6 +837,11 @@
             cursor: pointer;
             
             .item__content {
+
+              h1 {
+                display: inline;
+              }
+
               &_buttons {
                 .btn {
                   background-color: #16478C !important;
@@ -885,7 +890,7 @@
             }
 
             .promo-price {
-              h1, h2 {
+              h1, h2, span {
                 color: #C40000;
               }
 
