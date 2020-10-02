@@ -892,7 +892,7 @@
             .promo-price {
               h1, h2, span {
                 color: #C40000;
-              }
+                }
 
               h2 {
                 text-transform: uppercase;
@@ -1187,9 +1187,22 @@
             height: 38px;
           }
         }
+      }
 
-        button {
-          height: 38px;
+      &_buttons {
+        position: relative;
+
+        &-error {
+          background-color: #ff6363;
+          border-radius: 6px;
+          padding: 1rem;
+          position: absolute;
+          margin-top: 1rem;
+
+          p {
+            margin-bottom: 0;
+            color: $white;
+          }
         }
       }
     }
