@@ -6,6 +6,21 @@
     text-transform: uppercase;
   }
 
+  .header-line {
+    min-height: 5vh;
+    width: 100%;
+    padding: 0.25rem;
+    background: linear-gradient(91.17deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: $white;
+      margin: 0 1rem;
+    }
+  }
+
   &__nav {
     margin: 0 auto 1rem auto;
     width: 50%;

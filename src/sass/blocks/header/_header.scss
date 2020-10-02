@@ -10,9 +10,47 @@ header {
     }
 
     &__line {
-      height: 10px;
       width: 100%;
       background: linear-gradient(151.43deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 2rem;
+
+      #countbox {
+        margin: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        color: $white;
+
+        span {
+          margin: 0 1rem;
+        }
+      }
+
+      .btn-border {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+        border-radius: 4px;
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: normal;
+        min-height: 38px !important;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:hover {
+          background-color: #16478C !important;
+          border: 1px solid #16478C !important;
+          box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08) !important;
+        }
+      }
     }
 
     &__container {
@@ -31,7 +69,7 @@ header {
         border-radius: 0 0.5rem 0.5rem 0;
         cursor: pointer;
         position: absolute;
-        top: 20%;
+        top: 35%;
         left: 0;
 
         &:hover {
@@ -70,14 +108,14 @@ header {
         }
 
         &-user, &-enter, &-logout {
-          top: 20%;
+          top: 35%;
           right: 0;
         }
 
         &-back {
           width: 12rem;
           border-radius: 0 0.5rem 0.5rem 0;
-          top: 20%;
+          top: 35%;
           left: 0;
         }
 
@@ -101,7 +139,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 2rem 2rem 2rem;
+        padding: 1rem 2rem 2rem 2rem;
 
         img {
           width: 120px;

@@ -215,7 +215,7 @@
 
     .sticky-header.sticky-header-show {
       opacity: 1;
-      margin: -4.5rem 0;
+      margin: -5rem 0;
     }
 
     .sticky-header {
@@ -484,6 +484,28 @@
       line-height: 26px !important;
       text-align: center;
       margin-bottom: 4rem;
+    }
+
+    .person-gift {
+      background-color: #FFD483;
+      border-radius: 5px;
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+
+      p {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        letter-spacing: 0.1em;
+        margin-left: 1rem;
+        font-size: 12px;
+      }
     }
 
     &__list {
