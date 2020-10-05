@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/styles.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Speaker Search</title>
+</head>
+<body>
+    <header class="header-back-person">
+    <div class="header">
+        <div class="header__line">
+            <p>
+                UX Марафон #21 «Из рук в руки»
+                <span>•</span>
+                15 октября
+                <span>•</span>
+                до повышения цен осталось
+                <span id="countbox"></span>
+            </p>
+
+            <button class="btn btn-border">Подробности и билеты</button>
+        </div>
+        <div class="header__container line-available">
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-back">
+                    <img src="../../img/leftArrow.svg" alt="">
+                    <a href="#">На главную</a>
+                </div>
+            </div>
+            <div class="header__container_content">
+                <img src="../../img/logo.svg" alt="logo">
+                <p>
+                    онлайн-конференция для тех, кто делает
+                    <br>
+                    удобные цифровые продукты
+                </p>
+            </div>
+            <div class="header__container_buttons">
+                <div class="header__container_buttons-user">
+                    <img src="../../img/user.svg" alt="">
+                    <a href="#">Мария</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="speakerSearch">
+        <div class="menu container-fluid">
+            <!-- back button container -->
+            <!-- <div class="menu__back_button">
+
+            </div> -->
+            <div class="menu__wrapper">
+                <a href="#" class="menu__link">
+                    <div class="menu__item">
+                        <span>события</span>
+                    </div>
+                </a>
+                <!-- when the menu tab is active, the activity class is added to the link (namely the link <a>) -->
+                <a href="#" class="menu__link active">
+                    <div class="menu__item ">
+                        <span>доклады</span>
+                    </div>
+                </a>
+                <a href="#" class="menu__link">
+                    <div class="menu__item">
+                        <span>спикеры</span>
+                    </div>
+                </a>
+                <a href="#" class="menu__link">
+                    <div class="menu__item">
+                        <span>компании</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="speakerSearch__popular">
+            <h1>Популярные спикеры</h1>
+
+            <div class="row">
+                <div class="col-xl-2 col-md-12">
+                    <div class="speakerSearch__popular_card">
+                        <img src="../../img/speakers/haritonova.png" alt="speaker">
+                        <h2>Катерина Тюхай</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-12">
+                    <div class="speakerSearch__popular_card">
+                        <img src="../../img/speakers/haritonova.png" alt="speaker">
+                        <h2>Катерина Тюхай</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-12">
+                    <div class="speakerSearch__popular_card">
+                        <img src="../../img/speakers/haritonova.png" alt="speaker">
+                        <h2>Катерина Тюхай</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-12">
+                    <div class="speakerSearch__popular_card">
+                        <img src="../../img/speakers/haritonova.png" alt="speaker">
+                        <h2>Катерина Тюхай</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-12">
+                    <div class="speakerSearch__popular_card">
+                        <img src="../../img/speakers/haritonova.png" alt="speaker">
+                        <h2>Катерина Тюхай</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="speakerSearch__container">
+            <div class="speakerSearch__container_heading">
+                <h1>Все спикеры</h1>
+
+                <div class="form-group">
+                    <span class="fa fa-search"></span>
+                    <label>
+                        <input type="text" class="form-control" placeholder="Поиск по имени или фамилии спикера">
+                    </label>
+                </div>
+            </div>
+            <div class="speakerSearch__container_mobile">
+                <h2 id="b1">
+                    А-Я
+                    <span class="fa fa-angle-down" id="checker"></span>
+                </h2>
+                <div id="p1" style="display:none" class="speakerSearch__container_mobile-list">
+                    <ul>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                        <li>
+                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="speakerSearch__container_content">
+                <div class="row">
+                    <div class="col-xl-4 col-md-12">
+                        <div class="speakerSearch__container_content-list">
+                            <div class="speakerSearch__container_content-list--block">
+                                <h2>А</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="speakerSearch__container_content-list--block">
+                                <h2>А</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="speakerSearch__container_content-list">
+                            <div class="speakerSearch__container_content-list--block">
+                                <h2>А</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="speakerSearch__container_content-list--block">
+                                <h2>А</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="speakerSearch__container_content-list">
+                            <div class="speakerSearch__container_content-list--block">
+                                <h2>А</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="speakerSearch__container_content-list--block">
+                                <h2>А</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акулина Мария, Фабрика Юзабилити</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul>
+                <li><a href="#">События</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Докладчикам</a></li>
+                <li><a href="#">Договор</a></li>
+                <li><a href="#">Положение о конфиденциальности</a></li>
+                <li><a href="#">Вопрос или проблема?</a></li>
+            </ul>
+        </div>
+        <div class="footer__info">
+            <p>© UX-Марафон 2015-2020</p>
+            <div class="footer__info_socials">
+                <a href="#">
+                    <img src="../../img/socials/facebook.svg" alt="facebook">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/telegram.svg" alt="telegram">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/insta.svg" alt="insta">
+                </a>
+                <a href="#">
+                    <img src="../../img/socials/youtube.svg" alt="youtube">
+                </a>
+            </div>
+            <p>Мы используем иллюстрации с icons8.com </p>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+    function bindEvent(element, eventName, eventHandler) {
+        let el = $(element)[0];
+        if (el.addEventListener) {
+            el.addEventListener(eventName, eventHandler, false)
+        } else if (el.attachEvent) {
+            el.attachEvent('on'+eventName, eventHandler);
+        }
+    }
+    bindEvent('#b1', 'click', function() {
+
+        if( $('#checker').hasClass('fa-angle-up')) {
+            $("#checker").removeClass('fa-angle-up').addClass('fa-angle-down');
+        } else {
+            $("#checker").removeClass('fa-angle-down').addClass('fa-angle-up');
+        }
+
+        $('#p1').toggle('blind');
+        if ($('#b1').text() == 'Show Spoiler') {
+            $('#b1').text('Hide Spoiler');
+        } else if ($('#b1').text() == 'Hide Spoiler') {
+            $('#b1').text('Show Spoiler');
+        }
+
+    });
+</script>
+</html>

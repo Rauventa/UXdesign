@@ -1,0 +1,314 @@
+
+
+.speakerSearch, .companySearch {
+  //root col style (for 5 cols)
+
+  .col-xl-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  &__container {
+
+    &_mobile {
+      display: none;
+    }
+  }
+}
+
+.speakerSearch {
+  padding: 0 4rem;
+
+  &__popular {
+    margin-bottom: 2rem;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    &_card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      padding: 1.5rem 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+      border: 1px solid $lineLight;
+      box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #00B2B2;
+        box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+      }
+
+      img {
+        margin-bottom: 1rem;
+        border-radius: 100rem;
+        width: 40%;
+        border: 1px solid $lineLight;
+      }
+    }
+  }
+
+  &__container {
+    padding-bottom: 4rem;
+
+    &_heading {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #00B2B2;
+      margin-bottom: 1rem;
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .form-control {
+        padding-left: 2.375rem;
+        width: 400px;
+      }
+
+      span {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+      }
+    }
+
+    &_content {
+
+      &-list {
+
+        &--block {
+
+          h2 {
+            font-weight: bold;
+            color: $textLight
+          }
+
+          a {
+            color: $textBlack
+          }
+        }
+      }
+    }
+  }
+}
+
+.companySearch {
+  padding: 0 4rem;
+
+  &__popular {
+    margin-bottom: 2rem;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    &_card {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      border-radius: 5px;
+      border: 1px solid $lineLight;
+      background-color: $white;
+      box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #00B2B2;
+        box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+      }
+    }
+  }
+
+  &__container {
+    padding-bottom: 4rem;
+
+    //root styles for CF bootstrap
+
+    .container-fluid {
+      margin: 0;
+      padding: 0;
+    }
+
+    &_heading {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #00B2B2;
+      margin-bottom: 1rem;
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .form-control {
+        padding-left: 2.375rem;
+        width: 400px;
+      }
+
+      span {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+      }
+    }
+
+    &_content {
+
+      &-list {
+
+        h2 {
+          color: $bgMagenta;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+
+        a {
+          color: $textBlack;
+        }
+      }
+    }
+  }
+}
+
+//Media
+
+@media screen and (max-width: 768px) {
+
+  .speakerSearch {
+
+    &__popular {
+      &_card {
+        height: 100% !important;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
+
+        h2 {
+          margin-bottom: 0;
+          margin-left: 1rem;
+        }
+
+        img {
+          width: 60px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .companySearch, .speakerSearch {
+    padding: 0 1.5rem;
+
+    .col-md-12 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    h1 {
+      font-size: 20px !important;
+      line-height: 26px !important;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &__popular {
+
+      &_card {
+        height: 70px;
+      }
+    }
+
+    &__container {
+
+      &_mobile {
+        display: block;
+
+        h2 {
+          font-size: 20px !important;
+        }
+
+        &-list {
+
+          a {
+            color: $textBlack;
+            font-size: 15px !important;
+            line-height: 26px !important;
+          }
+        }
+
+        #checker {
+          transition: all .3s;
+        }
+
+        h2 {
+          color: $bgMagenta;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+
+      &_heading {
+        flex-direction: column;
+        border-bottom: 0;
+
+        .form-group {
+          width: 100%;
+        }
+
+        .form-control {
+          width: 100%;
+        }
+
+        input, label {
+          width: 100%;
+        }
+
+        span {
+          line-height: 2rem;
+        }
+      }
+
+      &_content {
+        display: none;
+      }
+    }
+  }
+}
