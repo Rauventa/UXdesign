@@ -282,6 +282,10 @@
           letter-spacing: 0.1em;
           text-transform: uppercase;
           text-align: center;
+
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
         }
       }
 
