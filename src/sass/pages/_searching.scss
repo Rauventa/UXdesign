@@ -10,6 +10,17 @@
 
   &__container {
 
+    &_content {
+
+      &-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+      }
+    }
+
     &_mobile {
       display: none;
     }
@@ -100,7 +111,8 @@
           }
 
           a {
-            color: $textBlack
+            color: $textBlack;
+            text-decoration: none;
           }
         }
       }
@@ -234,10 +246,6 @@
       -ms-flex: 0 0 100%;
       flex: 0 0 100%;
       max-width: 100%;
-
-      &:not(:last-child) {
-        margin-bottom: 1rem;
-      }
     }
 
     h1 {
@@ -282,6 +290,10 @@
           letter-spacing: 0.1em;
           text-transform: uppercase;
           text-align: center;
+
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
         }
       }
 
@@ -307,7 +319,16 @@
       }
 
       &_content {
-        display: none;
+        //display: none;
+
+        h2 {
+          font-size: 20px !important;
+          line-height: 26px !important;
+        }
+
+        a {
+          font-size: 15px !important;
+        }
       }
     }
   }

@@ -127,37 +127,6 @@
                     </label>
                 </div>
             </div>
-            <div class="speakerSearch__container_mobile">
-                <h2 id="b1">
-                    А-Я
-                    <span class="fa fa-angle-down" id="checker"></span>
-                </h2>
-                <div id="p1" style="display:none" class="speakerSearch__container_mobile-list">
-                    <ul>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                        <li>
-                            <a href="#">Акулина Мария, Фабрика Юзабилити</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <div class="speakerSearch__container_content">
                 <div class="row">
                     <div class="col-xl-4 col-md-12">
@@ -257,6 +226,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="speakerSearch__container_content-buttons">
+                    <button class="btn btn-primary">Показать еще</button>
+                </div>
             </div>
         </div>
     </div>
@@ -306,10 +278,10 @@
     }
     bindEvent('#b1', 'click', function() {
 
-        if( $('#checker').hasClass('fa-angle-up')) {
-            $("#checker").removeClass('fa-angle-up').addClass('fa-angle-down');
+        if( $('#checker1').hasClass('fa-angle-up')) {
+            $("#checker1").removeClass('fa-angle-up').addClass('fa-angle-down');
         } else {
-            $("#checker").removeClass('fa-angle-down').addClass('fa-angle-up');
+            $("#checker1").removeClass('fa-angle-down').addClass('fa-angle-up');
         }
 
         $('#p1').toggle('blind');
@@ -318,7 +290,22 @@
         } else if ($('#b1').text() == 'Hide Spoiler') {
             $('#b1').text('Show Spoiler');
         }
+    });
 
+    bindEvent('#b2', 'click', function() {
+
+        if( $('#checker2').hasClass('fa-angle-up')) {
+            $("#checker2").removeClass('fa-angle-up').addClass('fa-angle-down');
+        } else {
+            $("#checker2").removeClass('fa-angle-down').addClass('fa-angle-up');
+        }
+
+        $('#p2').toggle('blind');
+        if ($('#b2').text() == 'Show Spoiler') {
+            $('#b2').text('Hide Spoiler');
+        } else if ($('#b2').text() == 'Hide Spoiler') {
+            $('#b2').text('Show Spoiler');
+        }
     });
 </script>
 </html>
