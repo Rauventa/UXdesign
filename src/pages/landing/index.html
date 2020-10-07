@@ -23,7 +23,7 @@
         <section class="header-line">
             <img src="../../img/landing/bell.svg" alt="bell1">
             <p>
-                До повышения цен осталось
+                До повышения цен
                 <span id="countbox"></span>
             </p>
             <img src="../../img/landing/bell.svg" alt="bell2">
@@ -1556,7 +1556,7 @@
     })
 </script>
 <script>
-    dateFuture = new Date(2020,8,24,23,59,59);
+    dateFuture = new Date(2020,9,8,23,59,59);
 
     function GetCount(){
 
@@ -1577,11 +1577,11 @@
             amount=amount%86400;
 
             if (days === 1) {
-                out+= days + " День"
+                out+= " остался " + days + " день"
             } else if (days === 2 || days === 3 || days === 4) {
-                out+= days + " Дня"
+                out+= " осталось " + days + " дня"
             } else {
-                out += days +" Дней"
+                out += " осталось " + days +" дней"
             }
             document.getElementById('countbox').innerHTML=out;
 
