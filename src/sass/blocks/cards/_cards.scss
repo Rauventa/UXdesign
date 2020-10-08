@@ -43,7 +43,6 @@
                 span {
                     color: $white;
                     font-weight: 700;
-                    letter-spacing: 0.08em;
                 }
             }
         }
@@ -53,6 +52,7 @@
                 span {
                     color: $white;
                     font-weight: 700;
+                    letter-spacing: 0.08em;
                 }
             }
         }
@@ -87,6 +87,7 @@
                 text-transform: uppercase;
                 transition: .3s all ease;
                 z-index: 30;
+                letter-spacing: 0.08em;
             }
         }
     }

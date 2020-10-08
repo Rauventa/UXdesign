@@ -45,9 +45,9 @@
   }
 
   &__why {
-    padding: 4rem;
+    padding: 4rem !important;
     background: linear-gradient(90.92deg, rgba(175, 3, 178, 0.2) -96.02%, rgba(0, 178, 178, 0.2) 216.28%);
-    margin: 4rem;
+    margin: 4rem 0;
     min-height: 100vh;
 
     &_content {

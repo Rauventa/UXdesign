@@ -5,6 +5,10 @@
   width: 100%;
   padding-bottom: 4rem;
 
+  .danger-text {
+    letter-spacing: inherit !important;
+  }
+
   a {
     color: $textBlack;
     line-height: 18px;
