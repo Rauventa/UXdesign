@@ -172,22 +172,9 @@
 
         &--content {
           ul {
+            margin-left: 1rem;
             li {
-              display: flex;
-              justify-content: flex-start;
-              align-items: flex-start;
               list-style-type: disc !important;
-              &::before {
-                content: '';
-                display: block;
-                margin-top: 5px;
-                background: url("../../img/ul-dot.svg") center (center/cover) no-repeat;
-                width: 10px;
-                min-width: 10px;
-                height: 10px;
-                position: relative;
-                margin-right: 1rem;
-              }
             }
           }
         }
