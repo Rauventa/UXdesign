@@ -1290,37 +1290,35 @@
   }
 
   .partners {
-    //todo убрать, когда будет готово
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 4rem;
 
-    &__general {
-     display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 4rem;
-    }
+    &__list {
+      padding: 0 10rem;
 
-    &__others {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-
-      &_list {
+      &_card {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 2px 6px rgba(29, 37, 47, 0.08), 0 4px 12px rgba(29, 37, 47, 0.12);
+        border-radius: 6px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-    }
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem;
 
-    img {
-      width: 300px;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+        }
+        
+        p {
+          text-align: center;
+          margin-top: 2rem;
+        }
+      }
     }
   }
 }
+
 .landing__gift {
   position: fixed;
   height: 100%;
@@ -1641,6 +1639,12 @@
     .how {
       padding: 4rem 2rem;
     }
+
+    .partners {
+      &__list {
+        padding: 0 4rem;
+      }
+    }
   }
 }
 
@@ -1883,6 +1887,14 @@
       h2 {
         font-size: 20px !important;
         line-height: 26px !important;
+      }
+    }
+
+    .partners {
+      &__list {
+        .col-md-6 {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
@@ -2228,6 +2240,12 @@
 
       .about-text {
         font-size: 15px !important;
+      }
+    }
+
+    .partners {
+      &__list {
+        padding: 0 2rem;
       }
     }
 
