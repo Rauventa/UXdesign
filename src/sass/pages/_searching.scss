@@ -28,7 +28,6 @@
 }
 
 .speakerSearch {
-  padding: 0 4rem;
 
   &__popular {
     margin-bottom: 2rem;
@@ -50,10 +49,18 @@
       box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
       border-radius: 5px;
 
+      h2 {
+        text-align: center;
+      }
+
       &:hover {
         cursor: pointer;
         border: 1px solid #00B2B2;
         box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+
+        h2 {
+          color: $bgOcean;
+        }
       }
 
       img {
@@ -121,7 +128,6 @@
 }
 
 .companySearch {
-  padding: 0 4rem;
 
   &__popular {
     margin-bottom: 2rem;
@@ -214,10 +220,21 @@
 
 //Media
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+
+  .companySearch, .speakerSearch {
+    .col-md-12 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
 
   .speakerSearch {
-
     &__popular {
       &_card {
         height: 100% !important;
@@ -238,15 +255,12 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
 
   .companySearch, .speakerSearch {
     padding: 0 1.5rem;
-
-    .col-md-12 {
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
 
     h1 {
       font-size: 20px !important;

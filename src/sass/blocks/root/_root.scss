@@ -150,6 +150,18 @@ a {
     box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08) !important;
   }
 }
+
+.btn-gold {
+  background-color: $bgSun !important;
+  border: 1px solid $bgSun !important;
+
+  &:hover {
+    background-color: #16478C !important;
+    border: 1px solid #16478C !important;
+    box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08) !important;
+  }
+}
+
 .btn-light {
   line-height: 20px;
 }

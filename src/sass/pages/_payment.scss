@@ -1,4 +1,3 @@
-
 .payData {
   padding-bottom: 4rem;
 
@@ -36,6 +35,32 @@
 }
 
 .payData, .catalog, .checkout-catalog, .landing-payment {
+
+  .course-marafon {
+    .course__content_info-data {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-left: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .course-all {
+    .course__content_info {
+
+    }
+  }
+
   .course {
     width: 100%;
     padding: 2rem;
@@ -187,6 +212,17 @@
           height: 20px
         }
 
+        &:checked + label.btn-gold:before {
+          width: 20px;
+          content: " ";
+          background-image: url('../../img/sun-checker.svg');
+          background-repeat: no-repeat;
+          position: absolute;
+          left: 1.5rem;
+          top: 0.5rem;
+          height: 20px
+        }
+
         &:checked + label {
           cursor: default;
         }
@@ -201,6 +237,13 @@
         &:checked + label.btn-secondary:after {
           content: "Продукт выбран";
           color: $bgMagenta;
+          font-size: 15px !important;
+          line-height: 20px;
+        }
+
+        &:checked + label.btn-gold:after {
+          content: "Продукт выбран";
+          color: $bgSun;
           font-size: 15px !important;
           line-height: 20px;
         }
@@ -250,10 +293,15 @@
 
         &-full {
           border: 1px solid $bgMagenta;
+
+          a {
+            color: $textBlack;
+            text-decoration: underline;
+          }
         }
 
         &-all {
-          justify-content: center;
+          //justify-content: center;
           border: 1px solid $bgSun;
         }
       }
