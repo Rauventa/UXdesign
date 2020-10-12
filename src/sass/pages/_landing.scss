@@ -532,11 +532,16 @@
 
           .info-text {
             min-width: 25%;
+            font-size: 20px;
           }
 
           .danger-text {
             min-width: 75%;
             text-transform: uppercase;
+
+            span {
+              font-weight: bold;
+            }
           }
         }
 
