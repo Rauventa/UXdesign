@@ -2241,6 +2241,15 @@
             }
           }
         }
+
+        .break {
+          .danger-text {
+            min-width: 65%;
+          }
+          .info-text {
+            margin-right: 1rem !important;
+          }
+        }
       }
 
       .about-text {
