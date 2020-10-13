@@ -1,5 +1,7 @@
 
-.urRelay {
+.urRelay, .phRelay {
+
+  @include danger_text;
 
   &__catalog {
 
@@ -106,6 +108,17 @@
           &_price {
             padding: 0.5rem;
             text-align: center;
+
+            h2 {
+              position: relative;
+              font-size: 26px !important;
+            }
+
+            .price-line {
+              position: absolute;
+              width: 50%;
+              left: 55px;
+            }
           }
 
           &_buttons {
@@ -285,6 +298,12 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+
+          .danger-text {
+            letter-spacing: initial;
+            text-align: center;
+            margin-bottom: 2rem;
+          }
 
           &_heading {
             margin-bottom: 2rem;
