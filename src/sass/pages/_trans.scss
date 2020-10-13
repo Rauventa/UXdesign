@@ -1,7 +1,44 @@
 
 .urRelay, .phRelay {
 
+  .big-heading {
+    letter-spacing: initial;
+  }
+
   @include danger_text;
+
+  &__heading {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    padding: 3rem;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__content {
+    padding: 3rem;
+
+    .big-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
 
   &__catalog {
 
@@ -100,10 +137,6 @@
         }
 
         &__content {
-
-          .big-heading {
-            letter-spacing: initial;
-          }
 
           &_price {
             padding: 0.5rem;
@@ -348,6 +381,23 @@
         display: flex;
       }
     }
+  }
+}
+
+.urRelay {
+
+  &__heading {
+    background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  &__content {
+    background: linear-gradient(90.92deg, rgba(175, 3, 178, 0.2) -96.02%, rgba(0, 178, 178, 0.2) 216.28%);
+
+    .
   }
 }
 
