@@ -1,0 +1,337 @@
+
+.urRelay {
+
+  &__catalog {
+
+    .landing-heading {
+      margin-bottom: 2rem;
+    }
+
+    &_list {
+      background-size: cover;
+      background-position: center;
+      background-image: url(../../img/bg.svg);
+      width: 100%;
+      padding: 4rem;
+
+      .item {
+        width: 90%;
+        height: 100%;
+        background-color: $white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid $bgOcean;
+        padding: 1rem 2rem 0 2rem;
+
+        &:hover {
+          border: 1px solid #16478C;
+          box-shadow: 2px 2px 8px rgba(22, 71, 140, 0.5), -2px -2px 8px rgba(22, 71, 140, 0.5);
+          cursor: pointer;
+
+          .item__content {
+
+            &_buttons {
+              .btn {
+                background-color: #16478C !important;
+                border: 1px solid #16478C !important;
+              }
+            }
+          }
+
+          input[type="radio"] {
+            &:checked + label {
+              background-color: $white !important;
+              border: 1px solid $white !important;
+              box-shadow: none !important;
+            }
+          }
+        }
+
+        &__heading {
+          padding: 1rem;
+          width: 100%;
+          border-radius: 5px 5px 0 0;
+          text-align: center;
+        }
+
+        &__info {
+          padding: 1rem 1rem 0 1rem;
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        &__list {
+          ul {
+
+            li {
+              text-align: left;
+              color: $textGrey;
+              display: flex;
+
+              p {
+                color: $textGrey;
+                margin-bottom: 0;
+                display: inline;
+              }
+
+              .fa-times {
+                color: #EB5757;
+              }
+
+              .question-icon {
+                color: $textGrey;
+
+                &:hover {
+                  color: $lineLight;
+                }
+              }
+
+              i {
+                color: #27AE60;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+        }
+
+        &__content {
+
+          .big-heading {
+            letter-spacing: initial;
+          }
+
+          &_price {
+            padding: 0.5rem;
+            text-align: center;
+          }
+
+          &_buttons {
+            padding: 1rem;
+
+            input[type="radio"] {
+              display: none !important;
+              *display: inline;
+              position: relative;
+
+              &:checked + label p {
+                display: none;
+              }
+
+              &:checked + label.btn-primary:before {
+                width: 20px;
+                content: " ";
+                background-image: url('../../img/ocean-checker.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0.65rem;
+                left: 1.5rem;
+                height: 20px
+              }
+
+              &:checked + label.btn-secondary:before {
+                width: 20px;
+                content: " ";
+                background-image: url('../../img/magenta-checker.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 1.5rem;
+                top: 0.65rem;
+                height: 20px
+              }
+
+              &:checked + label.btn-primary.btn-sun:before {
+                width: 20px;
+                content: " ";
+                background-image: url('../../img/sun-checker.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 1.5rem;
+                top: 0.65rem;
+                height: 20px
+              }
+
+              &:checked + label {
+                cursor: default;
+                margin-bottom: 0;
+              }
+
+              &:checked + label.btn-primary:after {
+                content: "Продукт выбран";
+                color: $bgOcean;
+                font-size: 15px !important;
+                line-height: 20px;
+              }
+
+              &:checked + label.btn-secondary:after {
+                content: "Продукт выбран";
+                color: $bgMagenta;
+                font-size: 15px !important;
+                line-height: 20px;
+              }
+
+              &:checked + label.btn-primary.btn-sun:after {
+                content: "Продукт выбран";
+                color: $bgSun;
+                font-size: 15px !important;
+                line-height: 20px;
+              }
+
+              &:checked + label {
+                background-color: $white !important;
+                border: 1px solid $white !important;
+                box-shadow: none !important;
+                position: relative;
+              }
+            }
+
+            input[type="radio"] + label {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              position: relative;
+
+              p {
+                margin-bottom: 0;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+
+      .item-magenta {
+        border: 1px solid $bgMagenta;
+        box-shadow: 2px 2px 8px rgba(175, 3, 178, 0.3), -2px -2px 8px rgba(175, 3, 178, 0.3);
+
+        .danger-text {
+          letter-spacing: 0 !important;
+        }
+      }
+
+      .item-sun {
+        border: 1px solid $bgSun;
+
+        .btn-sun {
+          background-color: $bgSun !important;
+          border: 1px solid $bgSun !important;
+
+          &:hover {
+            background-color: #16478C !important;
+            border: 1px solid #16478C !important;
+          }
+        }
+      }
+    }
+
+    &_description {
+      padding: 1rem 0;
+    }
+
+    &_forms {
+      .nav {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+
+          .nav-link {
+            border: 1px solid $lineLight !important;
+            border-radius: 0;
+            background-color: $bgGrey !important;
+            color: $textGrey !important;
+
+            &:hover {
+              color: $bgOcean !important;
+            }
+          }
+
+          &:nth-child(1) {
+            .nav-link {
+              border-right: none !important;
+              border-radius: 3px 0 0 3px;
+            }
+          }
+
+          &:nth-child(2) {
+            .nav-link {
+              border-left: none !important;
+              border-radius: 0 3px 3px 0;
+            }
+          }
+
+        }
+
+        .active {
+          background-color: $white !important;
+          color: $textBlack !important;
+
+          &:hover {
+            color: $textBlack !important;
+          }
+        }
+      }
+
+      .form {
+        width: 100%;
+        background-color: $white;
+        padding: 1rem 4rem;
+
+        &__bid, &__card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          &_heading {
+            margin-bottom: 2rem;
+            text-align: center;
+          }
+
+          form {
+            width: 40%;
+
+            .select-control {
+              width: 20%;
+            }
+          }
+
+          a {
+            color: $textGrey;
+            text-decoration: underline;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+              width: auto !important;
+              margin: 1rem 0;
+            }
+          }
+        }
+      }
+
+      .info-content {
+        margin-bottom: 2rem;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .active {
+        display: flex;
+      }
+    }
+  }
+}
+
+.phRelay {
+
+}
