@@ -485,6 +485,7 @@
 
       .card-table {
         width: 100%;
+        height: 100%;
 
         table {
           height: 100%;
@@ -550,6 +551,24 @@
 
     .landing-heading {
       margin-bottom: 2rem;
+    }
+
+    &_banner {
+      .header-line {
+        min-height: 5vh;
+        width: 100%;
+        padding: 0.25rem;
+        background: linear-gradient(91.17deg, rgba(175, 3, 178, 0.7) 0%, rgba(21, 71, 140, 0.7) 48.96%, rgba(0, 178, 178, 0.7) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          color: $white;
+          margin: 0 1rem;
+          font-size: 15px;
+        }
+      }
     }
 
     &_list {
