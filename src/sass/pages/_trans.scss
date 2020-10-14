@@ -98,7 +98,6 @@
 }
 
 .urRelay, .phRelay {
-
   .big-heading {
     letter-spacing: initial;
     text-align: center;
@@ -109,6 +108,12 @@
   p {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  label {
+    p {
+      font-size: 15px !important;
+    }
   }
 
   @include danger_text;
@@ -124,19 +129,6 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 0;
-    }
-  }
-
-  &__info {
-    padding: 3rem;
-
-    p {
-      &:not(:last-child) {
-        margin-bottom: 1.5rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 
@@ -170,7 +162,7 @@
         }
       }
     }
-    
+
     &_card {
       width: 100%;
       min-height: 30vh;
@@ -186,7 +178,7 @@
       .col-xl-4 {
         padding: 0;
       }
-      
+
       &-side {
         background-color: rgba(0, 178, 178, 0.4);
         display: flex;
@@ -946,6 +938,20 @@
       }
     }
   }
+
+  &__info {
+    padding: 3rem;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 .urRelay {
@@ -965,11 +971,20 @@
 
 .phRelay {
 
+  .danger-text {
+    letter-spacing: initial !important;
+
+    a {
+      color: $bgMagenta;
+    }
+  }
+
   &__heading {
-    background: linear-gradient(88.36deg, #B7B6F1 -3.15%, #F39A9A 84.21%);
+    background: linear-gradient(88.36deg, rgba(183, 182, 241, 0.5) -3.15%, rgba(243, 154, 154, 0.5) 84.21%);
 
     h2 {
       color: $textBlack;
+      //font-weight: 600;
     }
   }
 
@@ -1248,6 +1263,5 @@
         }
       }
     }
-
   }
 }
