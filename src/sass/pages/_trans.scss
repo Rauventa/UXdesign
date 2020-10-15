@@ -199,6 +199,7 @@
         width: 100%;
         min-height: 30vh;
         height: 100%;
+        padding: 1rem;
 
         ul {
 
@@ -290,6 +291,7 @@
         width: 100%;
         min-height: 30vh;
         height: 100%;
+        padding: 1rem;
 
         ul {
 
@@ -670,6 +672,10 @@
           &_price {
             padding: 0.5rem;
             text-align: center;
+
+            h1, span {
+              display: inline;
+            }
 
             h2 {
               position: relative;
