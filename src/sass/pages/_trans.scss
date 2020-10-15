@@ -1,4 +1,3 @@
-
 .relay {
 
   &__heading {
@@ -45,6 +44,7 @@
 
     iframe {
       width: 100%;
+      min-height: 67vh;
     }
   }
 
@@ -1197,6 +1197,13 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .relay {
+    iframe {
+      min-height: 40vh;
+    }
+  }
+
   .urRelay, .phRelay {
     &__content, &__old {
       padding: 3rem 1rem;
