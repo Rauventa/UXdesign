@@ -907,6 +907,11 @@
 
             &_price {
               padding: 1rem;
+
+              .big-heading {
+                letter-spacing: initial;
+              }
+
               h2 {
                 position: relative;
               }
