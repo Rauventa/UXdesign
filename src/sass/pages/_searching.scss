@@ -42,7 +42,7 @@
       display: flex;
       padding: 1.5rem 1rem;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       background: $white;
       border: 1px solid $lineLight;
@@ -148,6 +148,10 @@
       justify-content: center;
       align-items: center;
       transition: all .3s;
+
+      img {
+        width: 100%;
+      }
 
       &:hover {
         cursor: pointer;

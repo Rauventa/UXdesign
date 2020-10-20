@@ -2059,6 +2059,10 @@
     .speakers {
       padding: 2rem;
 
+      .row {
+        display: block;
+      }
+
       h1 {
         margin-bottom: 2rem !important;
       }
