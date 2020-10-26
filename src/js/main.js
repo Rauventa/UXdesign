@@ -2,7 +2,6 @@
 
 // Init tabs ---
 
-
 function Tabs() {
     let bindAll = function() {
         let menuElements = document.querySelectorAll('[data-tab]');
@@ -32,9 +31,7 @@ function Tabs() {
 
 let connectTabs = new Tabs();
 
-
 // Scroller ---
-
 
 const scrollToTopButton = document.getElementById('backTop');
 
@@ -61,3 +58,40 @@ scrollToTopButton.onclick = function(e) {
     e.preventDefault();
     scrollToTop();
 };
+
+//Days counter
+
+// dateFuture = new Date(2020,9,14,23,59,59);
+//
+// function GetCount(){
+//
+//     dateNow = new Date();
+//
+//     amount = dateFuture.getTime() - dateNow.getTime();
+//     delete dateNow;
+//     if(amount < 0){
+//         document.getElementById('countbox').innerHTML="Now!";
+//     }
+//     else{
+//
+//         days=0;hours=0;mins=0;secs=0;out="";
+//
+//         amount = Math.floor(amount/1000);
+//
+//         days=Math.floor(amount/86400);
+//         amount=amount%86400;
+//
+//         if (days === 1) {
+//             out+= days + " день"
+//         } else if (days === 2 || days === 3 || days === 4) {
+//             out+= days + " дня"
+//         } else {
+//             out += days +" дней"
+//         }
+//         document.getElementById('countbox').innerHTML=out;
+//
+//         setTimeout("GetCount()", 1000);
+//     }
+// }
+//
+// window.onload=function(){GetCount();}
