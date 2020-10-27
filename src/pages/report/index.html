@@ -135,41 +135,9 @@
 </body>
 <script>
     dateFuture = new Date(2020,9,14,23,59,59);
-
-    function GetCount(){
-
-        dateNow = new Date();
-
-        amount = dateFuture.getTime() - dateNow.getTime();
-        delete dateNow;
-        if(amount < 0){
-            document.getElementById('countbox').innerHTML="Now!";
-        }
-        else{
-
-            days=0;hours=0;mins=0;secs=0;out="";
-
-            amount = Math.floor(amount/1000);
-
-            days=Math.floor(amount/86400);
-            amount=amount%86400;
-
-            if (days === 1) {
-                out+= days + " день"
-            } else if (days === 2 || days === 3 || days === 4) {
-                out+= days + " дня"
-            } else {
-                out += days +" дней"
-            }
-            document.getElementById('countbox').innerHTML=out;
-
-            setTimeout("GetCount()", 1000);
-        }
-    }
-
-    window.onload=function(){GetCount();}
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="../../js/daysCounter.js"></script>
 </html>
