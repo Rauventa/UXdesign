@@ -1,19 +1,21 @@
 
 
 .speakerSearch, .companySearch {
+  //root styles for js show more
+
+  #loadLess {
+    display: none;
+  }
+
+  .item-list {
+    display: flex;
+  }
+
   //root col style (for 5 cols)
 
   .col-xl-2 {
     flex: 0 0 20%;
     max-width: 20%;
-  }
-
-  .item-list {
-    display: none;
-  }
-
-  #loadLess {
-    display: none;
   }
 
   &__container {
@@ -235,6 +237,11 @@
 @media screen and (max-width: 1024px) {
 
   .companySearch, .speakerSearch {
+
+    .item-list {
+      display: none;
+    }
+
     .col-md-12 {
       -ms-flex: 0 0 100%;
       flex: 0 0 100%;

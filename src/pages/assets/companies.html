@@ -153,22 +153,22 @@
                         <div class="companySearch__container_content-list">
                             <h2>1-F</h2>
                             <ul>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
                             </ul>
@@ -178,22 +178,22 @@
                         <div class="companySearch__container_content-list">
                             <h2>G-O</h2>
                             <ul>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
                             </ul>
@@ -203,22 +203,22 @@
                         <div class="companySearch__container_content-list">
                             <h2>P-W</h2>
                             <ul>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
                             </ul>
@@ -332,31 +332,33 @@
 </script>
 <script>
     $(function() {
-        $(".item-list").slice(0, 3).show();
-        $("#loadMore").on('click', function(e) {
-            e.preventDefault();
-            $(".item-list:hidden").slice(0, 3).slideDown();
-            if ($(".item-list:hidden").length == 0) {
-                $("#loadLess").fadeIn('slow');
-                $("#loadMore").hide();
-            }
-            // $('html,body').animate({
-            //     scrollTop: $(this).offset().top
-            // }, 1500);
-        });
+        if ($(window).width() < 998) {
+            $(".item-list").slice(0, 3).show();
+            $("#loadMore").on('click', function(e) {
+                e.preventDefault();
+                $(".item-list:hidden").slice(0, 3).slideDown();
+                if ($(".item-list:hidden").length == 0) {
+                    $("#loadLess").fadeIn('slow');
+                    $("#loadMore").hide();
+                }
+                // $('html,body').animate({
+                //     scrollTop: $(this).offset().top
+                // }, 1500);
+            });
 
-        $("#loadLess").on('click', function(e) {
-            e.preventDefault();
-            $('.item-list:not(:lt(3))').fadeOut();
-            $("#loadMore").fadeIn('slow');
-            $("#loadLess").hide();
+            $("#loadLess").on('click', function(e) {
+                e.preventDefault();
+                $('.item-list:not(:lt(3))').fadeOut();
+                $("#loadMore").fadeIn('slow');
+                $("#loadLess").hide();
 
-            desiredHeight = $(window).height();
+                desiredHeight = $(window).height();
 
-            $('html,body').animate({
-                scrollTop: $(this).offset().top + desiredHeight
-            }, 1500);
-        });
+                $('html,body').animate({
+                    scrollTop: $(this).offset().top + desiredHeight
+                }, 1500);
+            });
+        }
     });
 </script>
 </html>
