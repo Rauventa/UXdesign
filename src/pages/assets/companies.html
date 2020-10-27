@@ -128,22 +128,22 @@
                         <div class="companySearch__container_content-list">
                             <h2>А-Я</h2>
                             <ul>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
-                                <li>
+                                <li class="item-list">
                                     <a href="#">Ак Барс Банк</a>
                                 </li>
                             </ul>
@@ -226,7 +226,8 @@
                     </div>
                 </div>
                 <div class="companySearch__container_content-buttons">
-                    <button class="btn btn-primary">Показать еще</button>
+                    <a href="#" class="btn btn-primary" id="loadMore">Показать еще</a>
+                    <a href="#" class="btn btn-primary" id="loadLess">Показать меньше</a>
                 </div>
             </div>
         </div>
@@ -299,7 +300,8 @@
 
     window.onload=function(){GetCount();}
 </script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script>
@@ -326,6 +328,35 @@
             $('#b1').text('Show Spoiler');
         }
 
+    });
+</script>
+<script>
+    $(function() {
+        $(".item-list").slice(0, 3).show();
+        $("#loadMore").on('click', function(e) {
+            e.preventDefault();
+            $(".item-list:hidden").slice(0, 3).slideDown();
+            if ($(".item-list:hidden").length == 0) {
+                $("#loadLess").fadeIn('slow');
+                $("#loadMore").hide();
+            }
+            // $('html,body').animate({
+            //     scrollTop: $(this).offset().top
+            // }, 1500);
+        });
+
+        $("#loadLess").on('click', function(e) {
+            e.preventDefault();
+            $('.item-list:not(:lt(3))').fadeOut();
+            $("#loadMore").fadeIn('slow');
+            $("#loadLess").hide();
+
+            desiredHeight = $(window).height();
+
+            $('html,body').animate({
+                scrollTop: $(this).offset().top + desiredHeight
+            }, 1500);
+        });
     });
 </script>
 </html>
