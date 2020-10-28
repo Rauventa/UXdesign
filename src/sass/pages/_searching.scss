@@ -3,7 +3,7 @@
 .speakerSearch, .companySearch {
   //root styles for js show more
 
-  #loadLess {
+  #loadLess, #loadMore {
     display: none;
   }
 
@@ -253,6 +253,17 @@
     }
   }
 
+  .companySearch {
+    &__popular {
+      &_card {
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+
   .speakerSearch {
     &__popular {
       &_card {
@@ -280,6 +291,10 @@
 
   .companySearch, .speakerSearch {
     padding: 0 1.5rem;
+
+    #loadMore {
+      display: flex;
+    }
 
     h1 {
       font-size: 20px !important;

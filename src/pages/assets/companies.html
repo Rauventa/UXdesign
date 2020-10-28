@@ -304,32 +304,32 @@
 <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script>
-    function bindEvent(element, eventName, eventHandler) {
-        let el = $(element)[0];
-        if (el.addEventListener) {
-            el.addEventListener(eventName, eventHandler, false)
-        } else if (el.attachEvent) {
-            el.attachEvent('on'+eventName, eventHandler);
-        }
-    }
-    bindEvent('#b1', 'click', function() {
+<!--<script>-->
+<!--    function bindEvent(element, eventName, eventHandler) {-->
+<!--        let el = $(element)[0];-->
+<!--        if (el.addEventListener) {-->
+<!--            el.addEventListener(eventName, eventHandler, false)-->
+<!--        } else if (el.attachEvent) {-->
+<!--            el.attachEvent('on'+eventName, eventHandler);-->
+<!--        }-->
+<!--    }-->
+<!--    bindEvent('#b1', 'click', function() {-->
 
-        if( $('#checker').hasClass('fa-angle-up')) {
-            $("#checker").removeClass('fa-angle-up').addClass('fa-angle-down');
-        } else {
-            $("#checker").removeClass('fa-angle-down').addClass('fa-angle-up');
-        }
+<!--        if( $('#checker').hasClass('fa-angle-up')) {-->
+<!--            $("#checker").removeClass('fa-angle-up').addClass('fa-angle-down');-->
+<!--        } else {-->
+<!--            $("#checker").removeClass('fa-angle-down').addClass('fa-angle-up');-->
+<!--        }-->
 
-        $('#p1').toggle('blind');
-        if ($('#b1').text() == 'Show Spoiler') {
-            $('#b1').text('Hide Spoiler');
-        } else if ($('#b1').text() == 'Hide Spoiler') {
-            $('#b1').text('Show Spoiler');
-        }
+<!--        $('#p1').toggle('blind');-->
+<!--        if ($('#b1').text() == 'Show Spoiler') {-->
+<!--            $('#b1').text('Hide Spoiler');-->
+<!--        } else if ($('#b1').text() == 'Hide Spoiler') {-->
+<!--            $('#b1').text('Show Spoiler');-->
+<!--        }-->
 
-    });
-</script>
+<!--    });-->
+<!--</script>-->
 <script>
     $(function() {
         if ($(window).width() < 998) {
