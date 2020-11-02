@@ -122,6 +122,11 @@
             
         }
     }
+
+    a {
+        display: none;
+    }
+
     .present {
         display: none;
         position: absolute;
@@ -380,7 +385,7 @@
 }
 .swiper-slide {
     width: auto;
-    height: auto;
+    height: auto !important;
 
     .card {
         max-width: 100%;
