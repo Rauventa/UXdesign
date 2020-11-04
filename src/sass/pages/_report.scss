@@ -231,6 +231,7 @@
   &__heading {
     padding: 1.25rem 0;
     border-bottom: 1px solid $bgOcean;
+    margin-bottom: 2rem;
 
     h1 {
       margin-bottom: 0;
@@ -242,37 +243,55 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 2rem;
 
-    &_report {
-      display: flex;
-      padding: 1.25rem 0;
+    .card {
+      max-width: 100%;
 
-      &:not(:last-child) {
-        border-bottom: 1px solid $lineLight;
+      &__bottom {
+        justify-content: flex-end;
       }
 
-      &-img {
-        img {
-          width: 180px;
-          min-height: 100px;
-          height: 100%;
-          margin-right: 2rem;
-          border-radius: 5px;
-        }
+      .available {
+        display: none;
       }
 
-      &-content {
+      a {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .info-text {
-          margin-bottom: 0;
-        }
+        float: right;
       }
     }
+    //display: flex;
+    //flex-direction: column;
+
+    //&_report {
+    //  display: flex;
+    //  padding: 1.25rem 0;
+    //
+    //  &:not(:last-child) {
+    //    border-bottom: 1px solid $lineLight;
+    //  }
+    //
+    //  &-img {
+    //    img {
+    //      width: 180px;
+    //      min-height: 100px;
+    //      height: 100%;
+    //      margin-right: 2rem;
+    //      border-radius: 5px;
+    //    }
+    //  }
+    //
+    //  &-content {
+    //    display: flex;
+    //    flex-direction: column;
+    //    justify-content: space-between;
+    //
+    //    .info-text {
+    //      margin-bottom: 0;
+    //    }
+    //  }
+    //}
   }
 }
 
