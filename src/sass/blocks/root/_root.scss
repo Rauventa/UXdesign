@@ -167,6 +167,9 @@ a {
 .btn-gold {
   background-color: $bgSun !important;
   border: 1px solid $bgSun !important;
+  color: $white !important;
+  min-width: 13rem !important;
+  padding: .5rem 3.5rem!important;
 
   &:hover {
     background-color: #16478C !important;

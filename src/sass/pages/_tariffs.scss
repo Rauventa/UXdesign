@@ -5,8 +5,42 @@
     flex-direction: column;
     align-items: center;
 
-    h1 {
+    &_buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 1.5rem;
+
+      button {
+        padding: 0.35rem 1.25rem;
+        border: 1px solid $lineLight;
+        font-size: 15px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .btn-fiz {
+        background-color: $white;
+        border-radius: 5px 0 0 5px;
+        border-right: none;
+      }
+
+      .btn-ur {
+        background-color: $bgGrey;
+        border-radius: 0 5px 5px 0;
+        border-left: none;
+        color: $textGrey;
+      }
+    }
+
+    h1 {
+      margin: 1.5rem 0;
+    }
+
+    p {
+      margin-bottom: 3rem;
     }
   }
 
@@ -15,6 +49,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 1rem;
     }
 
     &_content {
@@ -45,6 +80,10 @@
               border: 1px solid $blue !important;
             }
           }
+        }
+
+        .btn {
+          transition: all .5s;
         }
 
         &__heading {
@@ -124,7 +163,6 @@
               top: 50%;
               left: 50%;
               transform: translate(-50%,-50%) rotate(-10deg);
-              //transform: rotate(-10deg);
               background-color: $lineError;
             }
           }
@@ -160,8 +198,9 @@
             left: 50%;
             transform: translate(-50%,-50%);
             background-color: #FF7A00;
-            padding: 0.25rem 1rem;
+            padding: 0.25rem 1.5rem;
             border-radius: 5px;
+            width: fit-content;
           }
 
           .tariff-line {
@@ -202,7 +241,7 @@
   }
 
   &__cards {
-    padding: 2rem 0;
+    padding: 3.5rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,11 +267,21 @@
         text-align: center;
         border-radius: 5px;
         padding: 3rem 2rem;
+        transition: all .5s;
 
         &:hover {
           border: 0.5px solid $blue;
           box-shadow: 2px 2px 8px rgba(22,71,140,.5), -2px -2px 8px rgba(22,71,140,.5);
           cursor: pointer;
+
+          .btn {
+            background-color: $blue !important;
+            border: 1px solid $blue !important;
+          }
+        }
+
+        .btn {
+          transition: all .5s;
         }
 
         &__heading {
@@ -284,6 +333,384 @@
         border: 0.5px solid $bgOcean;
         box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
       }
+
+      .item-magenta {
+        border: 0.5px solid $bgMagenta;
+        box-shadow: 2px 2px 12px rgba(175, 3, 178, 0.3), -2px -2px 12px rgba(175, 3, 178, 0.3);
+      }
+
+      .item-sun {
+        border: 0.5px solid $bgSun;
+        box-shadow: 4px 4px 8px rgba(254, 174, 20, 0.3), -4px -4px 8px rgba(254, 174, 20, 0.3);
+      }
+    }
+  }
+
+  &__warning {
+    padding: 0 2rem 4rem 2rem;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $textGrey;
+      text-decoration: underline;
+    }
+  }
+}
+
+.tariffsCatalog {
+
+  &__heading {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &_back {
+      background-color: $bgGrey;
+      border-radius: 0 0 5px 5px;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      position: absolute;
+      left: 0;
+      box-shadow: 0 2px 2px rgba(29, 37, 47, 0.08), 0 4px 6px rgba(29, 37, 47, 0.08);
+      transition: all .3s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #e0e0e0;
+      }
+
+      p {
+        margin-bottom: 0;
+        margin-left: 1rem;
+      }
+    }
+
+    &_card {
+      width: fit-content;
+      padding: 1.5rem 2rem;
+      background-color: $white;
+      box-shadow: 0 2px 6px rgba(29, 37, 47, 0.08), 0 4px 12px rgba(29, 37, 47, 0.12);
+      border-radius: 6px;
+      display: flex;
+
+      &-video {
+        img {
+          width: 180px;
+          height: 100%;
+          border-radius: 5px;
+          margin-right: 2rem;
+        }
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        &--text {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &--footer {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__cards {
+    padding: 3.5rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    &_container {
+      background: linear-gradient(90.13deg, rgba(0, 178, 178, 0.15) 0.11%, rgba(175, 3, 178, 0.15) 51.04%, rgba(254, 174, 20, 0.15) 99.88%);
+      padding: 2rem 0;
+      margin-top: 2rem;
+      width: 100%;
+
+      .row {
+        justify-content: center;
+      }
+
+      .tariff-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 3rem 2rem;
+        transition: all .5s;
+
+        &:hover {
+          border: 0.5px solid $blue;
+          box-shadow: 2px 2px 8px rgba(22,71,140,.5), -2px -2px 8px rgba(22,71,140,.5);
+          cursor: pointer;
+
+          .btn {
+            background-color: $blue !important;
+            border: 1px solid $blue !important;
+          }
+        }
+
+        .btn {
+          transition: all .5s;
+        }
+
+        input[type="radio"] {
+          &:checked + label {
+            background-color: $white !important;
+            border: 1px solid $white !important;
+            box-shadow: none !important;
+          }
+        }
+
+        &__heading {
+          display: flex;
+          align-items: center;
+          min-height: 15vh;
+        }
+
+        &__info {
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+
+        &__price {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          min-height: 13vh;
+
+          h1 {
+            margin-bottom: 0.5rem;
+            letter-spacing: inherit;
+          }
+
+          .old-price {
+            color: $textGrey;
+            position: relative;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+
+            &::before {
+              content: '';
+              position: absolute;
+              height: 1px;
+              width: 120%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%) rotate(-10deg);
+              //transform: rotate(-10deg);
+              background-color: $lineError;
+            }
+          }
+        }
+
+        &__buttons {
+          input[type="radio"] {
+            display: none !important;
+            *display: inline;
+            position: relative;
+
+            &:checked + label p {
+              display: none;
+            }
+
+            &:checked + label.btn-primary:before {
+              width: 20px;
+              content: " ";
+              background-image: url('../../img/ocean-checker.svg');
+              background-repeat: no-repeat;
+              position: absolute;
+              top: 0.65rem;
+              left: 1.5rem;
+              height: 20px
+            }
+
+            &:checked + label.btn-secondary:before {
+              width: 20px;
+              content: " ";
+              background-image: url('../../img/magenta-checker.svg');
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 1.5rem;
+              top: 0.65rem;
+              height: 20px
+            }
+
+            &:checked + label.btn-primary.btn-sun:before {
+              width: 20px;
+              content: " ";
+              background-image: url('../../img/sun-checker.svg');
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 1.5rem;
+              top: 0.65rem;
+              height: 20px
+            }
+
+            &:checked + label {
+              cursor: default;
+              margin-bottom: 0;
+            }
+
+            &:checked + label.btn-primary:after {
+              content: "Продукт выбран";
+              color: $bgOcean;
+              font-size: 15px !important;
+              line-height: 20px;
+            }
+
+            &:checked + label.btn-secondary:after {
+              content: "Продукт выбран";
+              color: $bgMagenta;
+              font-size: 15px !important;
+              line-height: 20px;
+            }
+
+            &:checked + label.btn-primary.btn-sun:after {
+              content: "Продукт выбран";
+              color: $bgSun;
+              font-size: 15px !important;
+              line-height: 20px;
+            }
+
+            &:checked + label {
+              background-color: $white !important;
+              border: 1px solid $white !important;
+              box-shadow: none !important;
+              position: relative;
+            }
+          }
+
+          input[type="radio"] + label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 0;
+
+            p {
+              margin-bottom: 0;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .item-ocean {
+        border: 0.5px solid $bgOcean;
+        box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+      }
+
+      .item-magenta {
+        border: 0.5px solid $bgMagenta;
+        box-shadow: 2px 2px 12px rgba(175, 3, 178, 0.3), -2px -2px 12px rgba(175, 3, 178, 0.3);
+      }
+
+      .item-sun {
+        border: 0.5px solid $bgSun;
+        box-shadow: 4px 4px 8px rgba(254, 174, 20, 0.3), -4px -4px 8px rgba(254, 174, 20, 0.3);
+
+        .btn-sun {
+          background-color: $bgSun !important;
+          border: 1px solid $bgSun !important;
+
+          &:hover {
+            background-color: #16478C !important;
+            border: 1px solid #16478C !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__warning {
+    padding: 0 2rem;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $textGrey;
+      text-decoration: underline;
+    }
+  }
+
+  &__extra {
+    width: 100%;
+    min-height: 50vh;
+    background-color: $white;
+    padding: 1rem 4rem;
+
+    a {
+      color: $textGrey;
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    &_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: $textGrey;
+        text-decoration: underline;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: auto !important;
+          margin: 1rem 0;
+        }
+      }
     }
   }
 }
@@ -293,5 +720,207 @@
     -ms-flex: 0 0 36.666667% !important;
     flex: 0 0 36.666667% !important;
     max-width: 36.666667% !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tariffs, .tariffsCatalog {
+    &__cards {
+      .col-xl-4 {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      &_container {
+
+        .tariff-item {
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .tariffsCatalog {
+    &__cards {
+      padding: 1rem 0 2rem 0;
+    }
+
+    &__extra {
+      &_form {
+        form {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tariffs {
+    &__tickets {
+      &_content {
+        .tariff-card {
+          &__content {
+            padding: 2rem 1.5rem 0 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .tariffsCatalog {
+    &__heading {
+      &_back {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tariffs, .tariffsCatalog {
+    &__tickets {
+      &_content {
+        .col-xl-5 {
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+
+        .tariff-card {
+          width: 80%;
+          margin: 0 auto;
+
+          &__content {
+            padding: 2rem 3rem 0 3rem;
+          }
+        }
+      }
+    }
+    &__cards {
+      .col-xl-4 {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      &_container {
+        padding: 2rem 0.5rem;
+
+        .tariff-item {
+          padding: 3rem 1rem;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .tariffsCatalog {
+    &__extra {
+      &_form {
+        form {
+          width: 80%;
+          
+          .info-text {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tariffs, .tariffsCatalog {
+    &__heading {
+      padding: 2rem;
+      text-align: center;
+
+      &_buttons {
+        flex-direction: column;
+
+        button {
+          width: 100%;
+        }
+
+        .btn-fiz {
+          border-right: 1px solid $lineLight;
+          border-bottom: none;
+          border-radius: 5px 5px 0 0;
+        }
+
+        .btn-ur {
+          border-left: 1px solid $lineLight;
+          border-top: none;
+          border-radius: 0 0 5px 5px;
+        }
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+    &__banner {
+      text-align: center;
+      padding: 0.5rem 1rem;
+    }
+    &__tickets {
+      &_content {
+        padding: 2rem 0.5rem;
+
+        .tariff-card {
+          width: 100%;
+
+          &__line {
+            padding: 1rem 0;
+          }
+
+          &__content {
+            padding: 2rem 1.5rem 0 1.5rem;
+          }
+        }
+      }
+    }
+    &__cards {
+      &_container {
+
+        .tariff-item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .tariffsCatalog {
+    &__heading {
+      &_card {
+        flex-direction: column;
+
+        &-video {
+          margin-bottom: 2rem;
+
+          img {
+            margin-right: 0;
+            width: 225px;
+          }
+        }
+
+        &-content {
+          .info-text {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__extra {
+      &_form {
+        form {
+          width: 100%;
+        }
+      }
+    }
   }
 }
