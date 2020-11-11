@@ -149,6 +149,10 @@
           align-items: center;
           border-radius: 5px;
 
+          &_main {
+            display: flex;
+          }
+
           .old-price {
             color: $textGrey;
             position: relative;
@@ -515,6 +519,10 @@
           justify-content: flex-start;
           align-items: center;
           min-height: 13vh;
+
+          &_main {
+            display: flex;
+          }
 
           h1 {
             margin-bottom: 0.5rem;
