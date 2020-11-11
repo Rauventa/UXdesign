@@ -307,6 +307,10 @@
           align-items: center;
           min-height: 13vh;
 
+          &_main {
+            display: flex;
+          }
+
           h1 {
             margin-bottom: 0.5rem;
             letter-spacing: inherit;
