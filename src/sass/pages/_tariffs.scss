@@ -54,10 +54,15 @@
 
     &_content {
       background: linear-gradient(90.13deg, rgba(0, 178, 178, 0.15) 0.11%, rgba(175, 3, 178, 0.15) 99.88%);
-      padding: 2rem;
+      padding: 4rem 2rem;
 
       .row {
         justify-content: center;
+
+        .col-xl-5 {
+          padding-right: 30px !important;
+          padding-left: 30px !important;
+        }
       }
 
       .tariff-card {
@@ -96,7 +101,7 @@
 
         &__content {
           width: 100%;
-          padding: 2rem 3rem 0 3rem;
+          padding: 2rem 2rem 0 2rem;
           background-color: $white;
 
           ul {
@@ -256,7 +261,7 @@
 
     &_container {
       background: linear-gradient(90.13deg, rgba(0, 178, 178, 0.15) 0.11%, rgba(175, 3, 178, 0.15) 51.04%, rgba(254, 174, 20, 0.15) 99.88%);
-      padding: 2rem 0;
+      padding: 4rem 0;
       margin-top: 2rem;
       width: 100%;
 
@@ -281,6 +286,108 @@
           .btn {
             background-color: $blue !important;
             border: 1px solid $blue !important;
+          }
+        }
+
+        .btn-sun {
+          background-color: $bgSun !important;
+          border: 1px solid $bgSun !important;
+
+          &:hover {
+            background-color: #16478C !important;
+            border: 1px solid #16478C !important;
+          }
+        }
+
+        &__buttons {
+          input[type="radio"] {
+            display: none !important;
+            *display: inline;
+            position: relative;
+
+            &:checked + label p {
+              display: none;
+            }
+
+            &:checked + label.btn-primary:before {
+              width: 20px;
+              content: " ";
+              background-image: url('../../img/ocean-checker.svg');
+              background-repeat: no-repeat;
+              position: absolute;
+              top: 0.65rem;
+              left: 1.5rem;
+              height: 20px
+            }
+
+            &:checked + label.btn-secondary:before {
+              width: 20px;
+              content: " ";
+              background-image: url('../../img/magenta-checker.svg');
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 1.5rem;
+              top: 0.65rem;
+              height: 20px
+            }
+
+            &:checked + label.btn-primary.btn-sun:before {
+              width: 20px;
+              content: " ";
+              background-image: url('../../img/sun-checker.svg');
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 1.5rem;
+              top: 0.65rem;
+              height: 20px
+            }
+
+            &:checked + label {
+              cursor: default;
+              margin-bottom: 0;
+            }
+
+            &:checked + label.btn-primary:after {
+              content: "Продукт выбран";
+              color: $bgOcean;
+              font-size: 15px !important;
+              line-height: 20px;
+            }
+
+            &:checked + label.btn-secondary:after {
+              content: "Продукт выбран";
+              color: $bgMagenta;
+              font-size: 15px !important;
+              line-height: 20px;
+            }
+
+            &:checked + label.btn-primary.btn-sun:after {
+              content: "Продукт выбран";
+              color: $bgSun;
+              font-size: 15px !important;
+              line-height: 20px;
+            }
+
+            &:checked + label {
+              background-color: $white !important;
+              border: 1px solid $white !important;
+              box-shadow: none !important;
+              position: relative;
+            }
+          }
+
+          input[type="radio"] + label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 0;
+
+            p {
+              margin-bottom: 0;
+              color: $white;
+            }
           }
         }
 
