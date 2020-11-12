@@ -958,22 +958,9 @@
       text-align: center;
 
       &_buttons {
-        flex-direction: column;
-
         button {
-          width: 100%;
-        }
-
-        .btn-fiz {
-          border-right: 1px solid $lineLight;
-          border-bottom: none;
-          border-radius: 5px 5px 0 0;
-        }
-
-        .btn-ur {
-          border-left: 1px solid $lineLight;
-          border-top: none;
-          border-radius: 0 0 5px 5px;
+          font-size: 12px;
+          padding: 0.5rem 1rem;
         }
       }
 
