@@ -42,9 +42,14 @@
   &__video {
     margin-bottom: 2rem;
 
-    iframe {
-      width: 100%;
-      min-height: 67vh;
+    iframe, .video-container {
+      width: 100% !important;
+      min-height: 67vh !important;
+    }
+
+    .video-js {
+      width: 100% !important;
+      margin: 0 !important;
     }
   }
 
