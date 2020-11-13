@@ -56,7 +56,16 @@
             </div>
         </div>
         <div class="relay__video">
-            <iframe src="https://facecast.net/v/3a1u2s" style="border:none" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<!--            <iframe src="https://facecast.net/v/3a1u2s" style="border:none" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
+            <div class="video-container video-basic">
+                <video id="example_video_1" class="video-js vjs-big-play-centered"
+                       controls preload="metadata" autoplay
+                       data-viblast-key="N8FjNTQ3NDdhZqZhNGI5NWU5ZTI=">
+                    <!-- this is an important to specify the type of the video. Use 'application/x-mpegURL' for HLS streams or 'application/dash+xml' for DASH streams -->
+                    <source src="http://test.ux-marafon.ru/video/video_348.mp4" type="video/mp4" />
+                </video>
+                <p id="duration"></p>
+            </div>
         </div>
 
         <h1 class="links-heading">Приглашаем на платформу UX-Марафон</h1>

@@ -834,6 +834,18 @@
   }
 }
 
+.tariffs, .tariffsCatalog {
+  &__cards {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__extra {
+    margin-top: -15rem;
+    padding-top: 15rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .col-xl-5 {
     -ms-flex: 0 0 36.666667% !important;
