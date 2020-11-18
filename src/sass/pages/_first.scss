@@ -120,25 +120,87 @@
       .big-heading {
         color: #FFA36F;
         text-transform: initial;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
         letter-spacing: initial;
         font-weight: bold !important;
+        font-size: 30px !important;
+        line-height: 30px !important;
       }
 
       .big-content-heading {
         color: $white;
-        font-size: 48px !important;
+        font-size: 42px !important;
         line-height: 56px !important;
-        margin-bottom: 55px;
+        margin-bottom: 45px;
       }
 
       .friday-button {
         background: linear-gradient(75.14deg, #FFB987 0%, #FF8970 98.11%);
-        border: 1px solid #FFA36F;
+        border: 1px solid transparent;
         box-sizing: border-box;
         border-radius: 5px;
-        padding: 1rem 2.5rem;
-        font-size: 26px !important;
+        padding: 0.75rem 2rem;
+        font-size: 22px !important;
+        color: #1D252F;
+      }
+    }
+  }
+
+  .friday1 {
+
+  }
+
+  .friday2 {
+    .first__friday_img {
+      background: linear-gradient(65.12deg, #E4E69E 14.79%, #E4FEC3 94.62%);
+    }
+
+    .first__friday_content {
+
+      .big-heading {
+        color: #E4FCBF;
+      }
+
+      .friday-button {
+        background: linear-gradient(75.14deg, #FFB987 0%, #FF8970 98.11%);
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 0.75rem 2rem;
+        font-size: 22px !important;
+        color: #1D252F;
+      }
+
+      .friday-pricing {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+
+        h1 {
+          color: #FC7679;
+          font-size: 64px !important;
+          line-height: 64px !important;
+          font-weight: bold !important;
+          letter-spacing: 0.04em !important;
+          margin-right: 1.5rem;
+        }
+
+        h3 {
+          color: #8A8E93;
+          font-size: 30px !important;
+          line-height: 30px !important;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .friday-extra {
+        h1 {
+          color: #E4FCBF;
+          font-size: 30px !important;
+          line-height: 30px !important;
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -343,7 +405,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: 16px;
-      letter-spacing: 0,085em;
+      letter-spacing: 0.085em;
       text-align: center;
       text-transform: uppercase;  
       color: $bgMagenta;
@@ -510,6 +572,30 @@
       }
     }
 
+    .friday2 {
+      .first__friday_content {
+
+        .friday-pricing {
+          h1 {
+            font-size: 52px !important;
+            line-height: 52px !important;
+          }
+
+          h3 {
+            font-size: 22px !important;
+            line-height: 22px !important;
+          }
+        }
+
+        .friday-extra {
+          h1 {
+            font-size: 22px !important;
+            line-height: 22px !important;
+          }
+        }
+      }
+    }
+
     &__banner {
       &_main {
         img {
@@ -603,6 +689,39 @@
         }
         .friday-button {
           font-size: 18px !important;
+        }
+      }
+    }
+
+    .friday2 {
+      .first__friday_content {
+
+        .big-content-heading {
+          padding: 0 2rem;
+        }
+
+        .friday-pricing {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          h1 {
+            font-size: 44px !important;
+            line-height: 44px !important;
+            margin-right: 0;
+          }
+
+          h3 {
+            font-size: 18px !important;
+            line-height: 18px !important;
+          }
+        }
+
+        .friday-extra {
+          h1 {
+            font-size: 15px !important;
+            line-height: 20px !important;
+          }
         }
       }
     }
