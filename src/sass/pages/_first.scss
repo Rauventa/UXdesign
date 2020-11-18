@@ -120,15 +120,16 @@
       .big-heading {
         color: #FFA36F;
         text-transform: initial;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         letter-spacing: initial;
+        font-weight: bold !important;
       }
 
       .big-content-heading {
         color: $white;
         font-size: 48px !important;
         line-height: 56px !important;
-        margin-bottom: 35px;
+        margin-bottom: 55px;
       }
 
       .friday-button {
@@ -136,7 +137,8 @@
         border: 1px solid #FFA36F;
         box-sizing: border-box;
         border-radius: 5px;
-        padding: 0.75rem 2rem;
+        padding: 1rem 2.5rem;
+        font-size: 26px !important;
       }
     }
   }
@@ -453,6 +455,10 @@
           font-size: 36px !important;
           line-height: 46px !important;
         }
+
+        .friday-button {
+          font-size: 22px !important;
+        }
       }
     }
   }
@@ -496,6 +502,10 @@
         .big-content-heading {
           font-size: 30px !important;
           line-height: 34px !important;
+        }
+
+        .friday-button {
+          padding: 0.75rem 2rem;
         }
       }
     }
@@ -584,10 +594,15 @@
         .big-heading {
           font-size: 20px !important;
           line-height: 20px !important;
+          margin-bottom: 20px;
         }
         .big-content-heading {
           font-size: 25px !important;
           line-height: 30px !important;
+          margin-bottom: 35px;
+        }
+        .friday-button {
+          font-size: 18px !important;
         }
       }
     }
