@@ -375,6 +375,10 @@
     width: 25%;
     box-shadow: 0 2px 6px rgba(29, 37, 47, 0.08), 0 4px 12px rgba(29, 37, 47, 0.12);
     border-radius: 6px;
+
+    &:hover {
+      box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+    }
   }
 }
 
