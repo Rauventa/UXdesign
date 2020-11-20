@@ -1,5 +1,100 @@
 .tariffs {
 
+  input[type="radio"] {
+    display: none !important;
+    *display: inline;
+    position: relative;
+
+    &:checked + label p {
+      display: none;
+    }
+
+    &:checked + label.btn-primary:before {
+      width: 20px;
+      content: " ";
+      background-image: url('../../img/ocean-checker.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0.65rem;
+      left: 1.5rem;
+      height: 20px
+    }
+
+    &:checked + label.btn-secondary:before {
+      width: 20px;
+      content: " ";
+      background-image: url('../../img/magenta-checker.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 1.5rem;
+      top: 0.65rem;
+      height: 20px
+    }
+
+    &:checked + label.btn-primary.btn-sun:before {
+      width: 20px;
+      content: " ";
+      background-image: url('../../img/sun-checker.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 1.5rem;
+      top: 0.65rem;
+      height: 20px
+    }
+
+    &:checked + label {
+      cursor: default;
+      margin-bottom: 0;
+    }
+
+    &:checked + label.btn-primary:after {
+      content: "Продукт выбран";
+      color: $bgOcean;
+      font-size: 15px !important;
+      line-height: 20px;
+    }
+
+    &:checked + label.btn-secondary:after {
+      content: "Продукт выбран";
+      color: $bgMagenta;
+      font-size: 15px !important;
+      line-height: 20px;
+    }
+
+    &:checked + label.btn-primary.btn-sun:after {
+      content: "Продукт выбран";
+      color: $bgSun;
+      font-size: 15px !important;
+      line-height: 20px;
+    }
+
+    &:checked + label {
+      background-color: $white !important;
+      border: 1px solid $white !important;
+      box-shadow: none !important;
+      position: relative;
+
+      &:hover {
+        background-color: transparent !important;
+        border: 1px solid transparent !important;
+      }
+    }
+  }
+
+  input[type="radio"] + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+
+    p {
+      margin-bottom: 0;
+      color: $white;
+    }
+  }
+
   &__heading {
     display: flex;
     flex-direction: column;
@@ -81,8 +176,8 @@
 
           .tariff-card__price {
             .btn {
-              background-color: $blue !important;
-              border: 1px solid $blue !important;
+              background-color: $blue;
+              border: 1px solid $blue;
             }
           }
         }
@@ -284,8 +379,8 @@
           cursor: pointer;
 
           .btn {
-            background-color: $blue !important;
-            border: 1px solid $blue !important;
+            background-color: $blue;
+            border: 1px solid $blue;
           }
         }
 
@@ -296,98 +391,6 @@
           &:hover {
             background-color: #16478C !important;
             border: 1px solid #16478C !important;
-          }
-        }
-
-        &__buttons {
-          input[type="radio"] {
-            display: none !important;
-            *display: inline;
-            position: relative;
-
-            &:checked + label p {
-              display: none;
-            }
-
-            &:checked + label.btn-primary:before {
-              width: 20px;
-              content: " ";
-              background-image: url('../../img/ocean-checker.svg');
-              background-repeat: no-repeat;
-              position: absolute;
-              top: 0.65rem;
-              left: 1.5rem;
-              height: 20px
-            }
-
-            &:checked + label.btn-secondary:before {
-              width: 20px;
-              content: " ";
-              background-image: url('../../img/magenta-checker.svg');
-              background-repeat: no-repeat;
-              position: absolute;
-              left: 1.5rem;
-              top: 0.65rem;
-              height: 20px
-            }
-
-            &:checked + label.btn-primary.btn-sun:before {
-              width: 20px;
-              content: " ";
-              background-image: url('../../img/sun-checker.svg');
-              background-repeat: no-repeat;
-              position: absolute;
-              left: 1.5rem;
-              top: 0.65rem;
-              height: 20px
-            }
-
-            &:checked + label {
-              cursor: default;
-              margin-bottom: 0;
-            }
-
-            &:checked + label.btn-primary:after {
-              content: "Продукт выбран";
-              color: $bgOcean;
-              font-size: 15px !important;
-              line-height: 20px;
-            }
-
-            &:checked + label.btn-secondary:after {
-              content: "Продукт выбран";
-              color: $bgMagenta;
-              font-size: 15px !important;
-              line-height: 20px;
-            }
-
-            &:checked + label.btn-primary.btn-sun:after {
-              content: "Продукт выбран";
-              color: $bgSun;
-              font-size: 15px !important;
-              line-height: 20px;
-            }
-
-            &:checked + label {
-              background-color: $white !important;
-              border: 1px solid $white !important;
-              box-shadow: none !important;
-              position: relative;
-            }
-          }
-
-          input[type="radio"] + label {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
-            margin-bottom: 0;
-
-            p {
-              margin-bottom: 0;
-              color: $white;
-            }
           }
         }
 
