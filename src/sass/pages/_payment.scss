@@ -284,6 +284,14 @@
         height: auto;
         transition: all .3s;
 
+        .pricing {
+          display: flex;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+
         .btn {
           display: flex;
           justify-content: center;
