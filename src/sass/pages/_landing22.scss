@@ -1,0 +1,253 @@
+
+
+//TODO Нужно сделать нормальные отступы по фигме, сравнить все и проверить. + Доделать мобильную версию
+
+
+.landing22 {
+  @include danger_text;
+
+  //speakers section ---
+
+  .speakers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+  }
+
+  .speakers-preview {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  //what section ---
+  //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
+
+  .what {
+    padding: 4rem;
+    width: 100%;
+    background: linear-gradient(194.72deg, rgba(119, 148, 254, 0.3) -4.86%, rgba(191, 250, 208, 0.3) 115.56%);
+
+    p {
+      font-size: 24px !important;
+      line-height: 32px !important;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+
+      &_info {
+        width: 40%;
+      }
+
+      &_items {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          h1, p {
+            text-align: center;
+          }
+
+          h1 {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  //how section ---
+  //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
+
+  .how {
+    width: 100%;
+    min-height: 50vh;
+    padding: 4rem 10rem;
+    margin: 0 auto;
+
+    &__item {
+      padding-left: 2rem;
+
+      &_image {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+        .arrow1, .arrow2 {
+          margin-left: 4rem;
+        }
+      }
+
+      &_content {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  //why section ---
+  //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
+
+  .why {
+    padding: 4rem;
+    background: linear-gradient(194.72deg, rgba(119, 148, 254, 0.3) -4.86%, rgba(191, 250, 208, 0.3) 115.56%);
+    min-height: 80vh;
+    margin-bottom: 4rem;
+
+    &__content {
+      width: 100%;
+
+      .odd {
+        justify-content: flex-end;
+        float: right;
+      }
+
+      &_item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70%;
+
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        img {
+          width: 80px;
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  //companies section ---
+  //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
+
+  .companies {
+    width: 100%;
+    padding: 2rem 4rem;
+    margin-bottom: 8rem;
+
+    img {
+      height: 40px;
+    }
+
+    &__line1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    &__line2 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  //feedback section ---
+  //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
+
+  .feedback {
+    margin-bottom: 4rem;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    &_container {
+      width: 100%;
+      //min-height: 60vh;
+      background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+        padding: 0 6rem;
+
+        .swiper-button-next {
+          margin-right: 25px;
+          &::after {
+            content: '';
+            background-image: url('../../img/landing/slider-right-arrow.svg');
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 65px;
+            margin-right: -15px;
+          }
+        }
+
+        .swiper-button-prev {
+          margin-left: 25px;
+          &::after {
+            content: '';
+            background-image: url('../../img/landing/slider-left-arrow.svg');
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 65px;
+            margin-left: -15px;
+          }
+        }
+
+        .swiper-button-disabled {
+          display: none;
+        }
+      }
+
+      &-item {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 2rem;
+
+        &--main {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          img {
+            margin-bottom: 0.5rem;
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
