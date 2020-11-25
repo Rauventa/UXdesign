@@ -115,13 +115,20 @@
       display: flex;
       align-items: flex-start;
 
+      .row {
+        width: 100%;
+      }
+
       &-gift {
         display: flex;
+        justify-content: flex-start;
         align-items: center;
         background-color: #FFD483;
         border-radius: 5px;
         padding: 0.5rem;
-        margin-left: 5rem;
+        width: fit-content;
+        margin-top: 3px;
+        cursor: pointer;
 
         img {
           margin-right: 0.5rem;
@@ -134,12 +141,14 @@
           text-transform: uppercase;
           margin-bottom: 0;
           letter-spacing: 0.1em;
+          word-wrap: normal;
         }
       }
 
       &-text {
-        h1 {
-          line-height: 30px !important;
+        a {
+          color: $textBlack;
+          text-decoration: underline;
         }
       }
     }
@@ -216,8 +225,13 @@
             align-items: flex-start;
             margin-bottom: 0;
 
-            p {
+            .speaker-name {
+              color: $textBlack;
+            }
+
+            a {
               margin-bottom: 0;
+              font-size: 15px;
             }
           }
         }
