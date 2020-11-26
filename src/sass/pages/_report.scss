@@ -106,6 +106,7 @@
 .main-report {
 
   &__content {
+    padding-bottom: 2rem;
 
     button {
       margin-bottom: 1rem;
@@ -235,6 +236,24 @@
             }
           }
         }
+      }
+    }
+  }
+
+  &__actual {
+    border-top: 1px solid $bgOcean;
+    padding: 1rem 0 2rem 0 !important;
+
+    &_heading {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      max-width: 100%;
+      height: auto;
+
+      &__descr {
+        padding-bottom: 1rem;
       }
     }
   }
