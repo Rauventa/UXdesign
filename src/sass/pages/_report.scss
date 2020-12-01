@@ -105,8 +105,20 @@
 
 .main-report {
 
+  &__heading {
+    border-bottom: 1px solid $bgOcean;
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem !important;
+
+    a {
+      font-size: 15px !important;
+    }
+  }
+
   &__content {
-    padding-bottom: 2rem;
+    padding: 0 0 2rem !important;
 
     button {
       margin-bottom: 1rem;
@@ -115,6 +127,7 @@
     &_heading {
       display: flex;
       align-items: flex-start;
+      margin-bottom: 1rem;
 
       .row {
         width: 100%;
@@ -131,9 +144,10 @@
         margin-top: 3px;
         cursor: pointer;
 
-        img {
-          margin-right: 0.5rem;
+        svg {
+          width: 20px;
           height: 20px;
+          margin-right: 10px;
         }
 
         p {
@@ -188,13 +202,19 @@
           }
         }
 
-        &--bonus {
+        &--bonus, &--another {
           a {
             color: $textGrey;
             text-decoration: underline;
             display: block;
             margin-bottom: 0.5rem;
             font-size: 15px;
+          }
+        }
+
+        .active {
+          h2, a, p {
+            color: $bgOcean;
           }
         }
 

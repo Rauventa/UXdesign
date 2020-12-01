@@ -43,6 +43,11 @@
     </div>
 </header>
     <div class="main-report">
+        <div class="main-report__heading container">
+            <a href="#" class="info-text">
+                UX-Марафон #20 | Юбилейный UX-Марафон
+            </a>
+        </div>
         <section class="main-report__nav"></section>
         <section class="main-report__content container">
             <div class="main-report__content_heading">
@@ -50,17 +55,21 @@
                     <div class="col-xl-7 col-md-12 col-sm-12">
                         <div class="main-report__content_heading-text">
                             <h1>8 наколок UX-менеджера</h1>
-                            <p>
-                                <a href="#">Юбилейный UX-Марафон #20</a>
-                                , 9 июля 2020
-                            </p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-md-12 col-sm-12">
-                        <div class="main-report__content_heading-gift">
-                            <img src="../../img/marafon/gift.svg" alt="gift">
-                            <p>Бонусные материалы</p>
-                        </div>
+                        <a href="#gift-materials">
+                            <div class="main-report__content_heading-gift" id="gift-animation">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12V22H4V12" stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 7H2V12H22V7Z" stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 22V7" stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z" stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z" stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>Бонусные материалы</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -541,8 +550,27 @@
             });
         });
     </script>
-<script src="../../js/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        $( "#gift-animation" ).click(function() {
+            let $post = $(".main-report__content_container-info--another");
+            $post.toggleClass("active");
+            setTimeout(function(){
+                $post.removeClass('active')
+            }, 3000);
+        });
+    </script>
 </html>
