@@ -387,6 +387,15 @@
     }
   }
 
+  .main-report {
+    &__heading {
+      padding: 0.5rem 15px !important;
+    }
+    &__content {
+      padding: 0 15px !important;
+    }
+  }
+
   .partners {
     padding: 0 1.5rem 2rem 1.5rem;
 
