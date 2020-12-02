@@ -133,6 +133,10 @@
         width: 100%;
       }
 
+      .col-xl-5 {
+        padding: 0 30px !important;
+      }
+
       &-gift {
         display: flex;
         justify-content: flex-start;
@@ -393,6 +397,12 @@
     }
     &__content {
       padding: 0 15px !important;
+
+      &_heading {
+        .col-xl-5 {
+          padding: 0 15px !important;
+        }
+      }
     }
   }
 
