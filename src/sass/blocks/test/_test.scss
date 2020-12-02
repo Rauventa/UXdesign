@@ -107,7 +107,8 @@
   }
 
   .vjs-big-play-button {
-    width: 90%;
+    width: 90% !important;
+
     &::before {
       font-size: 18px;
     }
