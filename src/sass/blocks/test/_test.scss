@@ -105,4 +105,15 @@
   .video-js {
     width: inherit;
   }
+
+  .vjs-big-play-button {
+    width: 90%;
+    &::before {
+      font-size: 18px;
+    }
+
+    &::after {
+      font-size: 32px;
+    }
+  }
 }
