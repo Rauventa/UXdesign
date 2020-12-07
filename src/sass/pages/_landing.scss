@@ -1109,7 +1109,7 @@
           border: 1px solid #8A8E93;
           border-radius: 5px;
           padding: 1rem 2rem;
-          visibality: hidden;
+          visibility: hidden;
           opacity: 0;
           transition: .5s all;
           z-index: -1;
@@ -1134,7 +1134,7 @@
         }
         .hint__body.active {
           z-index: 30;
-          visibality: visible;
+          visibility: visible;
           opacity: 1;
         }
         .hint__trigger_close {
