@@ -1,0 +1,257 @@
+.landing22 {
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding:4rem 0;
+        transition: .2s ease-in-out;
+        .br-mob {
+            display: none;
+        }
+        .faq-container {
+            width: 76%;
+            max-width: 1440px;
+            background: #F6F6F7;
+            padding: 1rem 0;
+        }
+        .faq-title {
+            color: #AF03B2;
+            margin-bottom: 40px;
+            font-weight: bold !important;
+            font-size: 36px !important;
+            &-mob {
+                display: none;
+            }
+        }
+        
+        
+        .accordion-container{
+            position: relative;
+            max-width: 1285px;
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+        }
+        
+        .set{
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #DEDEDE;
+            &:last-child {
+                border-bottom: none; 
+            }
+        }
+        .set > a{
+            display: block;
+            padding: 10px 0px;
+            text-decoration: none;
+            color: #16478C;
+            transition:all 0.2s linear;
+            width: 100%;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: normal;
+        }
+        // .set > a.active{
+        
+        // }
+        .content{
+            width: 100%;
+            display:none;
+        
+        }
+        .content p{
+            padding-top: 5px;
+            font-size: 20px;
+            line-height: 26px;
+            font-style: normal;
+            font-weight: normal;
+            color: #1D252F;
+            padding-bottom: 40px;
+            margin: 0;
+            width: 100%;
+            span {
+                font-weight: bold;
+                color: #1D252F;
+                font-size: 20px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .landing22 {
+        .faq {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 0;
+            .faq-container {
+                width: 100%;
+                max-width: 1440px;
+                background: #F6F6F7;
+                padding: 0rem 1rem;
+            }
+            .faq-title {
+                color: #AF03B2;
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 18px !important;
+                &-desc {
+                    display: none;
+                }
+                &-mob {
+                    display: block;
+                }
+            }
+            .accordion-container{
+                position: relative;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                margin: 10px auto;
+            }
+            
+            .set{
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-bottom: 1px solid #DEDEDE;
+                &:last-child {
+                    border-bottom: none; 
+                }
+            }
+            .set > a{
+                display: block;
+                padding: 3px 0px;
+                padding-bottom: 5px;
+                width: 100%;
+                font-size: 20px;
+                line-height: 26px;
+                max-width: 265px;
+            }
+            // .set > a.active{
+            
+            // }
+            .content{
+                width: 100%;
+                display:none;
+            
+            }
+            .content p{
+                padding-top: 5px;
+                font-size: 13px;
+                line-height: 15px;
+                font-style: normal;
+                font-weight: normal;
+                color: #1D252F;
+                padding-bottom: 25px;
+                margin: 0;
+                width: 100%;
+                min-width: 285px;
+            
+                span {
+                    font-weight: bold;
+                    color: #1D252F;
+                    font-size: 13px;
+                    line-height: 15px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px) {
+    .landing22 {
+        .faq {
+            .br-mob {
+                display: block;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 0;
+            .faq-container {
+                width: 100%;
+                max-width: 1440px;
+                background: #F6F6F7;
+                padding: 0rem 1rem;
+            }
+            .faq-title {
+                color: #AF03B2;
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 18px !important;
+                &-desc {
+                    display: none;
+                }
+                &-mob {
+                    display: block;
+                }
+            }
+            .accordion-container{
+                position: relative;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                margin: 10px auto;
+            }
+            
+            .set{
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-bottom: 1px solid #DEDEDE;
+                &:last-child {
+                    border-bottom: none; 
+                }
+            }
+            .set > a{
+                display: block;
+                padding: 3px 0px;
+                padding-bottom: 5px;
+                width: 100%;
+                font-size: 20px;
+                line-height: 26px;
+                max-width: 260px;
+            }
+            // .set > a.active{
+            
+            // }
+            .content{
+                width: 100%;
+                display:none;
+            
+            }
+            .content p{
+                padding-top: 5px;
+                font-size: 13px;
+                line-height: 15px;
+                font-style: normal;
+                font-weight: normal;
+                color: #1D252F;
+                padding-bottom: 25px;
+                margin: 0;
+                width: 90%;
+                min-width: 274px;
+                span {
+                    font-weight: bold;
+                    color: #1D252F;
+                    font-size: 13px;
+                    line-height: 15px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
