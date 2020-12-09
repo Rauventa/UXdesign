@@ -7,6 +7,7 @@
         padding:4rem 0;
         transition: .2s ease-in-out;
         transition: height .2s ease-in-out;
+        position: relative;
         .br-mob {
             display: none;
         }
@@ -60,8 +61,10 @@
         // }
         .content{
             width: 100%;
-            display:none;
-        
+            // display:none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
         .content p{
             padding-top: 5px;
@@ -145,8 +148,6 @@
             // }
             .content{
                 width: 100%;
-                display:none;
-            
             }
             .content p{
                 padding-top: 5px;
@@ -233,7 +234,6 @@
             // }
             .content{
                 width: 100%;
-                display:none;
             
             }
             .content p{
