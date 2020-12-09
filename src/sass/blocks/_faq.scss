@@ -6,6 +6,7 @@
         width: 100%;
         padding:4rem 0;
         transition: .2s ease-in-out;
+        transition: height .2s ease-in-out;
         .br-mob {
             display: none;
         }
@@ -72,6 +73,10 @@
             padding-bottom: 40px;
             margin: 0;
             width: 100%;
+            a {
+                color: #1D252F;
+                text-decoration: underline;
+            }
             span {
                 font-weight: bold;
                 color: #1D252F;
