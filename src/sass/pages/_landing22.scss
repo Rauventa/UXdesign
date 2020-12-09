@@ -486,6 +486,7 @@
       line-height: 34px;
       color: $bgGrey;
       padding-left: 1em;
+      font-weight: bold !important;
     }
   }
   .sticky__nav {
@@ -497,6 +498,7 @@
     top: 0;
     transform: translate(-50%, 0);
     width: auto;
+    filter: drop-shadow(0px 4px 4px rgba(29, 37, 47, 0.4));
     .sticky__nav-item {
       color: $bgGrey;
       font-weight: bold;
@@ -507,7 +509,10 @@
       text-decoration: none;
       margin-bottom: -10px;
       white-space: nowrap;
-
+      letter-spacing: 0.085em;
+      &:hover {
+        color: $blue !important;
+      }
     }
   }
   .speakers__btn {
@@ -535,6 +540,9 @@
     }
     .sticky__nav {
       .sticky__nav-item {
+        &:hover {
+          color: $bgOcean !important;
+        }
         &.js-active {
           color: $bgOcean ;
         }
@@ -579,6 +587,7 @@
 
         h1, p {
           text-align: center;
+          font-size: 24px;
        
         }
 
@@ -1029,6 +1038,12 @@
         border-left: 18px solid #90B1C9;
       }
     }
+    &.day3 {
+      margin-top: 6rem;
+      .programm__timing_item {
+        border-left: 18px solid #9984B3;
+      }
+    }
     h1 {
       font-size: 36px;
       line-height: 40px;
@@ -1058,7 +1073,6 @@
           font-size: 15px;
           color: $textGrey;
           white-space: nowrap;
-         
         }
       }
       .right {
@@ -1079,6 +1093,7 @@
             color: $blue;
             text-transform: uppercase;
             font-weight: bold;
+            letter-spacing: 0.085em;
           }
         }
         &__bottom {
@@ -1253,7 +1268,7 @@
             color: $textBlack;
           }
           p {
-            font-size: 20px;
+            font-size: 20px ;
             color: $textGrey;
             line-height: 32px;
           }
@@ -1291,7 +1306,7 @@
           align-items: center;
           justify-content: center;
           color: $white;
-          font-size: 20px;
+          font-size: 24px !important;
           border-radius: 4px;
           height: 60px;
           width: 180px;
