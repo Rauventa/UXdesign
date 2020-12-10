@@ -23,7 +23,7 @@ $(document).ready(function() {
     var panels = document.querySelectorAll('.content');
     panels[0].style.maxHeight = panels[0].scrollHeight + "px";
     for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function(e) {
+    acc[i].addEventListener("click", function(e) {
         e.preventDefault();
 
         this.classList.toggle("active");
@@ -35,7 +35,7 @@ $(document).ready(function() {
             panels.forEach((item) => item.style.maxHeight = null);
             panel.style.maxHeight = panel.scrollHeight + "px";
         } 
-      });
+    });
     }
     let extraHeight = $('.extra').css('height');
     $('.extra').css('height', 0);
@@ -79,7 +79,7 @@ $(document).ready(function() {
         
         $('.js-tickets-tabContent.js-active').removeClass('js-active');
         content.addClass('js-active');
-     });
+    });
 });
 
 // form 
@@ -125,28 +125,24 @@ if (screen.width > 768) {
     $("nav").on("click","a", function (event) {
         // исключаем стандартную реакцию браузера
         event.preventDefault();
-     
         // получем идентификатор блока из атрибута href
         var id  = $(this).attr('href'),
-     
         // находим высоту, на которой расположен блок
             top = $(id).offset().top - 50;
-         
         // анимируем переход к блоку, время: 800 мс
         $('body,html').animate({scrollTop: top}, 800);
-     });
-     jQuery(window).scroll(function(){
+        });
+    jQuery(window).scroll(function(){
         var $sections = $('.section');
-    $sections.each(function(i,el){
-       var top  = $(el).offset().top- 0;
-       var bottom = top +$(el).height();
-       var scroll = $(window).scrollTop();
-       var id = $(el).attr('id');
-       if( scroll > top && scroll < bottom){
-           $('a.js-active').removeClass('js-active');
-           $('a[href="#'+id+'"]').addClass('js-active');
-    
-       }
+        $sections.each(function(i,el){
+        var top  = $(el).offset().top- 0;
+        var bottom = top +$(el).height();
+        var scroll = $(window).scrollTop();
+        var id = $(el).attr('id');
+        if( scroll > top && scroll < bottom){
+            $('a.js-active').removeClass('js-active');
+            $('a[href="#'+id+'"]').addClass('js-active');
+        }
     })
     });
 }
