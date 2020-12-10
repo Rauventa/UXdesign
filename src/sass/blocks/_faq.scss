@@ -47,7 +47,7 @@
         }
         .set > a{
             display: block;
-            padding: 10px 0px;
+            padding: 20px 0px;
             text-decoration: none;
             color: #16478C;
             transition:all 0.2s linear;
@@ -139,7 +139,7 @@
                 padding: 3px 0px;
                 padding-bottom: 5px;
                 width: 100%;
-                font-size: 20px;
+                font-size: 20px !important;
                 line-height: 26px;
                 max-width: 265px;
             }
@@ -228,6 +228,10 @@
                 font-size: 20px;
                 line-height: 26px;
                 max-width: 260px;
+                color:$blue;
+                &:hover {
+                    color: $blue !important;
+                }
             }
             // .set > a.active{
             
@@ -238,8 +242,8 @@
             }
             .content p{
                 padding-top: 5px;
-                font-size: 13px;
-                line-height: 15px;
+                font-size: 13px !important;
+                line-height: 15px !important;
                 font-style: normal;
                 font-weight: normal;
                 color: #1D252F;
