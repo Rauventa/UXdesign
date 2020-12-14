@@ -1,6 +1,139 @@
 @import '../blocks/faq';
 .landing22 {
   transition: .2s ease-in-out;
+  .promocode {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    .hint__trigger {
+      cursor: pointer;
+      display: none;
+      i {
+        color : $textBlack;
+      }
+
+    }
+    .hint__body {
+      position: absolute;
+      width: 33%;
+      border: 1px solid #8A8E93;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      visibility: hidden;
+      opacity: 0;
+      transition: .5s all;
+      z-index: -1;
+      background: $bgGrey;
+
+      span {
+        color: $textGrey;
+      }
+
+      p {
+        margin-bottom: 0.25rem;
+
+        b {
+          margin-bottom: 0.75rem;
+        }
+
+        a {
+          color: $textBlack;
+          text-decoration: underline;
+        }
+      }
+    }
+    .hint__body.active {
+      z-index: 30;
+      visibility: visible;
+      opacity: 1;
+    }
+    .hint__trigger_close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      line-height: 15px;
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+    }
+
+    input[type="radio"] {
+      display: none !important;
+      *display: inline;
+      position: relative;
+
+      &:checked + label p {
+        display: none;
+      }
+
+      &:checked + label.btn-primary:before {
+        width: 22px;
+        content: " ";
+        background-image: url('../../img/black_check.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 1.5rem;
+        height: 20px
+      }
+
+
+      &:checked + label {
+        cursor: default;
+        margin-bottom: 0;
+      }
+
+      &:checked + label.btn-primary:after {
+        content: "Код активирован";
+        color: $textBlack;
+        font-size: 15px !important;
+        line-height: 20px;
+      }
+
+      &:checked + label {
+        background-color: transparent !important;
+        border: 1px solid transparent !important;
+        box-shadow: none !important;
+        position: relative;
+      }
+    }
+
+    input[type="radio"] + label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      margin-bottom: 0;
+
+      p {
+        margin-bottom: 0;
+        color: $white;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 2rem !important;
+      margin-right: 1rem;
+      width: 20%;
+
+      label {
+        color: $textBlack;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        i {
+          margin-left: 0.5rem;
+        }
+      }
+
+      input {
+        height: 38px;
+      }
+    }
+  }
   @include danger_text;
   .mobile-br {
     display: none;
@@ -1521,139 +1654,6 @@
     min-height: 50vh;
     background-color: $white;
     padding: 1rem 4rem;
-    &__main_form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-      width: 100%;
-      .hint__trigger {
-        cursor: pointer;
-        display: none;
-        i {
-          color : $textBlack;
-        }
-
-      }
-      .hint__body {
-        position: absolute;
-        width: 33%;
-        border: 1px solid #8A8E93;
-        border-radius: 5px;
-        padding: 1rem 2rem;
-        visibility: hidden;
-        opacity: 0;
-        transition: .5s all;
-        z-index: -1;
-        background: $bgGrey;
-
-        span {
-          color: $textGrey;
-        }
-
-        p {
-          margin-bottom: 0.25rem;
-
-          b {
-            margin-bottom: 0.75rem;
-          }
-
-          a {
-            color: $textBlack;
-            text-decoration: underline;
-          }
-        }
-      }
-      .hint__body.active {
-        z-index: 30;
-        visibility: visible;
-        opacity: 1;
-      }
-      .hint__trigger_close {
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        line-height: 15px;
-        font-size: 30px;
-        cursor: pointer;
-        display: none;
-      }
-
-      input[type="radio"] {
-        display: none !important;
-        *display: inline;
-        position: relative;
-
-        &:checked + label p {
-          display: none;
-        }
-
-        &:checked + label.btn-primary:before {
-          width: 22px;
-          content: " ";
-          background-image: url('../../img/black_check.svg');
-          background-repeat: no-repeat;
-          position: absolute;
-          left: 1.5rem;
-          height: 20px
-        }
-
-
-        &:checked + label {
-          cursor: default;
-          margin-bottom: 0;
-        }
-
-        &:checked + label.btn-primary:after {
-          content: "Код активирован";
-          color: $textBlack;
-          font-size: 15px !important;
-          line-height: 20px;
-        }
-
-        &:checked + label {
-          background-color: transparent !important;
-          border: 1px solid transparent !important;
-          box-shadow: none !important;
-          position: relative;
-        }
-      }
-
-      input[type="radio"] + label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        position: relative;
-        margin-bottom: 0;
-
-        p {
-          margin-bottom: 0;
-          color: $white;
-        }
-      }
-
-      .form-group {
-        margin-bottom: 2rem !important;
-        margin-right: 1rem;
-        width: 20%;
-
-        label {
-          color: $textBlack;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-
-          i {
-            margin-left: 0.5rem;
-          }
-        }
-
-        input {
-          height: 38px;
-        }
-      }
-    }
     &_buttons {
       position: relative;
 
@@ -2329,6 +2329,13 @@
 }
 @media (max-width: 1280px) {
   .landing22 {
+    .promocode {
+      width: 100%;
+      margin-top: 2rem !important;
+      .form-group {
+        width: 100%;
+      }
+    }
     .extra {
       padding: 1rem;
       &__main_form {
@@ -2905,6 +2912,26 @@
       padding: 0 2rem;
     }
   }
+  .promocode{
+    flex-direction: column;
+    padding: 0 2rem;
+
+    .hint__body.active {
+      width: 85%;
+
+      p {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    .form-group {
+      width: 100%;
+      margin: 0;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
   .extra {
     padding: 1rem;
     &__main_form {
@@ -3066,6 +3093,7 @@
     height: auto;
     min-height: 400px !important;
     max-height: 500px;
+    height: 430px;
   }
   .speakers__cont {
     width: 100%;
@@ -3073,6 +3101,7 @@
     margin-top: 0px;
     min-height: 400px;
     padding-top: 6em;
+    height: 430px;
   }
   .speaker-blops {
     display: none;
