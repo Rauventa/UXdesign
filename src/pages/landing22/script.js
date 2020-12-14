@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
     const $header = $('.sticky__header');
     $(document).on('scroll', function () {
@@ -16,6 +17,13 @@ $(document).ready(function() {
         $('html, body').stop().animate({
             scrollTop: $(anchor).offset().top - 130
         }, 800);
+    });
+    $("a.scrollToBurger").on("click", function(e){
+        e.preventDefault();
+        var anchor = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top - 60
+        }, 600);
     });
     // $("")
     var acc = document.getElementsByClassName("accordion");
@@ -121,7 +129,6 @@ if (screen.width > 768) {
     })
     });
 } else {
-    console.log('done');
     $("nav").on("click","a", function (event) {
         // исключаем стандартную реакцию браузера
         event.preventDefault();
