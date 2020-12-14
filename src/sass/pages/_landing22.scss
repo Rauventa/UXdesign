@@ -1325,6 +1325,7 @@
             .time {
               color: $bgMagenta;
               width: 100px;
+              min-width: 100px;
               font-size: 24px;
               font-weight: 600;
             }
@@ -2439,6 +2440,7 @@
               color: $bgMagenta;
               width: 70px;
               min-width: 70px;
+              min-width: 70px;
               font-size: 18px;
               font-weight: 600;
             }
@@ -3537,6 +3539,7 @@
             .time {
               color: $bgMagenta;
               width: 50px;
+              min-width: 50px;
               min-width: 50px;
               font-size: 18px;
               font-weight: 600;
