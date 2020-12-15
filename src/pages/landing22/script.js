@@ -26,7 +26,6 @@ $(document).ready(function() {
             if( scroll > top && scroll < bottom){
                 $('a.js-active').removeClass('js-active');
                 $('a[href="#'+id+'"]').addClass('js-active');
-                console.log(top);
             }
         })
         });

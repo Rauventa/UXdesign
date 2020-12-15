@@ -1,6 +1,103 @@
 @import '../blocks/faq';
 .landing22 {
   transition: .2s ease-in-out;
+  .sticker__banner {
+    background: linear-gradient(91.17deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%) !important;
+  }
+  &-banner {
+    height: 372px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 100%;
+      width: 2090px;
+      min-width: 100%;
+    }
+    .speakers__btn {
+      max-width: 302px !important;
+      min-width: 302px !important;
+    }
+    .speakers__btn-bought {
+      display: none;
+    }
+    &.bought {
+      .speakers__btn {
+        display: none;
+        max-width: 209px !important;
+        min-width: 209px !important;
+      }
+      .speakers__btn-bought {
+        display: flex;
+      }
+      .banner__content {
+        h1 {
+          margin-top: 2rem;
+        }
+        .bought__sticker {
+          display: flex;
+        }
+        h6 {
+          display: none;
+        }
+      }
+    }
+    .banner__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .bought__sticker {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 306px;
+        height: 56px;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.085em;
+        background: linear-gradient(356.54deg, #25558C -10.8%, #1994AB 94.81%);
+        border-radius: 0px 0px 5px 5px;
+      }
+      h1 {
+        font-size: 36px !important;
+        font-weight: bold !important;
+        width: 560px;
+        text-align: center;
+        line-height: 42px !important;
+        color: $bgGrey;
+        
+      }
+      h5 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 20px;
+        color: $bgGrey;
+        font-weight: bold;
+        text-align: center;
+      }
+      h6 {
+        text-align: center;
+        color: $bgGrey;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
   .promocode {
     display: none;
     justify-content: center;
@@ -141,9 +238,6 @@
   .center {
     text-align: center;
   }
-  .speakers__btn_mob {
-    display: none;
-  }
   .mobileImg {
     display: none;
   }
@@ -158,7 +252,7 @@
     color: $white;
     font-size: 20px;
     span {
-      margin: 0 5px;
+      margin: 0 15px;
     }
   }
   header {
@@ -536,78 +630,7 @@
     a {
       text-decoration: underline;
     }
-    .speakers__btn {
-      margin-top: 40px;
-      height: 60px;
-      padding: 0 70px;
-      background: $white;
-      color: $textBlack;
-      min-width: 499px;
-      position: relative;
-      transition: .2s ease-in-out;
-      text-decoration: none;
-      border-radius: 4px;
-      // &.speakers__btn_mob {
-      //   display: none;
-      // }
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        height: 100%;
-        width: 100%;
-        background: $bgMagenta;
-        border-radius: 4px;
-        transform: translate(5px, 5px);
-        transition: .3s ease-in-out;
-        animation: razmer 3s infinite;
-        opacity: 1;
-      }
-      div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        background: $white;
-        display: flex;
-        align-items: center;
-        color: $textBlack;
-        justify-content: center;
-        border-radius: 4px;
-        font-size: 20px;
 
-      }
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        height: 100%;
-        width: 100%;
-        background: $bgMagenta;
-        border-radius: 4px;
-        transform: translate(5px, 5px);
-        transition: .3s ease-in-out;
-        opacity: 0;
-      }
-      &:hover {
-        &:before {
-          transform: translate(-15px, -15px);
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-        }
-        &:after {
-          transform: translate(-15px, -15px);
-          height: 100%;
-          width: 100%;
-          opacity: 1;
-        }
-    }
-  }
   }
   @keyframes razmer {
     0% {  
@@ -738,6 +761,7 @@
       transition: 0s ease-in-out;
       min-width: 250px;
       width: 10%;
+      max-height: 85% !important;
       &:before {
         animation: none;
       }
@@ -1960,11 +1984,6 @@
     a {
       text-decoration: underline;
     }
-    .speakers__btn {
-      margin-top: 40px;
-      height: 60px;
-      padding: 0 0px;
-    }
   }
   //what section ---
   //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
@@ -2770,11 +2789,7 @@
     a {
       text-decoration: underline;
     }
-    .speakers__btn {
-      margin-top: 40px;
-      height: 55px;
-      padding: 0 0px;
-    }
+
   }
   @keyframes btn-slide-before {
     0% {
@@ -2968,14 +2983,39 @@
 @media (max-width:  760px) {
 .landing22 {
   @include danger_text;
-  .speakers__btn_desktop {
-    display: none;
+  .sticker {
+    height: 25px;
+    img {
+      display: none;
+    }
+    span {
+      font-size: 12px;
+    }
   }
   .mobile-br {
     display: block;
   }
-  .speakers__btn_mob {
-    display: block;
+  &-banner {
+    .banner__content {
+      .speakers__btn {
+        max-width: 238px !important;
+        min-width: 238px !important;
+      }
+      .bought__sticker {
+        width: 202px;
+        height: 32px;
+        font-size: 10px;
+      }
+      h1 {
+        font-size: 18px !important;
+        line-height: 21px !important;
+        width: 280px;
+        margin-top: 0;
+      }
+      h5 {
+        font-size: 15px;
+      }
+    }
   }
   .desktop-br {
     display: none;
@@ -3138,12 +3178,7 @@
     a {
       text-decoration: underline;
     }
-    .speakers__btn {
-      margin-top: 30px;
-      height: 40px;
-      padding: 0 0px;
-      min-width: 70%;
-    }
+
   }
   .what {
     padding: 2rem;
@@ -3798,7 +3833,7 @@
       margin-right: 1rem;
       transition: 0s ease-in-out;
       height: 40px;
-
+      max-height: 40px;
       white-space: nowrap;
       
     }
@@ -3840,13 +3875,13 @@
       .speakers__btn {
         visibility: visible;
         opacity: 1;
-        
         margin-right: 2em;
         transition: .4s ease-in-out;
         padding: 0 0px;
         margin-top: 0;
         display: none;
         min-width: 100px;
+        height: 40px ;
         &::before {
           display: none;
         }
