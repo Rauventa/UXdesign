@@ -34,8 +34,8 @@
       min-width: 302px !important;
     }
     .no-timing {
-      max-width: 399px !important;
-      min-width: 399px !important;
+      max-width: 460px !important;
+      min-width: 460px !important;
     }
     .speakers__btn-bought {
       display: none;
@@ -3021,7 +3021,9 @@
       .speakers__btn {
         max-width: 238px !important;
         min-width: 238px !important;
-        font-size: 15px !important;
+        div {
+          font-size: 15px !important;
+        }
       }
       .bought__sticker {
         width: 202px;
