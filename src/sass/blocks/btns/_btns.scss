@@ -1,0 +1,103 @@
+.speakers__btn_mob {
+    display: none;
+  }
+  .speakers__btn {
+    margin-top: 40px;
+    height: 60px;
+    padding: 0 70px;
+    background: $white;
+    color: $textBlack;
+    min-width: 499px;
+    position: relative;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+    border-radius: 4px;
+    // &.speakers__btn_mob {
+    //   display: none;
+    // }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        height: 100%;
+        width: 100%;
+        background: $bgMagenta;
+        border-radius: 4px;
+        transform: translate(5px, 5px);
+        transition: .3s ease-in-out;
+        animation: razmer 3s infinite;
+        opacity: 1;
+    }
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      background: $white;
+      display: flex;
+      align-items: center;
+      color: $textBlack;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 20px;
+
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      height: 100%;
+      width: 100%;
+      background: $bgMagenta;
+      border-radius: 4px;
+      transform: translate(5px, 5px);
+      transition: .3s ease-in-out;
+      opacity: 0;
+    }
+    &:hover {
+      &:before {
+        transform: translate(-15px, -15px);
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+      }
+      &:after {
+        transform: translate(-15px, -15px);
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+      }
+  }
+}
+@media(max-width: 1450px) {
+    .speakers__btn {
+        margin-top: 40px;
+        height: 60px;
+        padding: 0 0px;
+      }
+}
+@media (max-width: 1190px) {
+    .speakers__btn {
+        margin-top: 40px;
+        height: 55px;
+        padding: 0 0px;
+      }
+}
+@media (max-width: 760px) {
+    .speakers__btn_desktop {
+        display: none;
+      }
+    .speakers__btn_mob {
+        display: block;
+      }
+    .speakers__btn {
+        margin-top: 30px;
+        height: 40px;
+        padding: 0 0px;
+        min-width: 70%;
+      }
+}
