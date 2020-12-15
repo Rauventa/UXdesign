@@ -9,6 +9,17 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    .speakers__btn-timing {
+      display: none; 
+    }
+    &.timing {
+      .speakers__btn-timing {
+        display: flex ; 
+      }
+      .no-timing {
+        display: none;
+      }
+    }
     img {
       position: absolute;
       top: 0;
@@ -21,6 +32,10 @@
     .speakers__btn {
       max-width: 302px !important;
       min-width: 302px !important;
+    }
+    .no-timing {
+      max-width: 399px !important;
+      min-width: 399px !important;
     }
     .speakers__btn-bought {
       display: none;
@@ -2996,10 +3011,17 @@
     display: block;
   }
   &-banner {
+    .no-timing {
+      max-width: 242px !important;
+      min-width: 242px !important;
+    }
+
     .banner__content {
+
       .speakers__btn {
         max-width: 238px !important;
         min-width: 238px !important;
+        font-size: 15px !important;
       }
       .bought__sticker {
         width: 202px;
