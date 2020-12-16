@@ -131,6 +131,20 @@ $(document).ready(function() {
             $('.extra').css('opacity', '0');
         }
     });
+    if($('.js-ticket').hasClass('js-selected')) {
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top - 140;
+        $('body,html').animate({scrollTop: top}, 800);
+        $('.extra').css('height', extraHeight);
+        $('.extra').css('min-height', null);
+        $('.extra').css('visibility', 'visible');
+        $('.extra').css('opacity', '1');
+    } else {
+        $('.extra').css('height', 0);
+        $('.extra').css('min-height', 0);
+        $('.extra').css('visibility', 'hidden');
+        $('.extra').css('opacity', '0');
+    }
     $('.js-tickets-tabHeader').click(function() {
         var id = $(this).attr('data-tab'),
             content = $('.js-tickets-tabContent[data-tab="'+ id +'"]');

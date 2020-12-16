@@ -56,9 +56,6 @@
         .bought__sticker {
           display: flex;
         }
-        h6 {
-          display: none;
-        }
       }
     }
     .banner__content {
@@ -104,13 +101,11 @@
         color: $bgGrey;
         font-weight: bold;
         text-align: center;
-        display: none;
       }
       h6 {
         text-align: center;
         color: $bgGrey;
         font-size: 20px;
-        font-weight: bold;
         margin-top: 10px;
       }
     }
@@ -3039,8 +3034,8 @@
         margin-top: 0;
       }
       h5 {
-        font-size: 20px;
-        display: none;
+        font-size: 15px; 
+        display: block;
       }
       h6 {
         font-size: 16px;
