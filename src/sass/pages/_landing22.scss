@@ -104,11 +104,13 @@
         color: $bgGrey;
         font-weight: bold;
         text-align: center;
+        display: none;
       }
       h6 {
         text-align: center;
         color: $bgGrey;
-        font-size: 15px;
+        font-size: 20px;
+        font-weight: bold;
         margin-top: 10px;
       }
     }
@@ -3037,7 +3039,11 @@
         margin-top: 0;
       }
       h5 {
-        font-size: 15px;
+        font-size: 20px;
+        display: none;
+      }
+      h6 {
+        font-size: 16px;
       }
     }
   }
