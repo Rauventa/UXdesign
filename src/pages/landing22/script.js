@@ -1,7 +1,8 @@
 
 
-$(document).ready(function() {
 
+window.onload = function() {
+    
     if (screen.width > 768) {
         $("nav").on("click","a", function (e) {
             // исключаем стандартную реакцию браузера
@@ -99,10 +100,18 @@ $(document).ready(function() {
     });
     }
     let extraHeight = $('.extra').css('height');
-    $('.extra').css('height', 0);
-    $('.extra').css('min-height', 0);
-    $('.extra').css('visibility', 'hidden');
-    $('.extra').css('opacity', '0');
+    function ExtraHeight() {
+        $('.extra').css('height', 0);
+        $('.extra').css('min-height', 0);
+        $('.extra').css('visibility', 'hidden');
+        $('.extra').css('opacity', '0');
+    }
+    if ($('.js-ticket').hasClass('js-selected')) {
+        console.log(done);
+    } else {
+        ExtraHeight();
+    }
+
 
     $('.js-ticket').on('click', function(e) {
         e.preventDefault();
@@ -155,7 +164,8 @@ $(document).ready(function() {
         $('.js-tickets-tabContent.js-active').removeClass('js-active');
         content.addClass('js-active');
     });
-});
+
+}
 
 // form 
 let formCheck = document.querySelector('#exampleCheck1');
