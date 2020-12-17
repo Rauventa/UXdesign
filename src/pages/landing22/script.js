@@ -2,7 +2,6 @@
 
 
 window.onload = function() {
-    
     if (screen.width > 768) {
         $("nav").on("click","a", function (e) {
             // исключаем стандартную реакцию браузера
@@ -107,7 +106,7 @@ window.onload = function() {
         $('.extra').css('opacity', '0');
     }
     if ($('.js-ticket').hasClass('js-selected')) {
-        console.log(done);
+        console.log('done');
     } else {
         ExtraHeight();
     }
