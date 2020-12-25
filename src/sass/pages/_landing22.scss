@@ -1,6 +1,9 @@
 @import '../blocks/faq';
 .landing22 {
   transition: .2s ease-in-out;
+  .colorMagenta {
+    color: $bgMagenta;
+  }
   .sticker__banner {
     background: linear-gradient(91.17deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%) !important;
   }
