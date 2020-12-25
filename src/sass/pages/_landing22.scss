@@ -1484,7 +1484,7 @@
         padding: 6px 24px;
         background: $bgGrey;
         transition: .2s ease-in-out;
-        cursor: pointer;
+        cursor: default;
         &.js-active {
           color: $textBlack;
           background: $white;
@@ -1756,7 +1756,7 @@
             align-items: center;
             justify-content: center;
             color: $white;
-            font-size: 24px !important;
+            font-size: 18px !important;
             border-radius: 4px;
             height: 40px;
             width: 200px;
@@ -2725,7 +2725,7 @@
             }
           }
           .btn {
-            font-size: 20px;
+            font-size: 16px;
             width: 180px;
             margin-top: 30px;
             &.bgMagenta {
@@ -3165,7 +3165,7 @@
             }
           }
           .btn {
-            font-size: 20px;
+            font-size: 16px !important;
             width: 180px;
             margin-top: 30px;
             &.bgMagenta {
@@ -4025,7 +4025,7 @@
             }
           }
           .btn {
-            font-size: 20px;
+            font-size: 16px;
             width: 180px;
             margin-top: 30px;
             cursor: pointer;
