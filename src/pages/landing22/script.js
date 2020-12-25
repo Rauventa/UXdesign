@@ -110,22 +110,25 @@ window.onload = function() {
     } else {
         ExtraHeight();
     }
-
-
+    $('.js-ticket').css('cursor','default');
     $('.js-ticket').on('click', function(e) {
         e.preventDefault();
+    });
 
-        if(!$(this).hasClass('js-selected')) {
-            $('.js-ticket').removeClass('js-selected');
-            $(this).addClass('js-selected');
+    $('.js-ticket-btn').on('click', function(e) {
+        e.preventDefault();
 
-        } else if ($(this).hasClass('js-selected')) {
+        if(!$(this).closest('.js-ticket').hasClass('js-selected')) {
             $('.js-ticket').removeClass('js-selected');
-            $(this).removeClass('js-selected');
+            $(this).closest('.js-ticket').addClass('js-selected');
+
+        } else if ($(this).closest('.js-ticket').hasClass('js-selected')) {
+            $('.js-ticket').removeClass('js-selected');
+            $(this).closest('.js-ticket').removeClass('js-selected');
         }
         let tickets = document.querySelectorAll('.js-ticket');
         if($('.js-ticket').hasClass('js-selected')) {
-            var id  = $(this).attr('href'),
+            var id  = $(this).closest('.js-ticket').attr('href'),
             top = $(id).offset().top - 140;
             $('body,html').animate({scrollTop: top}, 800);
             $('.extra').css('height', extraHeight);

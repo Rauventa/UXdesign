@@ -26,7 +26,8 @@ if (screen.width >= 768) {
         $(this).text(text);
     });
 }
-var element = $(".blog__report");
+if (screen.width > 768) {
+    var element = $(".blog__report");
 var height_el = element.offset().top;
 var element_stop = $(".articles_cards");
 var height_el_stop = element_stop.offset().top;
@@ -59,3 +60,5 @@ $(window).on('scroll', function() {
     }
 
 });
+
+}
