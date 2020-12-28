@@ -1,0 +1,212 @@
+.newYearBanner {
+    width: 100vw;
+    height: 372px;
+    overflow: hidden;
+    position: relative;
+    .bg {
+        height: 100%;
+        width: 100%;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            height: 100%;
+            min-width: 100%;
+            width: 2090px;
+        }
+    }
+    .bannerTxt { 
+        width: 100%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        h1 {
+            font-family: 'Pangolin', cursive;
+            color: #fff;
+            font-size: 72px !important;
+            line-height: 72px !important;
+            text-align: center;
+        }
+        .newYearBanner-txt {
+            display: flex;
+            margin-top: 1rem;
+            align-items: flex-end;
+            .percent {
+                line-height: 50px;
+                font-weight: 700;
+                font-size: 64px;
+                color: #FF8C67;
+            }
+            .txt {
+                margin-left: 10px;
+                line-height: 26px;
+                font-size: 36px;
+                font-weight: 400;
+                color: #FF8C67;
+            }
+        }
+        .promocode {
+            margin-top: 2rem;
+            color: $bgGrey;
+            font-size: 24px;
+        }
+    }
+    
+}
+.bgMob {
+    display: none;
+}
+@media (max-width: 1000px) {
+    .newYearBanner {
+        width: 100vw;
+        height: 352px;
+        overflow: hidden;
+        position: relative;
+        .bg {
+            height: 100%;
+            width: 100%;
+            img {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                height: 100%;
+                min-width: 100%;
+                width: 2090px;
+            }
+        }
+        .bannerTxt { 
+            width: 100%;
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 3;
+            h1 {
+                font-family: 'Pangolin', cursive;
+                color: #fff;
+                font-size: 54px !important;
+                line-height: 56px !important;
+                text-align: center;
+            }
+            .newYearBanner-txt {
+                display: flex;
+                margin-top: 1rem;
+                align-items: flex-end;
+                .percent {
+                    line-height: 45px;
+                    font-weight: 700;
+                    font-size: 54px;
+                    color: #FF8C67;
+                }
+                .txt {
+                    margin-left: 10px;
+                    line-height: 26px;
+                    font-size: 30px;
+                    font-weight: 400;
+                    color: #FF8C67;
+                }
+            }
+            .promocode {
+                margin-top: 2rem;
+                color: $bgGrey;
+                font-size: 24px;
+            }
+        }
+        
+    }
+}
+@media (max-width: 600px) {
+    .newYearBanner {
+        width: 100vw;
+        height: 352px;
+        overflow: hidden;
+        position: relative;
+        .bgMob {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: block;
+            img {
+                position: absolute;
+                left: 0%;
+                top: 0;
+                transform: translateX(0%);
+                height: 100%;
+                min-width: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .bg {
+            height: 100%;
+            width: 100%;
+            display: none;
+            img {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                height: 100%;
+                min-width: 100%;
+                width: 2090px;
+            }
+        }
+        .bannerTxt { 
+            width: 100%;
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 3;
+            h1 {
+                font-family: 'Pangolin', cursive;
+                color: #fff;
+                font-size: 36px !important;
+                line-height: 42px !important;
+                text-align: center;
+            }
+            .newYearBanner-txt {
+                display: flex;
+                margin-top: 2rem;
+                align-items: flex-end;
+                .percent {
+                    line-height: 35px;
+                    font-weight: 700;
+                    font-size: 38px;
+                    color: #FF8C67;
+                }
+                .txt {
+                    margin-left: 10px;
+                    line-height: 26px;
+                    font-size: 26px;
+                    font-weight: 400;
+                    color: #FF8C67;
+                }
+            }
+            .promocode {
+                margin-top: 3rem;
+                color: $bgGrey;
+                font-size: 24px;
+            }
+        }
+        
+    }
+}
