@@ -263,7 +263,6 @@
         display: none;
         &_item {
             animation: dowl_item 1.3s ease-in-out infinite;
-           
             // transform: translateY(100px);
             transition: 1s;
         }
@@ -594,7 +593,15 @@
         margin-top: 100px;
     }
     .menu {
-        display: none;
+
+        &__link {
+            .menu__item {
+                width: 150px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
     }
     .swp-btn {
         display: none;
@@ -660,10 +667,15 @@
         }
     }
 }
-
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+}
 // normal media
 
 @media screen and (max-width: 768px) {
+
     .myLectures {
         padding: 2rem 1rem;
 
