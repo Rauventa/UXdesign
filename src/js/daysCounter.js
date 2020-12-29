@@ -25,8 +25,10 @@ function GetCount(){
         }
         document.getElementById('countbox').innerHTML=out;
 
-        setTimeout("GetCount()", 1000);
+        setTimeout('GetCount()', 1000);
     }
+
 }
 
-window.onload=function(){GetCount();}
+// window.onload = function() {GetCount();}    
+$(document).ready(GetCount());

@@ -913,7 +913,7 @@
             </div>
             <div class="sticker">
                 <img data-src="../../img/landing22/sticker/bell.svg" alt="img">
-                <span>До повышения цен осталось 2 дня</span>
+                <span>До повышения цен<span style="margin: 0;" id="countbox"> осталось 2 дня</span></span>
                 <img data-src="../../img/landing22/sticker/bell.svg" alt="img">
             </div>
             <div data-tab="1" class="tickets__tabContent js-tickets-tabContent js-active">
@@ -946,7 +946,7 @@
                                                             UX-марафона #22 на сайте ux-marafon.ru
                                                             <br/>
                                                             в течение 1 года с даты марафона
-                                                           </p>"
+                                                            </p>"
                                             >
                                             </i>
                                         </li>
@@ -978,7 +978,7 @@
                                                             UX-Марафону и контакты
                                                             <br/>
                                                             спикеров
-                                                           </p>"
+                                                            </p>"
                                             >
                                             </i>
                                         </li>
@@ -996,7 +996,7 @@
                                                             время выступления. После конференции
                                                             <br/>
                                                             их можно скачать в pdf.
-                                                           </p>"
+                                                            </p>"
                                             >
                                             </i>
                                         </li>
@@ -1183,7 +1183,7 @@
                                                             UX-марафона #22 на сайте ux-marafon.ru
                                                             <br/>
                                                             в течение 1 года с даты марафона
-                                                           </p>"
+                                                            </p>"
                                             >
                                             </i>
                                         </li>
@@ -1215,7 +1215,7 @@
                                                             UX-Марафону и контакты
                                                             <br/>
                                                             спикеров
-                                                           </p>"
+                                                            </p>"
                                             >
                                             </i>
                                         </li>
@@ -1233,7 +1233,7 @@
                                                             время выступления. После конференции
                                                             <br/>
                                                             их можно скачать в pdf.
-                                                           </p>"
+                                                            </p>"
                                             >
                                             </i>
                                         </li>
@@ -1555,6 +1555,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../js/lazy.js"></script>
+    <script>
+        dateFuture = new Date(2021,0,5,23,59,59);
+        console.log(dateFuture);
+    </script>
+    <script src="../../js/daysCounter.js"></script>
     <script src="../../js/parallax.min.js"></script>
     <script src="script.js"></script>
     <script>
@@ -1572,5 +1577,6 @@
             delay: {show: 300, hide: 100}
         })
     })
-</script>
+    </script>
+
 </html>
