@@ -56,9 +56,7 @@ $(window).on('scroll', function() {
             element.removeClass("fixed absolute").attr("style", "");
             element.css('right', 0);
         }
-        
     }
-
 });
 
 }
