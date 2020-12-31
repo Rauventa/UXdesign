@@ -22,7 +22,8 @@
     margin-bottom: 2rem;
     .blog__item {
         margin-top: 3rem;
-        max-width: 900px;
+        width: 100%;
+        display: block;
         &_title {
             h4 {
                 font-size: 20px;
@@ -180,6 +181,7 @@
             font-size: 24px !important;
             margin-left: 0 !important;
             margin-bottom: 1rem;
+            line-height: 110% !important;
         }
         h3 {
             font-size: 20px !important;
@@ -197,6 +199,12 @@
     .quote {
         color: $bgOcean;
         font-style: italic;
+        a {
+            color: $blue;
+            &:hover {
+                color: $bgMagenta !important;
+            }
+        }
     }
     &__txt {
         font-size: 18px !important;
