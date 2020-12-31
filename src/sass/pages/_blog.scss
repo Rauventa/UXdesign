@@ -165,7 +165,6 @@
         .Sasha__wrapper {
             width: 100%;
             display: block;
-            padding-bottom:2rem ;
         }
         .Sasha {
             width: 50% ;
@@ -802,7 +801,7 @@
             margin-left: 0rem;
         }
         &__item {
-            padding-top: 8rem;
+            padding-top: 2rem !important;
             display: flex;
             align-items: start;
             flex-direction: column;
