@@ -2,6 +2,26 @@
 
 
 window.onload = function() {
+    const trigger = document.querySelector('.hint__trigger'),
+    close = document.querySelector('.hint__trigger_close');
+    trigger.addEventListener('mouseenter', () => {
+    document.querySelector('.hint__body').classList.add('active');
+    });
+    close.addEventListener('click', () => {
+    document.querySelector('.hint__body').classList.remove('active');
+    });
+    document.querySelector('.hint__body').addEventListener('mouseleave', () => {
+    document.querySelector('.hint__body').classList.remove('active');
+    });
+    // document.querySelector('.hint__body').addEventListener('click', (e) => {
+    //     if(e.target != document.querySelector('.hint__body') && document.querySelector('.hint__body').classList.contains('active')) {
+    //         document.querySelector('.hint__body').classList.remove('active');
+    //         console.log(e.target);
+    //     } else {
+    //         return false;
+    //     }
+     
+    // });
     if (screen.width > 768) {
         $("nav").on("click","a", function (e) {
             // исключаем стандартную реакцию браузера

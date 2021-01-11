@@ -116,15 +116,26 @@
       }
     }
   }
+
   .promocode {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
     margin-top: 2rem;
+    padding: 0 !important;
     width: 100%;
     .hint__trigger {
       cursor: pointer;
-      display: none;
+      i {
+        color : $textBlack;
+      }
+
+    }
+    .hint__trigger {
+      cursor: pointer;
+
       i {
         color : $textBlack;
       }
@@ -136,10 +147,11 @@
       border: 1px solid #8A8E93;
       border-radius: 5px;
       padding: 1rem 2rem;
+      // left: 10%;
       visibility: hidden;
       opacity: 0;
       transition: .5s all;
-      z-index: -1;
+      z-index: 200;
       background: $bgGrey;
 
       span {
@@ -160,9 +172,10 @@
       }
     }
     .hint__body.active {
-      z-index: 30;
+      z-index: 200;
       visibility: visible;
       opacity: 1;
+    
     }
     .hint__trigger_close {
       position: absolute;
@@ -170,8 +183,11 @@
       top: 5px;
       line-height: 15px;
       font-size: 30px;
+  
       cursor: pointer;
-      display: none;
+      img {
+        height: 16px;  
+      }
     }
 
     input[type="radio"] {
@@ -779,7 +795,7 @@
       transition: 0s ease-in-out;
       min-width: 250px;
       width: 10%;
-      max-height: 85% !important;
+      // max-height: 85% !important;
       &:before {
         animation: none;
       }
@@ -1074,6 +1090,7 @@
       font-size: 36px !important;
       line-height: 40px;
       font-weight: bold !important;
+      margin-top: 1rem;
     }
     .speakerHumans__more {
       margin-top: 50px;
@@ -1180,7 +1197,7 @@
     }
   }
   .programm {
-    padding-top: 5rem;
+    padding-top: 2rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1330,8 +1347,7 @@
         font-size: 36px;
         line-height: 40px;
         color: $textBlack;
-        position: sticky;
-        top: 14px;
+   
       }
       &_item {
         display: flex;
@@ -1418,7 +1434,7 @@
     &-list {
       display: flex;
       align-items: center;
-      margin-top: 3rem;
+      margin-top: 0 !important;
     }
     &-cont {
       display: flex;
@@ -2477,6 +2493,7 @@
   .landing22 {
     .promocode {
       width: 100%;
+      max-width: 500px;
       margin-top: 2rem !important;
       .form-group {
         width: 100%;
@@ -3051,26 +3068,7 @@
       padding: 0 2rem;
     }
   }
-  .promocode{
-    flex-direction: column;
-    padding: 0 2rem;
 
-    .hint__body.active {
-      width: 85%;
-
-      p {
-        margin-bottom: 0.75rem;
-      }
-    }
-
-    .form-group {
-      width: 100%;
-      margin: 0;
-    }
-    .btn {
-      width: 100%;
-    }
-  }
   .tickets {
     margin-top: 3rem;
     display: flex;
@@ -3241,6 +3239,161 @@
   }
   .mobile-br {
     display: block;
+  }
+  .promocode__wrapper {
+    padding: 0 1rem !important;
+  }
+  .promocode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 0 !important;
+    width: 100%;
+    .form-group {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .hint__trigger {
+      cursor: pointer;
+      i {
+        color : $textBlack;
+      }
+
+    }
+    .hint__trigger {
+      cursor: pointer;
+
+      i {
+        color : $textBlack;
+      }
+
+    }
+    .hint__body {
+      position: absolute;
+      width: 33%;
+      border: 1px solid #8A8E93;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      // left: 10%;
+      visibility: hidden;
+      opacity: 0;
+      transition: .5s all;
+      z-index: 200;
+      background: $bgGrey;
+
+      span {
+        color: $textGrey;
+      }
+
+      p {
+        margin-bottom: 0.25rem;
+
+        b {
+          margin-bottom: 0.75rem;
+        }
+
+        a {
+          color: $textBlack;
+          text-decoration: underline;
+        }
+      }
+    }
+    .hint__body.active {
+      z-index: 200;
+      visibility: visible;
+      opacity: 1;
+    
+    }
+    .hint__trigger_close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      line-height: 15px;
+      font-size: 30px;
+  
+      cursor: pointer;
+      img {
+        height: 16px;  
+      }
+    }
+
+    input[type="radio"] {
+      display: none !important;
+      *display: inline;
+      position: relative;
+
+      &:checked + label p {
+        display: none;
+      }
+
+      &:checked + label.btn-primary:before {
+        width: 22px;
+        content: " ";
+        background-image: url('../../img/black_check.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 1.5rem;
+        height: 20px
+      }
+
+
+      &:checked + label {
+        cursor: default;
+        margin-bottom: 0;
+      }
+
+      &:checked + label.btn-primary:after {
+        content: "Код активирован";
+        color: $textBlack;
+        font-size: 15px !important;
+        line-height: 20px;
+      }
+
+      &:checked + label {
+        background-color: transparent !important;
+        border: 1px solid transparent !important;
+        box-shadow: none !important;
+        position: relative;
+      }
+    }
+
+    input[type="radio"] + label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      margin-bottom: 0;
+
+      p {
+        margin-bottom: 0;
+        color: $white;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 2rem !important;
+      margin-right: 1rem;
+      width: 20%;
+
+      label {
+        color: $textBlack;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        i {
+          margin-left: 0.5rem;
+        }
+      }
+
+      input {
+        height: 38px;
+      }
+    }
   }
   &-banner {
     .no-timing {
@@ -3605,6 +3758,7 @@
       color: $bgMagenta;
       font-size: 18px !important;
       line-height: 40px;
+
       font-weight: bold !important;
     }
     .speakerHumans__more {
