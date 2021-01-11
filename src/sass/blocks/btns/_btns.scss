@@ -7,7 +7,7 @@
     padding: 0 70px;
     background: $white;
     color: $textBlack;
-    min-width: 499px;
+    min-width: 300px;
     position: relative;
     transition: .2s ease-in-out;
     text-decoration: none;
@@ -83,7 +83,7 @@
 @media (max-width: 1190px) {
     .speakers__btn {
         margin-top: 40px;
-        height: 55px;
+        height: 55px !important;
         padding: 0 0px;
       }
 }
@@ -96,8 +96,8 @@
       }
     .speakers__btn {
         margin-top: 30px;
-        height: 40px;
+        height: 50px !important;
         padding: 0 0px;
-        min-width: 70%;
+        min-width: 60%;
       }
 }
