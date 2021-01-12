@@ -461,7 +461,11 @@
         justify-content: space-between;
         padding: 1.5rem;
         min-height: 20vh;
-
+        p {
+          margin-bottom: 0 !important; 
+          font-size: 15px !important;
+          line-height: 133% !important;
+        }
         &--post {
           display: flex;
           justify-content: space-between;
@@ -800,6 +804,8 @@
       }
 
       &_content {
+
+   
         .big-bold-heading {
           font-size: 20px !important;
           line-height: 26px !important;
@@ -816,7 +822,7 @@
       }
       &_content {
         width: 100%;
-
+  
         .big-heading {
           font-size: 20px !important;
           line-height: 20px !important;
@@ -891,13 +897,17 @@
       padding: 2rem 1rem;
 
       &_card {
-        min-height: 30vh;
-        margin-bottom: 2rem;
-        height: auto;
+        min-height: auto !important;
+        margin-bottom: 1.5rem;
+        height: auto !important;
+        padding-bottom: 1rem;
     
         &-content {
           padding: 1rem 1rem 0 1rem;
-
+          p {
+            margin-bottom: 0 !important; 
+            font-size: 12px !important;
+          }
           &--post {
             margin-top: 1rem;
           }
