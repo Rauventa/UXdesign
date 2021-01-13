@@ -59,6 +59,22 @@ scrollToTopButton.onclick = function(e) {
     scrollToTop();
 };
 
+$('.js-newProductTrigger').on('click', () => {
+    $('.newProductModal').addClass('js-active');
+    $('body').css('overflow', 'hidden');
+    
+});
+$('.js-newProductModal-overlay').on('click', () => {
+    $('.newProductModal').removeClass('js-active');
+    $('body').css('overflow', '');
+    
+});
+$('.js-newProductModal-close').on('click', () => {
+    $('.newProductModal').removeClass('js-active');
+    $('body').css('overflow', '');
+    
+});
+
 //Days counter
 
 // dateFuture = new Date(2020,9,14,23,59,59);
