@@ -162,6 +162,29 @@
         display: flex;
         align-items: start;
         flex-direction: column;
+        .speaker__wrapper {
+            margin-top: 1rem;
+            .speaker_title {
+                margin-bottom: .4rem;
+                display: inline-block;
+            }
+        }
+        .speaker {
+            display: flex;
+            align-items: start;
+            margin-bottom: 0.8rem;
+            img {
+                max-width: 30% ;
+            }
+            .descr {
+                margin-left: 1rem;
+                span {
+                    color: $textGrey;
+                    max-width: 270px;
+                    display: block;
+                }
+            }
+        }
         .Sasha__wrapper {
             width: 100%;
             display: block;
@@ -661,6 +684,7 @@
             align-items: start;
             flex-direction: column;
             width: 80%;
+
             h1 {
                 font-size: 24px !important;
                 margin-left: 0.5rem;
@@ -732,6 +756,7 @@
             }
         }
     }
+
 }
 @media(max-width: 700px) {
     .bread_crumbs {
@@ -756,6 +781,13 @@
         }
     }
     .article {
+        .article__item {
+            .speaker__wrapper {
+                .masurevich {
+                    max-width: 28% !important;
+                }
+            }
+        }
         .blog__report {
             position: relative !important;
             display: flex;
