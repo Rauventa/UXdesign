@@ -989,7 +989,7 @@
   }
 }
 
-.urRelay {
+.ur  {
 
   &__heading {
     background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
@@ -1215,6 +1215,17 @@
 @media screen and (max-width: 768px) {
 
   .relay {
+    padding-top: 5rem;
+    .landing22 {
+      // overflow-x: hidden;
+      .programm {
+        width: 100%;
+        &__timing {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+    }
     iframe {
       min-height: 40vh;
     }
