@@ -1,0 +1,153 @@
+
+// .questProblemFooter {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+// }
+// .questProblem__html,
+// .questProblem__body {
+//     height: 100%;
+//     padding: 0;
+//     margin: 0;
+// }
+.colorMagenta {
+    color: $bgMagenta;
+}
+.questProblem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100%;
+    padding: 2rem 0;
+    margin-bottom: 4rem;
+    .error__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left {
+            max-width: 410px;
+            width: 45%;
+            p {
+                margin-bottom: 0 !important;
+                padding-top: 2rem ;
+                max-width: 410px;
+                font-size: 15px !important;
+                line-height: 130% !important;
+                a {
+                    font-size: 15px !important;
+                }
+            }
+        }
+        .right {
+            margin-left: 1rem;
+            max-width: 50%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .questProblem__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        h2 {
+            margin-bottom: 5px !important;
+        }
+        p {
+            margin-bottom: 0 !important;
+            padding-top: 2rem ;
+            max-width: 410px;
+            line-height: 130% !important;
+        }
+        .left {
+            max-width: 410px;
+            width: 50%;
+        }
+        .right {
+            margin-left: 1rem;
+            max-width: 50%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .questProblem {
+        display: flex;
+
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 100%;
+        padding: 2rem 0;
+        padding-top: 90px;
+        .error__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .left {
+                max-width: 410px;
+                width: 100%;
+                p {
+                    margin-bottom: 0 !important;
+                    padding-top: 1rem ;
+                    max-width: 410px;
+                    font-size: 15px !important;
+                    text-align: center;
+                    line-height: 130% !important;
+                    a {
+                        font-size: 15px !important;
+                    }
+                }
+            }
+            .right {
+                margin-left: 1rem;
+                width: 100%;
+                max-width: 500px;
+                margin-top: 2rem;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .questProblem__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            h2 {
+                margin-bottom: 5px !important;
+            }
+            p {
+                margin-bottom: 0 !important;
+                padding-top: 1rem ;
+                max-width: 410px;
+            }
+            .left {
+                max-width: 410px;
+                width: 60%;
+            }
+            .right {
+                margin-left: 0rem;
+                max-width: 40%;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        
+    }
+}
+// .questProblem__wrapper {
+//     flex: 1 0 auto;
+    
+// }
+// .footer {
+// 	flex: 0 0 auto;
+// }
