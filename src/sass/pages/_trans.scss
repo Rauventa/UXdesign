@@ -1098,6 +1098,7 @@
 }
 
 .trans {
+  margin-bottom: 2rem;
   .btn {
     display: none;
   }
@@ -1111,10 +1112,6 @@
   .trans__item {
     margin-top: 6rem;
     width: 100%;
-
-    &:last-child {
-      margin-bottom: 2rem;
-    }
     &:first-child {
       margin-top: 4rem;
     }
