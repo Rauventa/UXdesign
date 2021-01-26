@@ -116,7 +116,6 @@
       }
     }
   }
-
   .promocode {
     display: flex;
     justify-content: center;
@@ -1881,7 +1880,7 @@
     }
     &__list {
       padding: 0 3rem;
-
+      margin-top: 2rem;
       &_card {
         width: 100%;
         height: 100%;
@@ -1897,7 +1896,13 @@
           cursor: pointer;
           box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
         }
-        
+        img {
+          max-width: 150px;
+          max-height: 150px;
+          width: 150px;
+          height: 150px;
+          object-fit: contain;
+        }
         p {
           text-align: center;
           margin-top: 2rem;
@@ -2380,6 +2385,9 @@
     }
   }
   .partners {
+    &__list {
+      margin-top: 0;
+    }
     &__list {
       .col-md-6 {
         margin-bottom: 2rem;
