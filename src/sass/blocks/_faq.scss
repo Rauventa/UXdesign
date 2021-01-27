@@ -1,4 +1,4 @@
-.landing22 {
+.landing22, .landing23 {
     .faq {
         display: flex;
         flex-direction: column;
@@ -92,7 +92,7 @@
     }
 }
 @media (max-width: 767px) {
-    .landing22 {
+    .landing22, .landing23 {
         .faq {
             display: flex;
             flex-direction: column;
@@ -176,7 +176,7 @@
     }
 }
 @media (max-width: 350px) {
-    .landing22 {
+    .landing22, .landing23 {
         .faq {
             .br-mob {
                 display: block;
