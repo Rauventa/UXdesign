@@ -7,6 +7,11 @@
   .sticker__banner {
     background: linear-gradient(91.17deg, #AF03B2 0%, #15478C 48.96%, #00B2B2 100%) !important;
   }
+  .landing23-banner {
+    .speakers__btn-bought {
+      display: flex;
+    }
+  }
   &-banner {
     height: 372px;
     width: 100%;
@@ -33,8 +38,8 @@
       min-width: 100%;
     }
     .speakers__btn {
-      max-width: 302px !important;
-      min-width: 302px !important;
+      max-width: 250px !important;
+      min-width: 250px !important;
     }
     .no-timing {
       max-width: 460px !important;
