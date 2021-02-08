@@ -879,8 +879,180 @@
             }
         }
     }
+    .programm {
+        padding-top: 2rem;
+        .landing-heading {
+            font-weight: bold !important;
+            font-size: 36px !important;
+            line-height: 40px;
+            margin-bottom: 3rem !important;
+            color: $bgMagenta;
+        }
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .programm__item {
 
-
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            padding: 2rem 4rem;
+            padding-right: 3rem;
+            box-shadow: 0px 2px 2px rgba(29, 37, 47, 0.08), 0px 4px 6px rgba(29, 37, 47, 0.08);
+            margin-bottom: 2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: sticky !important;
+                left: 0;
+                top: 1rem;
+                min-width: 220px;
+                .descr {
+                    margin-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .name {
+                        font-size: 20px;
+                        color: $blue;
+                        line-height: 140%;
+                    }
+                    .company {
+                        font-size: 15px;
+                        color: $textGrey;
+                        line-height: 140%;
+            
+                    }
+                }
+            }
+            .right {
+                width: calc(100% - 280px);
+                &__top {
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 3px solid $lineLight;
+                    padding-bottom: 1rem;
+                    .theme {
+                        width: 80%;
+                        font-size: 30px !important;
+                        color: $bgMagenta;
+                        line-height: 120% !important;
+                        margin-bottom: 0;
+                    }
+                    .time {
+                        font-size: 20px;
+                        color: $blue;
+                        display: none;
+                    }
+                }
+                &__bottom {
+                    margin-top: 1rem;
+                    p {
+                        font-size: 15px !important;
+                        line-height: 140% !important;
+                    }
+                    ol {
+                        li {
+                            display: flex;
+                            font-size: 15px;
+                            div {
+                                height: 100%;
+                                display: inline-block;
+                                margin-right:5px;
+                                color: $textGrey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .qutes__pretitle {
+        margin-top: 2rem;
+        .landing-heading {
+            font-weight: bold !important;
+            font-size: 36px !important;
+            line-height: 40px;
+            margin-bottom: 3rem !important;
+            color: $bgMagenta;
+        }
+    }
+    .quotes {
+        width: 100%;
+        position: relative;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        &::before {
+            z-index: 0;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(55.81deg, #654EA3 -41.25%, #EAAFC8 98.71%);
+            opacity: .9;
+        }
+        .quotes__wrapper {
+            position: relative;
+            z-index: 3;
+            background-color: $white;
+            margin: 0 auto;
+            width: 95vw;
+            max-width: 1300px;
+            padding: 4rem 0;
+            .content {
+                width: 95%;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+        }
+        .quotes__item {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            position: relative;
+            margin-bottom: 3rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .line {
+                display: block;
+                height: inherit;
+                min-height: 100%;
+                width: 3px;
+                background-color: $bgMagenta;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .img {
+                margin-left: 2.5rem;
+            }
+            .txt {
+                margin-left: 2.5rem;
+                p {
+                    font-size: 18px !important;
+                    line-height: 140% !important;
+                }
+                .name {
+                    font-size: 20px !important;
+                    color: $blue;
+                }
+            }
+        }
+    }
     .tickets {
         margin-top: 3rem;
         display: flex;
@@ -2034,7 +2206,7 @@
 
 @media (max-width: 1200px) {
     .landing23 {
-
+        
         .tickets {
             margin-top: 3rem;
             display: flex;
@@ -2489,7 +2661,69 @@
 //         }
 //     }
 // }
+@media (max-width: 992px) {
+    .landing23 {
+        .programm {
+            .programm__item {
 
+                padding: 1rem 1rem;
+                padding-right: 1rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .left {
+                    position: static !important;
+                    min-width: 200px;
+                    width: 200px;
+                    .descr {
+                        margin-top: 1rem;
+                        align-items: center;
+                        .name {
+                            font-size: 18px;
+                            text-align: center;
+                        }
+                        .company {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .right {
+                    width: calc(100% - 230px);
+                    &__top {
+                        width: 100%;
+                        .theme {
+                            width: 80%;
+                            font-size: 25px !important;
+                            color: $bgMagenta;
+                        }
+                        .time {
+                            font-size: 20px;
+                        }
+                    }
+                    &__bottom {
+                        margin-top: 1rem;
+                        p {
+                            font-size: 15px !important;
+                            line-height: 140% !important;
+                        }
+                        ol {
+                            li {
+                                display: flex;
+                                font-size: 15px;
+                                div {
+                                    height: 100%;
+                                    display: inline-block;
+                                    margin-right:5px;
+                                    color: $textGrey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media(max-width: 768px) {
     .landing23 {
         .speakerHumans {
@@ -2503,7 +2737,7 @@
             }
 
         }
-
+        
         .tickets {
             margin-top: 3rem;
             display: flex;
@@ -3061,6 +3295,16 @@
             }
 
         }
+        .qutes__pretitle {
+            margin-top: 2rem;
+            .landing-heading {
+                font-weight: bold !important;
+                font-size: 18px !important;
+                line-height: 40px;
+                margin-bottom: 2rem !important;
+                color: $bgMagenta;
+            }
+        }
         .speakerHumans {
             .landing-heading {
                 font-weight: bold !important;
@@ -3118,6 +3362,139 @@
                                 line-height: 140%;
                             }
                         }
+                    }
+                }
+            }
+        }
+        .programm {
+            .landing-heading {
+                font-weight: bold !important;
+                font-size: 18px !important;
+                line-height: 40px;
+                margin-bottom: 2rem !important;
+                color: $bgMagenta;
+            }
+            .programm__wrapper {
+                width: 95vw !important;
+                max-width: 95vw;
+            }
+            .programm__item {
+
+                padding: 1rem 1rem;
+                padding-right: 1rem;
+                flex-direction: column;
+                align-items: start;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .left {
+                    align-items: start;
+                    width: 100%;
+                    .descr {
+                        margin-top: 1rem;
+                        align-items: start;
+                        .name {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .right {
+                    margin-top: 1.5rem;
+                    width: 100%;
+                    &__top {
+                        width: 100%;
+                        border-bottom: 0;
+                        border-top: 3px solid $lineLight;
+                        padding-top: 1rem;
+                        padding-bottom: 0;  
+                        .theme {
+                            width: 80%;
+                            font-size: 25px !important;
+                            color: $bgMagenta;
+                        }
+                        .time {
+                            font-size: 18px;
+                            position: absolute;
+                            
+                            top: 1rem;
+                            right: 1rem;
+                        }
+                    }
+                    &__bottom {
+                        margin-top: 1rem;
+                        p {
+                            font-size: 15px !important;
+                            line-height: 140% !important;
+                        }
+                        ol {
+                            li {
+                                display: flex;
+                                font-size: 15px !important;
+                                line-height: 140% !important;
+                                div {
+                                    height: 100%;
+                                    display: inline-block;
+                                    margin-right:5px;
+                                    color: $textGrey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .quotes {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            .quotes__wrapper {
+                position: relative;
+                z-index: 3;
+                background-color: $white;
+                margin: 0 auto;
+                width: 95vw;
+                max-width: 1300px;
+                padding: 2rem 0;
+                .content {
+                    width: 90%;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                }
+            }
+            .quotes__item {
+                width: 100%;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                position: relative;
+                margin-bottom: 2rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .line {
+                    display: block;
+                    height: inherit;
+                    min-height: 150px;
+                    width: 3px;
+                    background-color: $bgMagenta;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    max-height: 150px;
+                }
+                .img {
+                    margin-left: 1rem;
+                }
+                .txt {
+                    margin-left: 1rem;
+                    p {
+                        font-size: 15px !important;
+                        line-height: 140% !important;
+                    }
+                    .name {
+                        font-size: 18px !important;
+                        color: $blue;
                     }
                 }
             }
