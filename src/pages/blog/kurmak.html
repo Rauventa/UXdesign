@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#16478C" />
+    <meta property="og:image" content="../../img/blog/3.png" />
+    <meta property="og:description" content="Как провести интервью и докопаться до сути"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/styles.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link  rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>  Информационная архитектура для незрячего пользователя</title>
+</head>
+<body>
+    <div class="article">
+        <header>
+            <div class="header" >
+                <div class="header__line"></div>
+                <div class="header__container">
+                    <div class="header__container_hamburger dropdown">
+                        <img src="../../img/hamburger.svg" class="dropdown-toggle" id="hamburger-toggler-enter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="hamburger" />
+                        <div class="dropdown-menu" aria-labelledby="hamburger-toggler-enter">
+                            <a class="dropdown-item" href="#">События</a>
+                            <a class="dropdown-item" href="#">Доклады</a>
+                            <a class="dropdown-item" href="#">Спикеры</a>
+                            <a class="dropdown-item" href="#">Компании</a>
+                        </div>
+                    </div>
+                    <div class="header__container_content">
+                        <img src="../../img/logo.svg" alt="logo">
+                        <p>
+                            онлайн-конференция для тех, кто делает
+                            <br>
+                            удобные цифровые продукты
+                        </p>
+                    </div>
+                    <div class="header__container_buttons">
+                        <div class="header__container_buttons-enter">
+                            <img src="../../img/user.svg" alt="">
+                            <p>Войти</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="bread_crumbs">
+            <div class="bread_crumbs__wrapper">
+                <a href="blog.html">Блог</a>
+                <span class="bread_crumbs-arrow">
+                    >
+                </span>
+                <span class="articleName">
+                    ИА для незрячего пользователя
+                </span>
+            </div>
+        </div>
+        <div class="article__wrapper container">
+
+            <div class="article__item">
+                <h1>
+                    Информационная архитектура для незрячего пользователя
+                </h1>
+                <br>  
+                <div class="article__txt">
+                    Одной из важных тем, затронутых на прошедшей совсем недавно онлайн-конференции 
+                    <a target="blanc" href="https://ux-marafon.ru/events/event?id=22">UX-Марафон #22 | Информационная архитектура</a>
+                    , стала accessibility – доступность цифрового продукта для людей с ограниченными возможностями. 
+                    <br><br>
+                    Валерия Курмак, директор практики Human Experience в AIC, эксперт в области инклюзивного дизайна и автор телеграм-канала «Не исключение» рассказала слушателям конференции, как выглядит навигация для незрячих людей и как избежать ошибок при проектировании информационной архитектуры, чтобы создать по-настоящему доступный цифровой продукт.
+                    <br><br>
+                    <h3>Как «видит» сайт незрячий</h3>
+                
+                    Человеку с нормальным зрением ориентироваться на сайте или в мобильном приложении помогает визуальное оформление и структура цифрового продукта: заголовки разного уровня, выделенные области, меню, подвал.
+                    “Незрячие люди также ориентируются по элементам структуры, но то, что зрячий человек видит, незрячему зачитывает скринридер – специальная программа экранного доступа, которая обращается к коду и озвучивает контент, двигаясь слева направо и сверху вниз и переходя от заголовков первого уровня к более мелким”
+                    Если страница свёрстана корректно – человек может быстро «пробежаться» по ней, двигаясь от более крупных заголовков к заголовкам второго уровня, и попасть в нужный блок. Но если разметка некорректна (например, если заголовки, которые мы видим визуально, не имеют соответствующего обозначения в коде) – незрячему пользователю придётся прослушивать подряд всю информацию, которая есть на странице, пока он не доберётся до необходимого раздела. Вот почему так важно, чтобы все элементы структуры имели подписи, корректное отображение и понятные типы.
+                    <div class="img">
+                        <img class="big" src="../../img/blog/kurmak/2.png" alt="img">
+                    </div>
+                    <h3>Проектируем для незрячих пользователей</h3>
+                    Международный стандарт WCAG (Руководство по обеспечению доступности веб-контента) предусматривает три главных принципа, которым должен соответствовать цифровой продукт:
+                    <br><br>
+                    1. У человека должна быть возможность воспринять контент.
+                    <br>
+                    2. У него должна быть возможность управлять контентом.
+                    <br>
+                    3. У него должна быть возможность понять контент.
+                    <br> <br>
+                    Поскольку содержание сайта или мобильного приложения воспринимается незрячим человеком через скринридер – структура и контент должны предусматривать возможность корректного прочтения скринридером. 
+                    <br> <br>
+                    <b>Заголовок страницы должен стоять в самом начале</b>
+                    <br> <br>
+                    Оказавшись на странице, человек в первую очередь должен понять, где именно он находится. Это значит, что первым элементом, который обнаружит и зачитает скринридер, должен быть не профиль, не поле ввода и не что-то ещё, а именно заголовок страницы.
+                    <br> <br>
+                    <div class="quote">
+                        “С точки зрения дизайна заголовок страницы может быть расположен где угодно. Но с точки зрения кода и доступности для скринридера очень важно, чтобы этот элемент был первым, который услышит незрячий пользователь. Тогда он поймёт, на какой странице он находится, и чего ему ждать от этой страницы”
+                    </div>
+                    <br>
+                    <b>Заголовки одного уровня должны иметь одинаковый размер</b>
+                    <br><br>
+                    Структура заголовков с их стилями — основа навигации для незрячих. Поэтому так важно, чтобы заголовки имели правильную архитектуру и правильные уровни. В то же время текст, который не является заголовком, не должен выглядеть таковым.
+                    <br><br>
+                    Пример типичной ошибки – когда из соображений бизнеса или по замыслу дизайнера одноуровневые заголовки имеют в дизайн-макете разный размер, и разработчик, не разобравшись, прописывает их как заголовки разного уровня. А в результате для незрячего человека вся структура информации выглядит некорректно.
+                    <br><br>
+                    <b>Заголовки и названия элементов должны быть понятными и максимально информативными</b>
+                    <br><br>
+                    Для незрячего пользователя UX-редактура приобретает глобальное значение.  Не имея других каналов восприятия, он по названию ссылки или надписи на кнопке должен чётко понять, что конкретно произойдёт при клике.
+                    <br><br>
+                    <div class="quote">
+                        “Признак неинформативного заголовка – слова вроде «шаг», «день», «этап», «занятие», «вопрос», «пример», «случай», «эксперимент». Если после них стоит число, а после него ничего – есть повод повысить информативность”
+                    </div>
+                    <br>
+                    Так, например, «Шаг 1» – это плохой заголовок. Хорошим заголовком с точки зрения цифровой доступности будет «Первый шаг: создать аккаунт». Таким же осмысленным должен быть текст ссылки: не «тут», «здесь» или «посмотреть по этой ссылке», а «перейти на госуслуги», «купить товар».
+                    <div class="img">
+                        <img class="big" src="../../img/blog/kurmak/1.png" alt="img">
+                    </div>
+                    <b>Таблица должна быть сверстана как таблица, а не как картинка</b>
+                    <br><br>
+                    Чтобы таблица была доступна для чтения скринридером, она должна быть сверстана соответствующим образом. Строки и столбцы должны иметь понятные названия, при этом желательно указывать общее количество строк (например, «третья строка из пяти»), чтобы незрячему пользователю было легче оценить общий объём информации.
+                    <br><br>
+                    <b>Убирайте лишнюю информацию</b>
+                    <br><br>
+                    Обратная ситуация – когда те же самые таблицы используются разработчиками исключительно для красоты и аккуратности вёрстки. Зрячему пользователю они не видны, но в коде остаются, и скринридер озвучит эту информацию, если её не скрыть.
+                    <br><br>
+                    <b>У незрячего человека должна быть возможность сразу перейти к основному контенту, пропустив верхнее меню</b>
+                    <br><br>
+                    Как уже говорилось, скринридер зачитывает информацию на странице по порядку, двигаясь слева направо и сверху вниз. Это не всегда удобно. Для того, чтобы незрячий человек мог быстро перейти к основному содержанию сайта, у скринридера есть очень важная функция skip to main content. Чтобы эта функция работала корректно, область с основным контентом должна быть выделена в коде. И здесь мы переходим к самому важному, базовому требованию к цифровому продукту с точки зрения accessibility.
+                    <br><br>
+                    <b>Структура сайта/приложения должна быть предельно чёткой и продуманной</b>
+                    <br><br>
+                    Почему это так важно? Дело в том, что зрячие люди видят страницу целиком. Мы тоже можем ошибаться, но в целом нам легче догадаться, что имел в виду дизайнер. Незрячий пользователь такой подсказки лишён. И в его случае отсутствие в коде логичной структуры и чётко выделенных областей может сделать цифровой продукт попросту недоступным.
+                    <br><br>
+                    Таким образом, доступность цифрового продукта для незрячих пользователей, не предполагает ничего специфического, ничего «инопланетного». Всё, что для этого требуется – грамотно выстроенная информационная архитектура и корректная вёрстка.
+                    <br><br>
+                    <div class="quote">
+                        “Очень простой совет – попробуйте, когда вы проектируете навигацию, представить себе структуру «дерева» так, как она будет выглядеть для незрячего пользователя. И тогда гарантирую вам, что и для зрячих людей абсолютно точно будет хорошая структура и понятная навигация”
+                    </div>
+                    <br>
+                    Полную версию доклада Валерии Курмак можно посмотреть в записи на 
+                    <a target="blanc" href="https://ux-marafon.ru/events/event?id=22">платформе UX-Марафон.</a>
+                    Там же доступны выступления других спикеров 
+                    <a target="blanc" href="https://ux-marafon.ru/events/event?id=22">UX-Марафона #22: </a>
+                    фундаментальная лекция по основам ИА от Алексея Бородкина, мастер-классы Павла Шерера, показавшего, как собрать информационную архитектуру с нуля, и Виталия Мазуревича – по карточной сортировке; доклады «Использование ментальных карт при работе с информационной архитектурой на примере XMind» Михаила Галушко и «Объектная модель в проектировании» Анастасии Поповой, а также два свежих кейса – инфоархитектурный разбор сервисной платформы для Почты России от Сергея Петрова и история создания новой ИА для сайта Банка России от Дениса Васильева. 
+
+                </div>
+            </div>
+            <article class="blog__report">
+                <div class="blog__report-card__wrapper">
+                    <h5>Видео доклада:</h5>
+                    <div class="card card_buy card_download card_available">
+                        <a target="blanc" href="https://ux-marafon.ru/reports/report?id=145" class="card-content">
+                            <div class="present">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12V22H4V12" stroke="#1D252F" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M22 7H2V12H22V7Z" stroke="#1D252F" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 22V7" stroke="#1D252F" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                            d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z"
+                                            stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                            d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z"
+                                            stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="card__video">
+                                <img src="../../img/blog/preview/preview5.png" class="swiper-lazy" alt="заглушка">
+                                <!-- <div class="swiper-lazy-preloader"></div> -->
+                            </div>
+                            <div class="card__descr">
+                                <h2>Ошибки при проектировании, или какую роль в доступности сайтов и приложений ИА играет для незрячих</h2>
+                                <p class="info-text">
+                                    <span class="name">Валерия Курмак</span> <br>
+                                    <span class="speciality">Руководитель практики Human Experience, AIC</span>
+                                </p>
+                            </div>
+                        </a>                     
+                    </div>
+                </div>
+                <div class="blog__report-card__wrapper">
+                    <h5>Доклад по близкой теме:</h5>
+                    <div class="card card_buy card_download card_available">
+                        <a target="blanc" href="https://ux-marafon.ru/reports/report?id=144" class="card-content">
+                            <div class="present">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12V22H4V12" stroke="#1D252F" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M22 7H2V12H22V7Z" stroke="#1D252F" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 22V7" stroke="#1D252F" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                            d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z"
+                                            stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                            d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z"
+                                            stroke="#1D252F" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="card__video">
+                                <img src="../../img/blog/ia8/borodkingV.png" class="swiper-lazy" alt="заглушка">
+                                <!-- <div class="swiper-lazy-preloader"></div> -->
+                            </div>
+                            <div class="card__descr">
+                                <h2>Фундаментальная лекция про основы информационной архитектуры</h2>
+                                <p class="info-text">
+                                    <span class="name">Алексей Бородкин</span> <br>
+                                    <span class="speciality">Lead Designer, Магнит</span>
+                                </p>
+                            </div>
+                        </a>                     
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="articles__cards-wrapper">
+            <div class="container articles_cards__wrapper">
+                <div class=" articles_cards">
+                    <h3>
+                        Другие наши статьи:
+                    </h3>
+                    <div class="container articles_cards_list">
+                        <a href="iaNew.html" class="articles_cards_item">
+                            <img src="../../img/blog/8.png" alt="img">
+                            <div class="descr">
+                                <span>
+                                    8 взглядов на информационную архитектуру
+                                </span>
+                                <div class="articles_card-btn">
+                                    Читать
+                                </div>
+                            </div>
+                        </a>
+                        <a href="ia.html" class="articles_cards_item">
+                            <img src="../../img/blog/6.png" alt="img">
+                            <div class="descr">
+                                <span>
+                                    Информационная архитектура – для чего нужна и почему это важно?
+                                </span>
+                                <div class="articles_card-btn">
+                                    Читать
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Докладчикам</a></li>
+                <li><a href="#">Договор</a></li>
+                <li><a href="#">Положение о конфиденциальности</a></li>
+                <li><a href="#">Вопрос или проблема?</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__info">
+            <p>© UX-Марафон 2015-2020</p>
+            <div class="footer__info_socials">
+                <a href="#">
+                    <img data-src="../../../img/socials/facebook.svg" alt="facebook">
+                </a>
+                <a href="#">
+                    <img data-src="../../../img/socials/telegram.svg" alt="telegram">
+                </a>
+                <a href="#">
+                    <img data-src="../../../img/socials/insta.svg" alt="insta">
+                </a>
+                <a href="#">
+                    <img data-src="../../../img/socials/youtube.svg" alt="youtube">
+                </a>
+            </div>
+            <p>Мы используем иллюстрации с icons8.com </p>
+        </div>
+        
+    </footer>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="../../js/main.js"></script> -->
+<!-- <script src="../../js/modal.js"></script> -->
+<script src="../../js/scrollTop.js"></script>
+<!-- <script src="../../js/trigger.js"></script> -->
+<!-- <script src="../../js/daysCounter.js"></script> -->
+<script src="../../js/lazy.js"></script>
+<script src="../../js/blog.js"></script>
+</html>
