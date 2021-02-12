@@ -669,13 +669,60 @@
 }
 @media (max-width: 767px) {
     .menu {
-        display: none;
+        display: none !important;
     }
 }
 // normal media
 
 @media screen and (max-width: 768px) {
-
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &__wrapper {
+            margin: 2rem 0;
+            padding: 8px 15px;
+        }
+    
+    
+        &__link {
+            .menu__item {
+                width: 16vw;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                transition: all .3s;
+                margin: 0 5px;
+                background: $bgGrey;
+                position: relative;
+    
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90.92deg, #AF03B2 -96.02%, #00B2B2 216.28%);
+                    opacity: 0;
+                    transition: all .3s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 4px;
+                }
+    
+                span {
+                    color: $textGrey;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    transition: .3s all ease;
+                    z-index: 30;
+                    letter-spacing: 0.08em;
+                }
+            }
+        }
+    }
     .myLectures {
         padding: 2rem 1rem;
 
