@@ -896,6 +896,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            .breakingTime {
+                margin: 2rem 0 ;
+                margin-top: 1rem;
+                font-size: 24px;
+            }
         }
         .programm__item {
 
@@ -956,7 +961,6 @@
                     .time {
                         font-size: 20px;
                         color: $blue;
-                        display: none;
                     }
                 }
                 &__bottom {
@@ -3373,6 +3377,7 @@
                 }
             }
         }
+
         .programm {
             .landing-heading {
                 font-weight: bold !important;
@@ -3384,6 +3389,11 @@
             .programm__wrapper {
                 width: 95vw !important;
                 max-width: 95vw;
+
+            }
+            .breakingTime {
+                margin: 1rem 0 !important;
+                font-size: 20px !important;
             }
             .programm__item {
 
