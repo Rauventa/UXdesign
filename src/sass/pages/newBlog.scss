@@ -8,6 +8,7 @@ $bgMagenta: #Af03B2;
 $textBlack: #1D252F;
 $textGrey: #8A8E93;
 $textLight: #C4C4C4;
+$textDarkGrey: #4F4F4F;
 .newBlog {
     .categories {
         .categories__list {
@@ -213,7 +214,74 @@ $textLight: #C4C4C4;
         }
     }
 }
-
+.article__wrapper {
+    .article__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        .date {
+            font-size: 15px;
+            color: $textGrey;
+            margin-right: 25px;
+        }
+        .views {
+            display: flex;
+            align-items: center;
+            .viewsMain {
+                margin-left: 5px;
+                font-size: 15px;
+                color: $textGrey;
+            }
+        }
+    }
+    .article__item {
+        .article__txt_main {
+            font-size: 20px !important;
+            color: $textDarkGrey;
+            line-height: 140%;
+            ul {
+                list-style-type: decimal;
+                li {
+                    font-size: 20px !important;
+                    color: $textDarkGrey;
+                    line-height: 140%;
+                }
+            }
+            ol {
+                list-style-type: decimal !important;
+                li {
+                    list-style-type: decimal !important;
+                    margin-left: 1em;
+                    font-size: 20px !important;
+                    color: $textDarkGrey;
+                    line-height: 140%;
+                }
+            }
+            p {
+                font-size: 20px !important;
+                color: $textDarkGrey;
+                line-height: 140%;
+                margin-bottom: 2em;
+            }
+            blockquote {
+                padding:5px 0 ;
+                padding-left: 1.2rem;
+                margin: 2em 0;
+                border-left: 2px solid $bgOcean;
+                p {
+                    margin-bottom: 0;
+                    color: $textBlack;
+                }
+            }
+            h2 {
+                font-size: 22px !important;
+                color: $textBlack;
+                margin-bottom: 1.5  em;
+                margin-top: 3em;
+            }
+        }
+    }
+}
 @media (max-width: 1200px) {
     .newBlog {
         .categories {
