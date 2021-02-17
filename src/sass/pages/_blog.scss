@@ -208,13 +208,15 @@
         h3 {
             font-size: 20px !important;
             margin-bottom: 1rem;
+            font-weight: bold;
         }
 
         ul {
             li {
                 list-style: disc;
                 margin-left: 1em;
-                font-size: 18px !important;
+                font-size: inherit !important;
+                line-height: inherit !important;
             }
         }
     }
