@@ -26,6 +26,31 @@ if (screen.width >= 768) {
         $(this).text(text);
     });
 }
+$('.article__rate_list_item').on('mouseenter', function() {
+    let index = $(this).index();
+    let elems = document.querySelectorAll('.article__rate_list_item');
+    elems.forEach((elem, i) => {
+        if (i > index) {
+            return false
+        } else {
+            elem.classList.add('hov');
+        }
+    });
+});
+$('.article__rate_list_item').on('click', function() {
+    let index = $(this).index();
+    let elems = document.querySelectorAll('.article__rate_list_item');
+    elems.forEach((elem, i) => {
+        if (i > index) {
+            elem.classList.remove('hovMain');
+        } else {
+            elem.classList.add('hovMain');
+        }
+    });
+});
+$('.article__rate_list_item').on('mouseleave', function() {
+    $('.article__rate_list_item').removeClass('hov');
+});
 if (screen.width > 768) {
     var element = $(".blog__report");
 var height_el = element.offset().top;
