@@ -1507,6 +1507,54 @@
         }
     
     }
+    // .partners {
+    //     min-height: 50vh;
+    //     padding: 3rem 0;
+    //     padding-bottom: 5rem;
+    //     .landing-heading {
+    //       font-size: 36px !important;
+    //       font-weight: bold !important;
+    //       color: $bgMagenta;
+    //     }
+    //     &__list {
+    //       padding: 0 3rem;
+    //       margin: 0 auto;
+    //       margin-top: 2rem;
+
+    //         .row {
+    //             margin: 0 auto;
+    //             display: flex;
+    //             justify-content: start;
+    //         }
+    //       &_card {
+    //         width: 100%;
+    //         height: 100%;
+    //         box-shadow: 0 2px 6px rgba(29, 37, 47, 0.08), 0 4px 12px rgba(29, 37, 47, 0.12);
+    //         border-radius: 6px;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //         align-items: center;
+    //         padding: 2rem;
+    
+    //         &:hover {
+    //           cursor: pointer;
+    //           box-shadow: 4px 4px 8px rgba(0, 178, 178, 0.3), -4px -4px 8px rgba(0, 178, 178, 0.3);
+    //         }
+    //         img {
+    //           max-width: 150px;
+    //           max-height: 150px;
+    //           width: 170px;
+    //           height: auto;
+    //           object-fit: contain;
+    //         }
+    //         p {
+    //           text-align: center;
+    //           margin-top: 2rem;
+    //         }
+    //       }
+    //     }
+    //   }
 }
 
 
@@ -1645,11 +1693,11 @@
 
 @media (max-width: 1530px) {
     .landing23 {
-        .partners {
-            &__list {
-                padding: 0 4rem;
-            }
-        }
+        // .partners {
+        //     &__list {
+        //         padding: 0 4rem;
+        //     }
+        // }
     }
 }
 
@@ -2171,7 +2219,16 @@
 
         //how section ---
         //TODO Копия стилей с прошлого лендинга, исправить на одни и те же стили
-
+        // .partners {
+        //     &__list {
+        //       margin-top: 0;
+        //     }
+        //     &__list {
+        //       .col-md-6 {
+        //         margin-bottom: 2rem;
+        //       }
+        //     }
+        //   }
     }
 }
 
@@ -2744,7 +2801,16 @@
             }
 
         }
-        
+        // .partners {
+        //     .landing-heading {
+        //       font-size: 18px !important;
+        //       font-weight: bold !important;
+        //       color: $bgMagenta;
+        //     }
+        //     &__list {
+        //       padding: 0 2rem;
+        //     }
+        //   }
         .tickets {
             margin-top: 3rem;
             display: flex;
