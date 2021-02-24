@@ -25,6 +25,9 @@
     .mobile-br {
         display: none;
     }
+    .speakers__btn-bought {
+        display: none;
+    }
     .promoBanner__txt {
         display: flex;
         justify-content: center;
@@ -121,6 +124,12 @@
         }
     }
     &.bought {
+        .speakers__btn-bought {
+            display: flex;
+        }
+        .noBought {
+            display: none;
+        }
         .promoBanner__txt {
             h6 {
                 display: none !important;
