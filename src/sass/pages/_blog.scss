@@ -339,6 +339,30 @@
     position: relative;
     border-radius: 6px;
     box-shadow: 0px 2px 6px rgba(29, 37, 47, 0.08), 0px 4px 12px rgba(29, 37, 47, 0.12);
+    .line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5%;
+        z-index: 0;
+        background-color: #af03b2;
+        border-radius: 5px 5px 0 0;
+        transform: rotate(-180deg);
+        &:before {
+            transition: .2s ease-in-out;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(91.17deg,#af03b2 0,#15478c 48.96%,#00b2b2 100%);
+            border-radius: 5px 5px 0 0;
+            transition: .2s ease-in-out;
+        }
+    }
     &::before {
         content: '';
         background: linear-gradient(194.72deg, #7794FE -4.86%, #BFFAD0 115.56%);
@@ -352,22 +376,31 @@
         box-shadow: 0px 2px 6px rgba(29, 37, 47, 0.08), 0px 4px 12px rgba(29, 37, 47, 0.12);
         border-radius: 6px;
         transition: .2s ease-in-out;
+        z-index: 1;
     }
     &:hover {
         box-shadow: 0px 6px 12px rgba(0, 178, 178, 0.32), 0px 8px 24px rgba(0, 178, 178, 0.24);
         &::before { 
             opacity: 0.3;
         }
+        .line {
+            &::before {
+                opacity: 0;
+            }
+        }
     }
+
     .blogCard__content {
         width: 100%;
         height: 100%;
         min-height: 200px;
         padding: 20px;
+        padding-bottom: 30px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        z-index: 2;
         .top {
             display: flex;
             width: 100%;
@@ -375,7 +408,13 @@
             align-items: start;
             margin-bottom: 3rem;
             .blogCardTitle {
-                width: 80%;
+                width: 57%;
+                font-size: 24px !important;
+            }
+            img {
+                width: 35%;
+                height: auto;
+                max-height: 100%;
             }
         }
         .bottom {
@@ -873,11 +912,10 @@
                 align-items: start;
                 margin-bottom: 3rem;
                 .blogCardTitle {
-                    width: 80%;
+                    width: 60%;
+                    font-size: 15px !important;
                 }
                 .logo {
-                    width: 41px;
-                    height: 41px;
                     object-fit: contain;
                 }
             }   
@@ -1185,11 +1223,11 @@
                 align-items: start;
                 margin-bottom: 3rem;
                 .blogCardTitle {
-                    width: 80%;
+                    width: 70%;
+                    font-size: 15px !important;
                 }
                 .logo {
-                    width: 35px;
-                    height: 35px;
+                    width: 30%;
                     object-fit: contain;
                 }
             }   
